@@ -455,8 +455,7 @@ the historical base--FT comparisons or ablation controls.
   BM25 (paper)        & 37.4 & 38.5 & 55.8 & 48.6 & 62.6 & 73.5 & 39.9 & 50.0 & 57.9 \\
   BM25 (ours)         & 37.4 & 38.5 & 55.8 & 48.6 & 62.6 & 73.5 & 39.9 & 50.0 & 57.9 \\
   GTR-T5-large (paper)& 45.7 & 38.5 & 51.5 & 37.1 & 40.8 & 55.9 & 43.8 & 39.6 & 51.0 \\
-% NUM-CHECK [NUM-010] metric validation local field 9: 51.0 -> 51.1. Full precision: 51.0720268007.
-  GTR-T5-large (ours) & 45.8 & 38.5 & 51.5 & 37.1 & 40.8 & 55.9 & 43.8 & 39.6 & 51.0 \\
+  GTR-T5-large (ours) & 45.8 & 38.5 & 51.5 & 37.1 & 40.8 & 55.9 & 43.8 & 39.6 & 51.1 \\
   GritLM-7B (paper)   & 69.7 & 67.7 & 77.9 & 74.3 & 82.5 & 89.1 & 70.8 & 74.8 & 80.0 \\
   GritLM-7B (ours)    & 69.7 & 67.7 & 77.9 & 74.3 & 82.5 & 89.1 & 70.8 & 74.8 & 80.0 \\
   \hline
@@ -557,17 +556,14 @@ training-list provenance, objectives or software environments.
   \hline
   Model / retriever & R@20 & R@5 & nDCG@20 \\
   \hline
-% NUM-CHECK [NUM-011] heatmap delta field 1: +11.6 -> +11.7. Full precision: 11.6694584031.
-% NUM-CHECK [NUM-012] heatmap delta field 2: +12.4 -> +12.3. Full precision: 12.3394751535.
-  Llama 3.1 8B / BM25  & \gaindark{red!58}{+11.6} & \gaindark{red!62}{+12.4} & \gaincell{red!46}{+9.1} \\
+  Llama 3.1 8B / BM25  & \gaindark{red!58}{+11.7} & \gaindark{red!62}{+12.3} & \gaincell{red!46}{+9.1} \\
   Llama 3.1 8B / GRIT  & \gaincell{red!37}{+7.3} & \gaindark{red!67}{+13.3} & \gaindark{red!51}{+10.2} \\
   Llama 3.1 8B / Qwen3 & \gaincell{red!36}{+7.2}  & \gaindark{red!81}{+16.2} & \gaindark{red!64}{+12.7} \\
   Gemma 3 12B / BM25   & \gaincell{red!31}{+6.1}  & \gaincell{red!8}{+1.6}   & \gaincell{red!5}{+0.3} \\
   Gemma 3 12B / GRIT   & \gaincell{red!7}{+1.3}   & \gaincell{red!5}{+0.5}   & \gaincell{red!5}{+1.0} \\
   Gemma 3 12B / Qwen3  & \gaincell{red!18}{+3.6}  & \gaincell{red!8}{+1.6}   & \gaincell{red!18}{+3.5} \\
   Qwen 2.5 14B / BM25  & \gaincell{red!23}{+4.5}  & \gaincell{blue!5}{-0.5}  & \gaincell{red!5}{+0.9} \\
-% NUM-CHECK [NUM-013] heatmap delta field 2: +0.7 -> +0.8. Full precision: 0.781686208822.
-  Qwen 2.5 14B / GRIT  & \gaincell{red!16}{+3.1}  & \gaincell{red!5}{+0.7}   & \gaincell{red!16}{+3.1} \\
+  Qwen 2.5 14B / GRIT  & \gaincell{red!16}{+3.1}  & \gaincell{red!5}{+0.8}   & \gaincell{red!16}{+3.1} \\
   Qwen 2.5 14B / Qwen3 & \gaincell{red!9}{+1.8}   & \gaincell{red!8}{+1.5}   & \gaincell{red!12}{+2.3} \\
   Gemma 3 27B / BM25   & \gaincell{red!5}{+0.4}   & \gaincell{blue!5}{-0.1}  & \gaincell{blue!11}{-2.2} \\
   Gemma 3 27B / GRIT   & \gaincell{red!6}{+1.1}   & \gaincell{blue!5}{-0.9}  & \gaincell{blue!5}{-0.7} \\
@@ -637,7 +633,9 @@ Parent queries & Aspect rows & Optimizer steps & R@20 & R@5 & nDCG@20 \\
 mean $\pm$ sample standard deviation over three seeds; aspect rows and optimizer
 steps report mean $[\min,\max]$. The zero-shot row is a single checkpoint and is
 not included in the seed statistics. Bold marks the best trained budget for each
-metric. Values are percentages.}
+metric. Values are percentages. Differences are calculated from unrounded
+scores and rounded only for presentation; they may therefore differ slightly
+from differences between displayed values.}
 \label{tab:parent-budget-main}
 \end{table}
 
@@ -781,11 +779,9 @@ depths therefore follow from the shared first-stage lists, rather than identical
 ranking quality. R@5 and nDCG@20 remain sensitive to the reranked order.
 
 Increasing depth from 20 to 50 improves mean R@20 by 3.48, 2.98 and 3.98 pp for
-% NUM-CHECK [NUM-014] depth gain prose field 1: 1.43 -> 1.42. Full precision: 1.42332771163.
-Llama, Gemma 3 12B and Gemma 3 27B, while nDCG@20 improves by 1.43, 1.31 and
+Llama, Gemma 3 12B and Gemma 3 27B, while nDCG@20 improves by 1.42, 1.31 and
 1.37 pp. Increasing depth from 50 to 100 produces smaller R@20 gains of 1.04,
-% NUM-CHECK [NUM-015] depth gain prose field 2: 0.56 -> 0.55. Full precision: 0.552525069951.
-1.28 and 0.45 pp and nDCG@20 gains of 0.85, 0.56 and 0.04 pp. For Gemma 3 27B,
+1.28 and 0.45 pp and nDCG@20 gains of 0.85, 0.55 and 0.04 pp. For Gemma 3 27B,
 nDCG@20 therefore effectively plateaus at depth 50. Performance has not plateaued
 at depth 20, but depth 50 captures most of the improvement observed beyond 20. We
 did not measure
@@ -1123,15 +1119,11 @@ Values are percentages.}
 \hline
 Model & Background & Method & Result & All \\
 \hline
-% NUM-CHECK [NUM-016] llama background nDCG%20 gain: +0.064 -> +0.063. Full precision: 0.0634039105301.
-% NUM-CHECK [NUM-017] llama result nDCG%20 gain: +0.102 -> +0.103. Full precision: 0.102557196162.
-Llama 3.1 8B     & +0.064 & +0.036 & \textbf{+0.102} & \textbf{+0.068} \\
+Llama 3.1 8B     & +0.063 & +0.036 & \textbf{+0.103} & \textbf{+0.068} \\
 % NUM-CHECK [NUM-018] Facet table background maximum is emphasized on the wrong model: Gemma 12B +0.053 bold -> Llama +0.063 bold. If bold marks column maxima, move background emphasis to Llama; also consistently emphasize its Method gain +0.036. The +0.053 value itself is correct.
 Gemma 3 12B      & \textbf{+0.053} & +0.013 & +0.031 & +0.032 \\
-% NUM-CHECK [NUM-019] qwen14 all nDCG%20 gain: +0.011 -> +0.010. Full precision: 0.0101514283052.
-Qwen 2.5 14B     & +0.047 & +0.007 & -0.020 & +0.011 \\
-% NUM-CHECK [NUM-020] gemma27 all nDCG%20 gain: -0.024 -> -0.023. Full precision: -0.0234194390431.
-Gemma 3 27B      & -0.045 & +0.003 & -0.029 & -0.024 \\
+Qwen 2.5 14B     & +0.047 & +0.007 & -0.020 & +0.010 \\
+Gemma 3 27B      & -0.045 & +0.003 & -0.029 & -0.023 \\
 \hline
 \end{tabular}
 \end{adjustbox}
