@@ -563,6 +563,9 @@ with our ranking prompt; ``FT'' denotes its adapted checkpoint. Within each
 local base--FT pair, the first-stage candidate pool and input order are fixed.
 We report the primary cohort first and identify reconstructed or separately
 trained controls explicitly.
+We note that all differences for the evaluated results are calculated from unrounded
+scores and rounded only for presentation. Therefore, they may differ slightly
+from differences between displayed values.
 
 \subsection{LitSearch transfer}
 Table~\ref{tab:litsearch-main} presents the primary results and
@@ -691,8 +694,8 @@ parents, the curves are approximately flat and are not monotonic.
 \end{figure}
 
 The 100-parent model has the highest mean R@20, but improves it by only 1.03
-percentage points over 10 parents and 0.45 points over 25. The 25-parent condition
-has the highest R@5 and nDCG@20, exceeding the 100-parent condition by 1.02 and
+percentage points over 10 parents and 0.44 points over 25. The 25-parent condition
+has the highest R@5 and nDCG@20, exceeding the 100-parent condition by 1.03 and
 0.70 points, respectively. Increasing aspect examples and optimization steps by
 approximately a factor of ten does not produce a corresponding performance
 increase. Exact values and retriever-specific results are in
@@ -1249,8 +1252,8 @@ the completion rule above. These diagnostics are not full-dataset validity rates
 \subsection{CSFCube transfer}
 Table~\ref{tab:csfcube} gives the released dev and test aggregates. All three
 mid-size models improve nDCG\%@20 on both: Llama gains $+0.023$ and $+0.068$,
-Gemma 3 12B gains $+0.034$ and $+0.032$, and Qwen 2.5 14B gains $+0.009$ and
-$+0.011$. Gemma 3 27B instead declines by $-0.027$ and $-0.024$, while R@20
+Gemma 3 12B gains $+0.034$ and $+0.032$, and Qwen 2.5 14B gains $+0.008$ and
+$+0.010$. Gemma 3 27B instead declines by $-0.027$ and $-0.023$, while R@20
 is essentially preserved. These fold-level differences are descriptive.
 
 \begin{table}[ht]
@@ -1270,11 +1273,11 @@ is essentially preserved. These fold-level differences are descriptive.
   & R@20      & 0.309 & \textbf{0.393} & 0.250 & \textbf{0.374} \\
 \hline
 \multirow{2}{*}{Gemma 3 12B}
-  & nDCG\%@20 & 0.369 & \textbf{0.403} & 0.347 & \textbf{0.379} \\
+  & nDCG\%@20 & 0.369 & \textbf{0.403} & 0.347 & \textbf{0.378} \\
   & R@20      & 0.284 & \textbf{0.332} & 0.288 & \textbf{0.330} \\
 \hline
 \multirow{2}{*}{Qwen 2.5 14B}
-  & nDCG\%@20 & 0.372 & \textbf{0.381} & 0.345 & \textbf{0.356} \\
+  & nDCG\%@20 & 0.372 & \textbf{0.380} & 0.345 & \textbf{0.356} \\
   & R@20      & \textbf{0.311} & 0.301 & 0.270 & \textbf{0.276} \\
 \hline
 \multirow{2}{*}{Gemma 3 27B (4-bit)}
