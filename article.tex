@@ -202,8 +202,9 @@ reference points. Neural retrieval, however, has developed in several directions
 Dual encoders such as Dense Passage Retrieval (DPR) \cite{Karpukhin} support
 efficient dense retrieval, while late-interaction models such as ColBERT
 \cite{Khattab} exchange larger indexes for finer-grained query-document matching.
-Domain-adapted encoders, including SciBERT \cite{Beltagy} and SPECTER
-\cite{Cohan}, make use of scientific text and citation signals. Broad evaluations
+SciBERT \cite{Beltagy} uses language-model pretraining on scientific
+text, while SPECTER \cite{Cohan} learns scientific document
+representations using citation-based supervision. Broad evaluations
 such as Benchmarking-IR (BEIR) \cite{Thakur} and the Massive Text Embedding
 Benchmark (MTEB) \cite{Muennighoff} show why cross-task and cross-domain testing
 is necessary: strong in-domain performance does not always transfer to a new
@@ -224,7 +225,7 @@ More recent work uses LLMs directly as rerankers. In RankGPT \cite{Sun}, for
 example, the model returns an ordering of candidate identifiers for a given query.
 This line of research has increased interest in open and reproducible listwise
 rerankers. RankZephyr \cite{Pradeep} aims to approach proprietary-model
-performance without relying on closed-source models. Other work
+performance, while enabling inference without relying on proprietary APIs. Other work
 addresses efficiency by reducing decoding or constraining the ranking interface.
 FIRST, for instance, performs listwise reranking through single-token decoding and
 a learning-to-rank objective \cite{Reddy}. Surveys of LLMs for IR bring these
@@ -1072,8 +1073,7 @@ in Online Resource~1, Table~S8.
 
 To position the fine-tuned open-weight models against a strong closed-source
 reference, we use the aggregate title-abstract results reported for GPT-4o by
-Ajith et al.~\cite{Ajith}. GPT-4o was not rerun and its exact candidate files,
-API snapshot and evaluation harness are unavailable. Matching retriever families
+Ajith et al.~\cite{Ajith}. GPT-4o was not rerun. Matching retriever families
 therefore provides descriptive context without paired significance tests.
 
 The LitSearch authors report average Broad R@$20$ and average Specific R@$5$,
@@ -1310,7 +1310,7 @@ $.05$. This supports Llama transfer in broader recall across query paradigms.
 The nDCG evidence and other model comparisons remain inconclusive.
 
 Table~\ref{tab:csfcube-external-baselines} places our strongest generative FT primary cohort run
-against published baselines. Gemma 3 27B FT outperforms fabs\_tfidfcbow200 and
+against published baselines by Mysore et al.~\cite{Mysore}. Gemma 3 27B FT outperforms fabs\_tfidfcbow200 and
 has higher R@20 than UnSimCSE-BERT, with approximately matching nDCG\%@20,
 but remains below SPECTER-ID. We interpret this as cross-benchmark transfer,
 not a new state of the art. These external artifacts lack matched per-case
@@ -1333,7 +1333,7 @@ SPECTER-ID         & 0.521 & 0.572 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{External CSFCube test baselines, aggregated across facets. Published baseline percentages are expressed as decimals}
+\caption{Comparison with published CSFCube test baselines from Mysore et al.~\cite{Mysore} (Table 3), aggregated across facets. Published baseline percentages are expressed as decimals}
 \label{tab:csfcube-external-baselines}
 \end{table}
 
@@ -1558,7 +1558,7 @@ Online Resource~1 contains detailed methods, robustness checks, complete support
 
 \bibitem{Reddy}Gangi Reddy, R., Doo, J., Xu, Y., Sultan, M. A., Swain, D., Sil, A., et al. (2024). FIRST: Faster improved listwise reranking with single token decoding. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (pp. 8642--8652). doi: \url{https://doi.org/10.18653/v1/2024.emnlp-main.491}.
 
-\bibitem{Zhu}Zhu, Y., Yuan, H., Wang, S., Liu, J., Liu, W., Deng, C., et al. (2025). Large language models for information retrieval: A survey. ACM Transactions on Information Systems, 44(1), 1--54. doi: \url{https://doi.org/10.1145/3748304}.
+\bibitem{Zhu}Zhu, Y., Yuan, H., Wang, S., Liu, J., Liu, W., Deng, C., et al. (2026). Large language models for information retrieval: A survey. ACM Transactions on Information Systems, 44(1), Article 12, 1--54. doi: \url{https://doi.org/10.1145/3748304}.
 
 \bibitem{Zhang}Zhang, Y., Li, M., Long, D., Zhang, X., Lin, H., Yang, B., et al. (2025). Qwen3 Embedding: Advancing text embedding and reranking through foundation models. arXiv preprint arXiv:2506.05176. doi: \url{https://doi.org/10.48550/arXiv.2506.05176}.
 
