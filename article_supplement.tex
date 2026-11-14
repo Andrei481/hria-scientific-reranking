@@ -1349,30 +1349,6 @@ inclusion in the main pipeline. These experiments use the original-environment
 checkpoints, so we do not compare them numerically with the
 reconstructed-environment experiments.
 
-% =====================================================
-% TODO: FIND NOTEBOOKS / RESOURCES FOR THIS OR REMOVE 
-% =====================================================
-
-% \subsection{LLM-assisted query rewriting}
-
-% LitSearch distinguishes broad from specific questions and reports results for each
-% type separately. Motivated by this distinction, we test an LLM-assisted rewriting
-% step. For each aspect-level query and one sampled pool, the method produces two
-% additional variants alongside the original:
-% \begin{itemize}
-%     \item \textbf{Focused (more specific)}: We condition the rewrite on a
-%     top-scoring relevant document.
-%     \item \textbf{Broad (more general)}: We use the same relevant document but
-%     instruct the model to widen the query's scope.
-% \end{itemize}
-% We generate the rewrites with Gemma-3 27B-IT. They do not consistently improve
-% downstream reranking quality in our experiments, so we exclude this step from the
-% final training pipeline.
-
-% =====================================================
-% TODO: FIND NOTEBOOKS / RESOURCES FOR THIS OR REMOVE 
-% =====================================================
-
 \subsection{Alternative efficiency-oriented formulation via single-token decoding}
 
 We also implement an ablation experiment inspired by \textit{Faster improved listwise reranking with single token
