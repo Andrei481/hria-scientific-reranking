@@ -423,7 +423,7 @@ the target permutation. We compute loss only on assistant-response tokens.
 The complete prompt is given in Online Resource~1. At LitSearch inference, all
 100 candidates are placed in one prompt, indexed from $[1]$ to $[100]$, with
 each passage truncated to approximately 300 words. The main generative rerankers
-do not use sliding windows; however, the reranking inference code includes a safety mechanism which progressively reduces the number of included documents in the prompt in case of failures.
+do not use sliding windows. However, the reranking inference code includes a safety mechanism which progressively reduces the number of included documents in the prompt in case of failures.
 
 For the primary cohort, Llama 3.1 8B, Gemma 3 12B and Qwen 2.5 14B use 16-bit
 LoRA~\cite{Hu}; Gemma 3 27B uses 4-bit QLoRA~\cite{Dettmers}. We apply LoRA to
@@ -1468,15 +1468,7 @@ behavior that the precision control does not consistently resolve.
 These findings motivate stronger top-rank-weighted
 losses, harder negatives and tie-aware objectives.
 
-% The external GPT-4o comparison provides context rather than a controlled local
-% test. With GritLM, Gemma 3 27B FT slightly exceeds reported GPT-4o Specific
-% R@20 ($86.2\%$ versus $85.9\%$), but remains lower on Broad R@20 ($-2.3$ pp)
-% and Specific R@5 ($-3.4$ pp). With Qwen3, it reaches $77.6\%$ Broad R@20 and
-% $86.3\%$ Specific R@20, exceeding that GPT-4o + GritLM reference on both.
-% The latter comparison combines a stronger retriever with the adapted reranker.
-% GPT-4o was not rerun and per-query outputs are unavailable. These differences
-% are metric-specific and cross-protocol, without paired significance tests.
-The external GPT-4o comparison is useful for perspective; however, it remains only descriptive: differences in retrieval
+The external GPT-4o comparison is useful for perspective. However, it remains only descriptive: differences in retrieval
 and unavailable per-query outputs prevent controlled or significance-tested
 claims of superiority.
 
