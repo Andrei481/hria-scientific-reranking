@@ -7,14 +7,12 @@ scripts, configurations, prepared data, saved rankings, and analysis results.
 Start with [resources.md](resources.md) for the experiment-to-file guide and
 [models and data](docs/models_and_data.md) for download links. Resources that
 still need an author-supplied link or file are listed in
-[AUTHOR_TODO.md](AUTHOR_TODO.md).
 
 ## Repository layout
 
 ```text
 resources.md                 experiment-to-file guide
 docs/models_and_data.md       available model and data links
-AUTHOR_TODO.md                remaining links/files to supply
 notebooks/                   existing numbered notebook collection
 configs/environments/        retained environment exports
 resources/                   collected experimental resources
