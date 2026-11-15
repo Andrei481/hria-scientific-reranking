@@ -120,7 +120,7 @@ This supplement preserves detailed methods and supporting experiments from the f
 
 We first construct an in-memory mapping from each DORIS-MAE
 \texttt{abstract\_id} to a concatenated title-abstract string with the format
-\texttt{"Title: {title} Abstract: {abstract}"}. This representation follows the
+\texttt{"Title: \{title\} Abstract: \{abstract\}"}. This representation follows the
 corpus schema and allows us to format passages efficiently.
 
 We structure every training instance as a chat-style conversation. The user
@@ -137,9 +137,9 @@ the ranking and nothing else.
 Example output for 8 passages:\newline[2] \textgreater\ [5] \textgreater\ [4] \textgreater\ [8]
 \textgreater\ [6] \textgreater\ [1] \textgreater\ [3] \textgreater\ [7].
 \par\vspace{2pt}
-Query: {query}\newline
-Passages:\newline[1] Title: {title} Abstract: {abstract}\newline
-[2] Title: {title} Abstract: {abstract} \dots
+Query: \{query\}\newline
+Passages:\newline[1] Title: \{title\} Abstract: \{abstract\}\newline
+[2] Title: \{title\} Abstract: \{abstract\} \dots
 \par\vspace{2pt}
 Your ranking (most to least relevant):
 \end{quote}
@@ -153,7 +153,7 @@ example, uses \texttt{<start\_of\_turn>user} and
 \texttt{<start\_of\_turn>model}.
 
 We distinguish between the sampled \emph{training} list length,
-$K_{\mathrm{train}}$ and the \emph{inference} reranking depth,
+$K_{\mathrm{train}}$, and the \emph{inference} reranking depth,
 $K_{\mathrm{eval}}$. Our standard training configuration uses
 $K_{\mathrm{train}}=50$, while the main LitSearch experiment reranks the top
 $K_{\mathrm{eval}}=100$ first-stage candidates. At inference, we place all 100
@@ -191,7 +191,7 @@ permutation of its input list. The metrics therefore describe the model output
 together with the repair rule. Omitted candidates retain their first-stage order
 at the end of the list.
 
-\subsection{Base models fine-tuning}
+\subsection{Fine-tuning of base models}
 
 For the primary cohort, we use LoRA~\cite{Hu} for parameter-efficient fine-tuning
 (PEFT). The weights of Llama 3.1 8B, Gemma 3 12B and Qwen 2.5 14B are loaded
@@ -210,9 +210,9 @@ four primary-cohort models use AdamW, a cosine learning-rate schedule,
 20 warmup steps, weight
 decay $0.01$, learning rate $1 \times 10^{-5}$ and two epochs. The context length
 is capped at 16,384 tokens. Loss is applied only to assistant-response tokens.
-the main article, Table~2 reports the settings that differ by model.
+Table~2 in the main article reports the settings that differ by model.
 The separate parent-grouped selection study in
-the main article, Section~5.3 uses a newly selected learning rate for Llama 3.1
+Section~5.3 of the main article uses a newly selected learning rate for Llama 3.1
 8B. It does not change the settings of the previous checkpoints.
 
 For the primary-cohort Gemma 3 27B model, \texttt{load\_in\_4bit=True} invokes the pinned Unsloth and
@@ -237,7 +237,7 @@ runs use 16-bit LoRA; the separate 16-bit run here is used as a precision contro
 \label{sec:compact-training}
 
 To assess whether a compact supervised model could offer a competitive alternative,
-we fine-tune GTE-ModernBERT\cite{gte-modernbert}, a cross-encoder with
+we fine-tune GTE-ModernBERT~\cite{gte-modernbert}, a cross-encoder with
 149,605,633 parameters. We initialize it from
 \texttt{Alibaba-NLP/gte-reranker-modernbert-base}, pinned to revision
 \texttt{204bdd4}. This checkpoint already has ranking supervision. We therefore
@@ -494,14 +494,14 @@ We obtain nDCG@$k$ by normalizing DCG@$k$ with the ideal DCG, in which
 relevant documents appear as early as possible. Unlike R@$k$, nDCG@$k$ rewards
 their position within the top $k$, not only their presence.
 
-\paragraph{nDCG\%@$k$ (CSFCube)} CSFCube assigns relevance scores from 0-3,
+\paragraph{nDCG\%@$k$ (CSFCube)} CSFCube assigns relevance scores from 0 to 3,
 and its candidate-pool size varies across queries. We evaluate each query over its
 released pool. Following \cite{Mysore}, we report nDCG\%@$k$: nDCG computed
 over the top $k\%$ of the pool rather than at one fixed rank. For a pool of size
 $n$, the cutoff is $\lfloor (k/100) \cdot n \rfloor$. Thus, nDCG\%@$20$ is
 equivalent to nDCG at rank 20 for a pool of 100 candidates, but to nDCG at rank
 30 for a pool of 150. We use the graded labels directly as DCG gains, without
-binarization and apply a logarithmic position discount. Normalization uses the
+binarization, and apply a logarithmic position discount. Normalization uses the
 ideal DCG obtained by sorting the pool's labels in descending order, which gives
 values in $[0,1]$.
 
@@ -1343,8 +1343,8 @@ and Gemma 3 12B.}
 \FloatBarrier
 \section{Exploratory Variants Excluded from the Final Pipeline}
 
-We explored three additional variants but did not retain them in the main training
-recipe. All three are relevant to the broader design space. However, they either
+We explored two additional variants but did not retain them in the main training
+recipe. Both are relevant to the broader design space. However, they either
 failed to improve the final system or produced gains that were too inconsistent for
 inclusion in the main pipeline. These experiments use the original-environment
 checkpoints, so we do not compare them numerically with the
