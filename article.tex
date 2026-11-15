@@ -1,45 +1,4 @@
-%Version 3.1 December 2024
-% See section 11 of the User Manual for version history
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                                                 %%
-%% Please do not use \input{...} to include other tex files.       %%
-%% Submit your LaTeX manuscript as one .tex document.              %%
-%%                                                                 %%
-%% All additional figures and files should be attached             %%
-%% separately and not embedded in the \TeX\ document itself.       %%
-%%                                                                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
-
-%%=======================================================%%
-%% to print line numbers in the margin use lineno option %%
-%%=======================================================%%
-
-%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-%%=========================================================================================%%
-%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
-%%=========================================================================================%%
-
-%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
-%%The option is available for: sn-basic.bst, sn-chicago.bst%  
- 
-%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
-%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
-%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
-%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
-%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
-%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
-%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
-%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
-
-%%%% Standard Packages
-%%<additional latex packages if required can be included here>
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}%
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
@@ -52,28 +11,10 @@
 \usepackage{manyfoot}%
 \usepackage{booktabs}%
 \usepackage{listings}%
-%%%%
 
-%%%%%=============================================================================%%%%
-%%%%  Remarks: This template is provided to aid authors with the preparation
-%%%%  of original research articles intended for submission to journals published 
-%%%%  by Springer Nature. The guidance has been prepared in partnership with 
-%%%%  production teams to conform to Springer Nature technical requirements. 
-%%%%  Editorial and presentation requirements differ among journal portfolios and 
-%%%%  research disciplines. You may find sections in this template are irrelevant 
-%%%%  to your work and are empowered to omit any such section if allowed by the 
-%%%%  journal you intend to submit to. The submission guidelines and policies 
-%%%%  of the journal take precedence. A detailed User Manual is available in the 
-%%%%  template package for technical guidance.
-%%%%%=============================================================================%%%%
-
-%% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
-\newtheorem{theorem}{Theorem}%  meant for continuous numbers
-%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
-%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
-\newtheorem{proposition}[theorem]{Proposition}% 
-%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}[theorem]{Proposition}%
 
 \theoremstyle{thmstyletwo}%
 \newtheorem{example}{Example}%
@@ -83,22 +24,16 @@
 \newtheorem{definition}{Definition}%
 
 \raggedbottom
-%%\unnumbered% uncomment this for unnumbered level heads
 
-% Packages needed by the transferred manuscript's existing tables and floats.
 \usepackage{tabularx}
 \usepackage{placeins}
 \usepackage{adjustbox}
 
-% Condensed article and Online Resource 1; see articol_jurnal_changes.md.
-% Replace author placeholders and supply verified declarations before submission.
 \newcommand{\manuscriptfigure}[2][]{\includegraphics[#1]{#2}}
 
 \begin{document}
 
 \title[Are 100 Queries Enough?]{Are 100 Queries Enough? Small-Data Adaptation of Open LLMs for Scientific Reranking}
-
-
 
 \author[1]{\fnm{Andrei-Răzvan} \sur{Joldea}}\email{andrei.joldea@student.upt.ro}
 
@@ -119,7 +54,7 @@ systems commonly depend on large proprietary models. This raises concerns about
 reproducibility, computational constraints and deployment. We investigate whether
 limited supervision is sufficient to adapt open instruction-tuned models, ranging
 from 8B to 27B parameters, into effective listwise scientific-paper rerankers.
-Starting from 100 human-authored, multi-aspect DORIS-MAE\cite{Wang} parent queries and their
+Starting from 100 human-authored, multi-aspect DORIS-MAE~\cite{Wang} parent queries and their
 released relevance labels, we use aspect decomposition, candidate pool subsampling
 and pool-level augmentation to expand the dataset to 4,494 training records. In a
 nested three-seed learning curve with 10, 25, 50, 75 and 100 parent queries, most of
@@ -152,7 +87,7 @@ generally outperform sparse retrieval with BM25, while LLM-based reranking
 provides further improvements.
 
 However, accurate reranking pipelines often rely on large proprietary models,
-such as GPT-class rerankers and on zero-shot prompting. Their effectiveness can
+such as GPT-class rerankers, and on zero-shot prompting. Their effectiveness can
 vary with the prompt design, candidate-list length and positional bias~\cite{Sun}.
 Our primary objective is to balance two requirements: the model should be small
 enough to self-host without external APIs, but still competitive for scientific
@@ -192,7 +127,7 @@ literature search questions and pairs every query with one or more ground-truth
 papers. Some queries are generated by an LLM from inline citations, while others
 are written by researchers about their own work \cite{Ajith}. CSFCube uses a third
 format: faceted query-by-example. A query consists of a scientific paper and a
-specific facet, such as background, method, or result and relevance depends on
+specific facet, such as background, method or result, and relevance depends on
 similarity along that facet. The benchmark uses depth-$k$ pooling under
 TREC-style practices to obtain graded relevance judgments \cite{Mysore}.
 
@@ -215,8 +150,8 @@ approaches, according to whether the loss is defined over individual documents,
 document pairs or complete ranked lists. Listwise methods such as ListMLE
 \cite{Xia} optimize a probability over permutations and form the basis of much of the
 listwise reranking literature. For neural reranking, monoT5 \cite{Nogueira}
-reformulated the task as token generation: T5 is fine-tuned to emit "true" or
-"false," and the corresponding logits become relevance scores. RankT5
+reformulated the task as token generation: T5 is fine-tuned to emit ``true'' or
+``false,'' and the corresponding logits become relevance scores. RankT5
 \cite{Zhuang} added pairwise and listwise losses to T5-based reranking, while RankGPT \cite{Sun} adopted a generative formulation
 toward full listwise ranking. These systems are usually evaluated with top-weighted
 IR metrics that support graded relevance, such as (n)DCG.
@@ -240,9 +175,8 @@ of $N$ candidate documents $\{d_1, \dots, d_N\}$, we ask the model to predict a
 permutation that orders them by decreasing relevance. Each document contains a
 paper title and abstract. This formulation follows earlier LLM-based listwise
 prompts and benchmark implementations, including RankGPT-style \cite{Sun}
-prompts that request an ordered sequence such as "[2] $>$ [5] $>$ \dots".
+prompts that request an ordered sequence such as ``[2] $>$ [5] $>$ \dots''.
 
-% TODO: Change Fixed-size to "target size 50"
 \begin{figure}[t]
 \centering
 \manuscriptfigure[width=\textwidth]{architecture.drawio.pdf}
@@ -257,11 +191,11 @@ contains 100 complex, human-authored queries from several computer science
 subfields. Each query is divided into aspects and, when available, sub-aspects. It
 is also paired with a pool of approximately 99–138 paper abstracts and graded
 relevance labels. The underlying corpus contains 363,133 computer science paper
-abstracts from arXiv, published between 2011–2021. We use this corpus both to
+abstracts from arXiv, published between 2011 and 2021. We use this corpus both to
 construct candidate pools and to retrieve paper text when formatting prompts.
 
 We do not treat a complete multi-aspect query as one atomic training unit.
-Instead, every aspect or sub-aspect sentence becomes an "aspect-level query" and
+Instead, every aspect or sub-aspect sentence becomes an ``aspect-level query'' and
 retains its parent's candidate pool and relevance labels. We perform the extraction
 as follows:
 
@@ -335,7 +269,7 @@ of grade.
 \end{itemize}
 We use two safeguards during generation. First, we enforce \emph{set-level
 uniqueness}. Two pools with the same document identifiers are treated as
-duplicates, irrespective of internal order and we retain only the first. Thus, the
+duplicates, irrespective of internal order, and we retain only the first. Thus, the
 augmentation changes candidate composition rather than merely permuting
 positions. Second, we limit the number of rejected sampling attempts for each
 query. A query can consequently produce fewer than $V$ variants when its
@@ -423,7 +357,7 @@ the target permutation. We compute loss only on assistant-response tokens.
 The complete prompt is given in Online Resource~1. At LitSearch inference, all
 100 candidates are placed in one prompt, indexed from $[1]$ to $[100]$, with
 each passage truncated to approximately 300 words. The main generative rerankers
-do not use sliding windows, however, the reranking inference code includes a safety mechanism which progressively reduces the number of included documents in the prompt in case of failures.
+do not use sliding windows. However, the reranking inference code includes a safety mechanism which progressively reduces the number of included documents in the prompt in case of failures.
 
 For the primary cohort, Llama 3.1 8B, Gemma 3 12B and Qwen 2.5 14B use 16-bit
 LoRA~\cite{Hu}; Gemma 3 27B uses 4-bit QLoRA~\cite{Dettmers}. We apply LoRA to
@@ -694,66 +628,6 @@ that all 100 are necessary. Most measured gain appears with 10--25 parents.
 Three seeds do not support a high-power equivalence test, and the best budget
 depends on whether the objective is deeper recall or early ranking quality.
 
-% \subsection{Parent-grouped hyperparameter selection}
-% \label{sec:grouped-hpo}
-
-% Table~\ref{tab:grouped-hpo-selection} reports the validation results for the
-% parent-grouped learning-rate search. The rate $5\times10^{-6}$ gives the
-% lowest parent-averaged NLL on each of the three splits and is selected for the
-% final refit. The grouped search therefore does not retain the historical
-% reference rate $1\times10^{-5}$. We adopt its selected rate for the additional
-% refit. Only the learning rate is varied in this study.
-% The standard deviations describe variation across splits whose training sets
-% overlap. They are not standard errors over independent experiments.
-
-% \begin{table}[t]
-% \centering
-% \scriptsize
-% \setlength{\tabcolsep}{4pt}
-% \begin{adjustbox}{max width=\linewidth}
-% \begin{tabular}{lrr}
-% \hline
-% Learning rate & Mean validation NLL & SD across splits \\
-% \hline
-% $5\times10^{-6}$ & $\mathbf{0.070711}$ & 0.009043 \\
-% $1\times10^{-5}$ & 0.072112 & 0.009905 \\
-% $2\times10^{-5}$ & 0.074852 & 0.008772 \\
-% \hline
-% \end{tabular}
-% \end{adjustbox}
-% \caption{Parent-query-disjoint learning-rate selection for Llama 3.1 8B over three split assignments. Lower parent-averaged validation NLL is better}
-% \label{tab:grouped-hpo-selection}
-% \end{table}
-
-% After selection, the chosen checkpoints obtain internal-test parent-averaged
-% NLLs of 0.076731, 0.076040 and 0.076456 for split seeds 42, 2026 and 3407,
-% respectively. These evaluations share the same ten held-out parents and do not
-% constitute independent test samples. The final checkpoint is then trained from
-% the base model on all 4,494 lists for two epochs using the selected rate.
-
-% \begin{table}[t]
-% \centering
-% \small
-% \setlength{\tabcolsep}{4pt}
-% \begin{adjustbox}{max width=\linewidth}
-% \begin{tabular}{lrrrr}
-% \hline
-% Retriever & R@20 & R@5 & nDCG@20 & nDCG@5 \\
-% \hline
-% BM25  & 66.31 & 55.11 & 50.03 & 46.66 \\
-% GRIT  & 80.88 & 69.13 & 64.23 & 60.71 \\
-% Qwen3 & 81.09 & 69.21 & 64.40 & 60.84 \\
-% \hline
-% \end{tabular}
-% \end{adjustbox}
-% \caption{LitSearch scores for the separately trained, grouped-selected Llama 3.1 8B refit: percentages over 597 queries at $K_{\mathrm{eval}}=100$}
-% \label{tab:grouped-hpo-litsearch}
-% \end{table}
-
-% Table~\ref{tab:grouped-hpo-litsearch} reports the refit's external LitSearch
-% results. On CSFCube, the official aggregate test evaluation gives
-% R@$20=40.83\%$, nDCG@$20=43.51\%$ and nDCG\%@$20=43.20\%$.
-
 \subsection{Parent-grouped hyperparameter selection}
 \label{sec:grouped-hpo}
 After performing a parent-grouped search, we select $5\times10^{-6}$, which gives the lowest
@@ -862,118 +736,6 @@ No aspect decomposition & 72.93 & 60.88 & 55.54 \\
 
 \end{table}
 
-% \subsection{Tie-handling sensitivity}
-% \label{sec:tie-sensitivity}
-
-% To test whether arbitrary ordering within relevance ties affects adaptation, we
-% train Llama 3.1 8B with two target policies. The deterministic policy orders
-% equal-grade candidates by their position in the presented input list. The
-% epoch-randomized policy independently shuffles candidates within each relevance
-% grade at each logical epoch, while retaining descending order between grades.
-% Both policies use response-token cross-entropy. Thus, the experiment changes
-% the ordering of tied targets, not the relevance labels or the training loss.
-
-% We use the same frozen 4,494-list artifact as the compact-reranker study in
-% Section~\ref{sec:compact-training}, retaining its candidate lists. For
-% each seed in $\{42,2026,3407\}$, the two policies share candidate membership,
-% input order, example schedule, base checkpoint and optimization settings.
-% The runs use unquantized BF16 LoRA with rank 128, alpha 256, dropout 0.05,
-% learning rate $10^{-5}$, effective batch size two and maximum sequence length
-% 16,384. Two logical epochs give 4,494 optimizer steps. These are newly trained
-% matched controls. Exact training-list identity with the historical LLM cohort
-% is not assumed.
-
-% Every checkpoint reranks the same 597 LitSearch queries with BM25, GRIT and
-% Qwen3 candidates at $K_{\mathrm{eval}}=100$. Generation uses temperature zero,
-% top-$p=1$, seed zero and a 1,024-token output budget. Quality metrics use the
-% same first-occurrence and missing-ID completion rule described earlier.
-% We measure validity separately on the raw responses.
-
-% \begin{table}[ht]
-% \centering
-% \footnotesize
-% \setlength{\tabcolsep}{4pt}
-% \renewcommand{\arraystretch}{1.08}
-% \begin{adjustbox}{max width=\linewidth}
-% \begin{tabular}{l l c c c}
-% \hline
-% Retriever & Tie policy & R@20 & R@5 & nDCG@20 \\
-% \hline
-% BM25 & Deterministic & $67.21\pm0.70$ & $54.50\pm0.50$ & $49.89\pm0.30$ \\
-%      & Epoch-randomized & $67.21\pm0.22$ & $56.17\pm0.25$ & $47.74\pm1.26$ \\
-% \hline
-% GRIT & Deterministic & $82.57\pm0.80$ & $69.78\pm0.05$ & $64.79\pm0.16$ \\
-%      & Epoch-randomized & $80.52\pm0.52$ & $60.98\pm1.86$ & $53.33\pm2.10$ \\
-% \hline
-% Qwen3 & Deterministic & $80.94\pm0.73$ & $69.92\pm0.24$ & $64.84\pm0.24$ \\
-%       & Epoch-randomized & $79.37\pm0.52$ & $62.63\pm2.06$ & $53.26\pm1.93$ \\
-% \hline
-% \end{tabular}
-% \end{adjustbox}
-% \caption{Matched Llama 3.1 8B tie policies: mean $\pm$ sample standard deviation over three seeds, with scores multiplied by 100. Quality is evaluated after the same repair rule}
-% \label{tab:tie-sensitivity}
-% \end{table}
-
-% Table~\ref{tab:tie-sensitivity} shows that randomizing ties does not improve
-% ranking quality consistently. BM25 R@5 increases descriptively, but nDCG@20
-% decreases with all three retrievers. For paired inference, we first average
-% each query's randomized-minus-deterministic difference over the three seeds.
-% For the retriever average, we also average over BM25, GRIT and Qwen3 before
-% resampling queries. We use 10,000 paired query-bootstrap replicates and
-% 10,000 sign-flip permutations. Holm correction forms a separate family for
-% each metric over the three retriever-specific contrasts and their average.
-% These intervals condition on the retained checkpoints. The sample standard
-% deviations in Table~\ref{tab:tie-sensitivity} describe training-seed variation
-% separately.
-
-% \begin{table}[ht]
-% \centering
-% \scriptsize
-% \setlength{\tabcolsep}{3pt}
-% \renewcommand{\arraystretch}{1.08}
-% \begin{adjustbox}{max width=\linewidth}
-% \begin{tabular}{l r c c}
-% \hline
-% Metric & $\Delta$ & 95\% CI & $p_{\mathrm{H}}$ \\
-% \hline
-% R@20 & $-$1.21 & [$-$2.41, $-$0.04] & .1404 \\
-% R@5 & $-$4.81 & [$-$6.67, $-$3.03] & .0004 \\
-% nDCG@20 & $-$8.40 & [$-$9.91, $-$6.90] & .0004 \\
-% \hline
-% \end{tabular}
-% \end{adjustbox}
-% \caption{Epoch-randomized minus deterministic tie-policy differences, averaged over retrievers and seeds, in percentage points. Intervals are pointwise; $p_{\mathrm{H}}$ applies within-metric Holm correction}
-% \label{tab:tie-sensitivity-uncertainty}
-% \end{table}
-
-% The aggregate R@5 and nDCG@20 declines remain significant after correction
-% (Table~\ref{tab:tie-sensitivity-uncertainty}). The R@20 contrast does not,
-% despite its unadjusted confidence interval excluding zero. This is not evidence
-% of equivalence between the policies.
-
-% Output validity changes substantially. Averaging over the equally sized
-% retriever--seed groups, the raw exact-permutation rate falls from 52.67\% with
-% deterministic ties to 0.24\% with randomized ties. The mean number of missing
-% candidate IDs rises from 1.42 to 32.25. Both conditions have zero complete
-% fallback, but this only means that some valid IDs were emitted. It does not
-% imply complete raw rankings. These differences qualify the interpretation of
-% the repaired quality scores.
-
-% We also audit whether the output budget directly limits the measured top-rank
-% metrics. Of 1,349 length-finished responses across the six runs, 1,348 already
-% contain at least 20 distinct valid IDs. In the remaining response, the sole
-% relevant document is already ranked first. Under the first-occurrence parser,
-% extending these same prefixes cannot change R@5, R@20 or nDCG@20. This is an
-% audit of the saved responses, not a rerun with a larger generation budget.
-
-% The experiment therefore establishes sensitivity to within-grade target
-% ordering under the tested transfer and repair protocol. It does not separate
-% relevance learning from output validity or generalization from 50/51 training
-% candidates to 100 evaluation candidates. In particular, epoch-wise target
-% randomization is not a tie-aware objective: both conditions still optimize one
-% serialized target per presentation. A loss that does not penalize alternative
-% orders within a relevance grade remains untested.
-
 \subsection{Tie-handling sensitivity}
 \label{sec:tie-sensitivity}
 We compare deterministic input-order tie breaking with epoch-wise randomization
@@ -1013,8 +775,8 @@ Randomizing ties lowers nDCG@20 with every retriever
 (Table~\ref{tab:tie-sensitivity}). Averaged over seeds and retrievers, R@5 and
 nDCG@20 decline by 4.81 and 8.40 pp, respectively (Holm-adjusted $p=.0004$
 for both); the R@20 difference is not significant ($p_{\mathrm H}=.1404$).
-The raw exact-permutation rate falls from 52.67\% to 0.24\%, and mean missing
-IDs increase from 1.42 to 32.25. These validity changes qualify the repaired
+The raw exact-permutation rate falls from 52.67\% to 0.24\%, and the mean number of missing
+IDs increases from 1.42 to 32.25. These validity changes qualify the repaired
 quality scores. Full intervals and the saved-response output-budget audit are
 reported in Online Resource~1, Section~S15.
 
@@ -1153,14 +915,6 @@ reported GPT-4o + GritLM pipeline on both R@$20$ metrics. This difference reflec
 the combined contribution of a stronger first-stage retriever and the fine-tuned
 reranker. It is not a pure comparison of reranker quality against GPT-4o.
 
-% \begin{figure}[htbp]
-%   \centering
-%   \manuscriptfigure[width=\columnwidth]{fig_gpt4o_comparison.pdf}
-%   \caption{Comparison between the strongest closed-source GPT4o reranking baseline reported by LitSearch, Qwen3 retrieval
-% without reranking, and our best open end-to-end pipeline.}
-%   \label{fig:gpt4o-comparison}
-%   \end{figure}
-
 \subsection{Compact supervised comparison and inference cost}
 \label{sec:compact-results}
 GTE-ModernBERT is already competitive before DORIS-MAE adaptation
@@ -1229,8 +983,6 @@ Recorded GPU memory (GiB) & 1.63 & 129.57 \\
 \end{table}
 
 GTE is approximately 41 times faster in this microbenchmark. 
-% The ratio is
-% specific to its sample, batching and serving configuration and does not measure Gemma 3 27B. 
 Llama emits a complete permutation without repair for 30\% of the
 sampled queries, with a mean of 98.3 parsed indices. Its evaluated rankings use
 the completion rule above. These diagnostics are not full-dataset validity rates.
@@ -1239,7 +991,7 @@ the completion rule above. These diagnostics are not full-dataset validity rates
 Table~\ref{tab:csfcube} gives the released dev and test aggregates. All three
 mid-size models improve nDCG\%@20 on both: Llama gains $+0.023$ and $+0.068$,
 Gemma 3 12B gains $+0.034$ and $+0.032$, and Qwen 2.5 14B gains $+0.008$ and
-$+0.010$. Gemma 3 27B instead declines by $-0.027$ and $-0.023$, while R@20
+$+0.010$. Gemma 3 27B instead declines by $0.027$ and $0.023$, while R@20
 is essentially preserved. These fold-level differences are descriptive.
 
 \begin{table}[ht]
@@ -1374,7 +1126,7 @@ All        & 0.5439 & 0.6133 & 0.5860 & 0.6156 \\
 
 Table~\ref{tab:leakage-overlap} establishes disjointness at the query level, but it
 also reveals exact document reuse across the scientific corpora. We address this
-with via a LitSearch sensitivity analysis. We remove all 227 exact
+via a LitSearch sensitivity analysis. We remove all 227 exact
 normalized title-abstract matches to documents seen during DORIS-MAE prompt
 construction. Then, we retrieve each first-stage list to depth 200, remove the
 blacklisted documents and refill the list in its original order until it contains
@@ -1464,19 +1216,10 @@ more relevant papers in the top 20 while moving the earliest relevant paper
 downward. Examples are retained in Online Resource~1, Table~S9. Larger
 base models leave less room for improvement, and Gemma 3 27B has mixed nDCG
 behavior that the precision control does not consistently resolve. 
-% Its CSFCube regression remains unexplained. 
 These findings motivate stronger top-rank-weighted
 losses, harder negatives and tie-aware objectives.
 
-% The external GPT-4o comparison provides context rather than a controlled local
-% test. With GritLM, Gemma 3 27B FT slightly exceeds reported GPT-4o Specific
-% R@20 ($86.2\%$ versus $85.9\%$), but remains lower on Broad R@20 ($-2.3$ pp)
-% and Specific R@5 ($-3.4$ pp). With Qwen3, it reaches $77.6\%$ Broad R@20 and
-% $86.3\%$ Specific R@20, exceeding that GPT-4o + GritLM reference on both.
-% The latter comparison combines a stronger retriever with the adapted reranker.
-% GPT-4o was not rerun and per-query outputs are unavailable. These differences
-% are metric-specific and cross-protocol, without paired significance tests.
-The external GPT-4o comparison is useful for perspective, however it remains only descriptive: differences in retrieval
+The external GPT-4o comparison is useful for perspective. However, it remains only descriptive: differences in retrieval
 and unavailable per-query outputs prevent controlled or significance-tested
 claims of superiority.
 
@@ -1496,12 +1239,6 @@ human-authored parent queries. Matched controls support aspect-level supervision
 but do not establish an independent benefit from distinct-pool augmentation.
 
 For Llama 3.1 8B, most observed improvement appears with 10--25 parents. 
-% The
-% 100-parent condition gives the highest mean R@20, while 25 parents give the
-% highest R@5 and nDCG@20. Thus, 100 parents are sufficient for the observed
-% transfer, but are not shown to be necessary. LitSearch provides the most
-% consistent corrected evidence for Llama. CSFCube supports its broader-recall
-% transfer while other comparisons remain less conclusive.
 Among the tested
 budgets, 100 gives the highest mean R@20, while 25 gives the highest R@5 and
 nDCG@20. Thus, 100 parents suffice for the observed transfer but are not shown
@@ -1516,10 +1253,8 @@ Further work should examine top-rank-weighted losses, harder negatives and
 multi-seed controls across additional scientific benchmarks. The code will be
 made available at \url{https://github.com/Andrei481/hria-scientific-reranking}.
 
-
 \FloatBarrier
 \backmatter
-% TODO: Add verified funding, competing interests, author contributions, and data availability statements.
 \bmhead{Funding}
 This research is partially supported by the project
 ``Romanian Hub for Artificial Intelligence - HRIA'',

@@ -1,45 +1,4 @@
-%Version 3.1 December 2024
-% See section 11 of the User Manual for version history
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                                                 %%
-%% Please do not use \input{...} to include other tex files.       %%
-%% Submit your LaTeX manuscript as one .tex document.              %%
-%%                                                                 %%
-%% All additional figures and files should be attached             %%
-%% separately and not embedded in the \TeX\ document itself.       %%
-%%                                                                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
-
-%%=======================================================%%
-%% to print line numbers in the margin use lineno option %%
-%%=======================================================%%
-
-%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-%%=========================================================================================%%
-%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
-%%=========================================================================================%%
-
-%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
-%%The option is available for: sn-basic.bst, sn-chicago.bst%  
- 
-%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
-%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
-%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
-%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
-%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
-%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
-%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
-%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
-
-%%%% Standard Packages
-%%<additional latex packages if required can be included here>
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}%
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
@@ -52,28 +11,10 @@
 \usepackage{manyfoot}%
 \usepackage{booktabs}%
 \usepackage{listings}%
-%%%%
 
-%%%%%=============================================================================%%%%
-%%%%  Remarks: This template is provided to aid authors with the preparation
-%%%%  of original research articles intended for submission to journals published 
-%%%%  by Springer Nature. The guidance has been prepared in partnership with 
-%%%%  production teams to conform to Springer Nature technical requirements. 
-%%%%  Editorial and presentation requirements differ among journal portfolios and 
-%%%%  research disciplines. You may find sections in this template are irrelevant 
-%%%%  to your work and are empowered to omit any such section if allowed by the 
-%%%%  journal you intend to submit to. The submission guidelines and policies 
-%%%%  of the journal take precedence. A detailed User Manual is available in the 
-%%%%  template package for technical guidance.
-%%%%%=============================================================================%%%%
-
-%% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
-\newtheorem{theorem}{Theorem}%  meant for continuous numbers
-%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
-%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
-\newtheorem{proposition}[theorem]{Proposition}% 
-%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}[theorem]{Proposition}%
 
 \theoremstyle{thmstyletwo}%
 \newtheorem{example}{Example}%
@@ -83,15 +24,11 @@
 \newtheorem{definition}{Definition}%
 
 \raggedbottom
-%%\unnumbered% uncomment this for unnumbered level heads
 
-% Packages needed by the transferred manuscript's existing tables and floats.
 \usepackage{tabularx}
 \usepackage{placeins}
 \usepackage{adjustbox}
 
-% Condensed article and Online Resource 1; see articol_jurnal_changes.md.
-% Replace author placeholders and supply verified declarations before submission.
 \newcommand{\manuscriptfigure}[2][]{\includegraphics[#1]{#2}}
 
 \renewcommand{\thesection}{S\arabic{section}}
@@ -120,7 +57,7 @@ This supplement preserves detailed methods and supporting experiments from the f
 
 We first construct an in-memory mapping from each DORIS-MAE
 \texttt{abstract\_id} to a concatenated title-abstract string with the format
-\texttt{"Title: {title} Abstract: {abstract}"}. This representation follows the
+\texttt{"Title: \{title\} Abstract: \{abstract\}"}. This representation follows the
 corpus schema and allows us to format passages efficiently.
 
 We structure every training instance as a chat-style conversation. The user
@@ -137,9 +74,9 @@ the ranking and nothing else.
 Example output for 8 passages:\newline[2] \textgreater\ [5] \textgreater\ [4] \textgreater\ [8]
 \textgreater\ [6] \textgreater\ [1] \textgreater\ [3] \textgreater\ [7].
 \par\vspace{2pt}
-Query: {query}\newline
-Passages:\newline[1] Title: {title} Abstract: {abstract}\newline
-[2] Title: {title} Abstract: {abstract} \dots
+Query: \{query\}\newline
+Passages:\newline[1] Title: \{title\} Abstract: \{abstract\}\newline
+[2] Title: \{title\} Abstract: \{abstract\} \dots
 \par\vspace{2pt}
 Your ranking (most to least relevant):
 \end{quote}
@@ -153,7 +90,7 @@ example, uses \texttt{<start\_of\_turn>user} and
 \texttt{<start\_of\_turn>model}.
 
 We distinguish between the sampled \emph{training} list length,
-$K_{\mathrm{train}}$ and the \emph{inference} reranking depth,
+$K_{\mathrm{train}}$, and the \emph{inference} reranking depth,
 $K_{\mathrm{eval}}$. Our standard training configuration uses
 $K_{\mathrm{train}}=50$, while the main LitSearch experiment reranks the top
 $K_{\mathrm{eval}}=100$ first-stage candidates. At inference, we place all 100
@@ -191,7 +128,7 @@ permutation of its input list. The metrics therefore describe the model output
 together with the repair rule. Omitted candidates retain their first-stage order
 at the end of the list.
 
-\subsection{Base models fine-tuning}
+\subsection{Fine-tuning of base models}
 
 For the primary cohort, we use LoRA~\cite{Hu} for parameter-efficient fine-tuning
 (PEFT). The weights of Llama 3.1 8B, Gemma 3 12B and Qwen 2.5 14B are loaded
@@ -210,9 +147,9 @@ four primary-cohort models use AdamW, a cosine learning-rate schedule,
 20 warmup steps, weight
 decay $0.01$, learning rate $1 \times 10^{-5}$ and two epochs. The context length
 is capped at 16,384 tokens. Loss is applied only to assistant-response tokens.
-the main article, Table~2 reports the settings that differ by model.
+Table~2 in the main article reports the settings that differ by model.
 The separate parent-grouped selection study in
-the main article, Section~5.3 uses a newly selected learning rate for Llama 3.1
+Section~5.3 of the main article uses a newly selected learning rate for Llama 3.1
 8B. It does not change the settings of the previous checkpoints.
 
 For the primary-cohort Gemma 3 27B model, \texttt{load\_in\_4bit=True} invokes the pinned Unsloth and
@@ -237,7 +174,7 @@ runs use 16-bit LoRA; the separate 16-bit run here is used as a precision contro
 \label{sec:compact-training}
 
 To assess whether a compact supervised model could offer a competitive alternative,
-we fine-tune GTE-ModernBERT\cite{gte-modernbert}, a cross-encoder with
+we fine-tune GTE-ModernBERT~\cite{gte-modernbert}, a cross-encoder with
 149,605,633 parameters. We initialize it from
 \texttt{Alibaba-NLP/gte-reranker-modernbert-base}, pinned to revision
 \texttt{204bdd4}. This checkpoint already has ranking supervision. We therefore
@@ -494,14 +431,14 @@ We obtain nDCG@$k$ by normalizing DCG@$k$ with the ideal DCG, in which
 relevant documents appear as early as possible. Unlike R@$k$, nDCG@$k$ rewards
 their position within the top $k$, not only their presence.
 
-\paragraph{nDCG\%@$k$ (CSFCube)} CSFCube assigns relevance scores from 0-3,
+\paragraph{nDCG\%@$k$ (CSFCube)} CSFCube assigns relevance scores from 0 to 3,
 and its candidate-pool size varies across queries. We evaluate each query over its
 released pool. Following \cite{Mysore}, we report nDCG\%@$k$: nDCG computed
 over the top $k\%$ of the pool rather than at one fixed rank. For a pool of size
 $n$, the cutoff is $\lfloor (k/100) \cdot n \rfloor$. Thus, nDCG\%@$20$ is
 equivalent to nDCG at rank 20 for a pool of 100 candidates, but to nDCG at rank
 30 for a pool of 150. We use the graded labels directly as DCG gains, without
-binarization and apply a logarithmic position discount. Normalization uses the
+binarization, and apply a logarithmic position discount. Normalization uses the
 ideal DCG obtained by sorting the pool's labels in descending order, which gives
 values in $[0,1]$.
 
@@ -826,106 +763,6 @@ LitSearch queries. The intervals are pointwise; $p_{\mathrm{H}}$ is corrected
 within the six local-baseline comparisons for each metric.}
 \label{tab:open-reranker-uncertainty}
 \end{table}
-
-% \FloatBarrier
-% \section{External GPT-4o reference comparison}
-% \label{supp:gpt4o}
-
-% To position the fine-tuned open-weight models against a strong closed-source
-% reference, we use the aggregate title-abstract results reported for GPT-4o by
-% Ajith et al.~\cite{Ajith}. We did not rerun GPT-4o. Our local artifacts do not
-% contain the exact candidate files, API model snapshot, prompt execution, or output
-% parser used to produce the published values. The comparison therefore matches the
-% reported retriever family and metrics, but it does not use a shared harness and is
-% not a significance-tested reranker comparison.
-
-% The LitSearch authors report average Broad R@$20$ and average Specific R@$5$,
-% but not a combined Avg.\ Specific R@20. They do provide results for both specific
-% subsets. We therefore calculate their query-weighted mean using the weighting
-% underlying the LitSearch values: $n=231$ inline-specific and $n=211$
-% author-specific queries. This gives 85.9\% for GPT-4o + GritLM and 74.9\% for
-% GPT-4o + BM25. We compute our Specific R@20 results in the same way.
-
-% \begin{table}[ht]
-% \centering
-% \renewcommand{\arraystretch}{1.1}
-% \setlength{\tabcolsep}{4pt}
-% \footnotesize
-% \begin{adjustbox}{max width=\linewidth}
-% \begin{tabular}{l c c c}
-% \hline
-% Configuration & Broad R@20 & Spec.\ R@5 & Spec.\ R@20 \\
-% \hline
-% \multicolumn{4}{l}{\textit{Closed-source reference~\cite{Ajith}}} \\
-% GPT-4o reranking (BM25)        & 59.9 & 68.0 & 74.9 \\
-% GPT-4o reranking (GritLM)      & 75.3 & 79.2 & 85.9 \\
-% \hline
-% \multicolumn{4}{l}{\textit{Matched BM25 first-stage (ours)}} \\
-% Llama 3.1 8B FT (BM25)         & 53.2 & 57.9 & 70.8 \\
-% Gemma 3 12B FT (BM25)          & 53.8 & 58.7 & 70.5 \\
-% Qwen 2.5 14B FT (BM25)         & 48.6 & 57.4 & 70.9 \\
-% Gemma 3 27B FT (BM25)          & 52.1 & 62.0 & 71.2 \\
-% \hline
-% \multicolumn{4}{l}{\textit{Matched GritLM first-stage (ours)}} \\
-% Llama 3.1 8B FT (GRIT)     & 70.4 & 72.3 & 82.6 \\
-% Gemma 3 12B FT (GRIT)      & 72.4 & 75.6 & 84.3 \\
-% Qwen 2.5 14B FT (GRIT)     & 73.3 & 75.5 & 83.3 \\
-% Gemma 3 27B FT (GRIT)      & 73.0 & 75.8 & \textbf{86.2} \\
-% \hline
-% \multicolumn{4}{l}{\textit{Strong open reranker baseline}} \\
-% RankZephyr (GRIT)          & 72.0 & 74.0 & 84.3 \\
-% RankZephyr (Qwen3)         & 74.6 & 74.4 & 83.9 \\
-% \hline
-% \multicolumn{4}{l}{\textit{Retrieval-only comparison}} \\
-% Qwen3-Embedding-8B & 69.7 & 74.2 & 84.3 \\
-% \hline
-% \multicolumn{4}{l}{\textit{Local end-to-end pipeline with stronger first stage}} \\
-% Gemma 3 27B FT (Qwen3)     & \textbf{77.6} & 76.9 & \textbf{86.3} \\
-% \hline
-% \end{tabular}
-% \end{adjustbox}
-% \caption{ Comparison with the closed-source GPT-4o reranker reported by~\cite{Ajith}. “Spec. R@20” is the query-weighted average
-% over inline-specific and author-specific queries, matching the breakdown used by LitSearch. The BM25 and GritLM rows
-% support matched first-stage reranker comparisons; RankZephyr is included as a strong open reranker baseline; the Qwen3 rows
-% are end-to-end pipeline comparisons with a stronger first-stage retriever. Bold marks values that match or exceed the strongest
-% GPT-4o configuration (GritLM first-stage).}
-% \label{tab:gpt4o}
-
-% \end{table}
-
-% Table~\ref{tab:gpt4o} separates retriever-matched reference positioning from
-% retrieval-only and end-to-end pipeline results. The controlled local comparison
-% with open rerankers appears instead in
-% the main article, Table~11. With BM25, GPT-4o remains ahead of all
-% fine-tuned open rerankers on the three reported metrics. When we match the
-% GritLM retriever family, fine-tuned Gemma 3 27B slightly exceeds the reported
-% GPT-4o Specific R@$20$ ($86.2\%$ vs.\ $85.9\%$), but remains lower on Broad
-% R@$20$ ($-2.3$ pp) and Specific R@$5$ ($-3.4$ pp). The open reranker is therefore
-% competitive at the broader R@$20$ cutoff, but it does not outperform GPT-4o
-% uniformly. We cannot compute confidence intervals or significance tests for this
-% cross-protocol comparison because per-query GPT-4o outputs are unavailable.
-
-% RankZephyr provides a second open reranking reference. On the controlled local
-% GritLM candidate pool, it obtains $72.0\%$ Broad R@$20$, $74.0\%$ Specific
-% R@$5$ and $84.3\%$ Specific R@$20$. These results place it close to the stronger
-% fine-tuned open rerankers, but below our Gemma 3 27B FT result on Specific
-% R@$20$.
-
-% The Qwen3 rows in Table~\ref{tab:gpt4o} and
-% Fig.~\ref{fig:gpt4o-comparison} require a different interpretation: they compare
-% complete pipelines. Fine-tuned Gemma 3 27B with the stronger Qwen3 retriever
-% achieves $77.6\%$ Broad R@$20$ and $86.3\%$ Specific R@$20$, exceeding the
-% reported GPT-4o + GritLM pipeline on both R@$20$ metrics. This difference reflects
-% the combined contribution of a stronger first-stage retriever and the fine-tuned
-% reranker. It is not a pure comparison of reranker quality against GPT-4o.
-
-% \begin{figure}[htbp]
-%   \centering
-%   \manuscriptfigure[width=\columnwidth]{fig_gpt4o_comparison.pdf}
-%   \caption{Comparison between the strongest closed-source GPT4o reranking baseline reported by LitSearch, Qwen3 retrieval
-% without reranking, and our best open end-to-end pipeline.}
-%   \label{fig:gpt4o-comparison}
-%   \end{figure}
 
 \FloatBarrier
 \section{Examples of top-rank precision failures}
@@ -1343,8 +1180,8 @@ and Gemma 3 12B.}
 \FloatBarrier
 \section{Exploratory Variants Excluded from the Final Pipeline}
 
-We explored three additional variants but did not retain them in the main training
-recipe. All three are relevant to the broader design space. However, they either
+We explored two additional variants but did not retain them in the main training
+recipe. Both are relevant to the broader design space. However, they either
 failed to improve the final system or produced gains that were too inconsistent for
 inclusion in the main pipeline. These experiments use the original-environment
 checkpoints, so we do not compare them numerically with the
@@ -1471,8 +1308,6 @@ positive across model-retriever combinations. We therefore exclude repetition
 from the final pipeline and treat it as a possible inference-time robustness
 technique. A more controlled study should measure latency, context length and
 output-parse failures.
-
-
 
 \FloatBarrier
 
