@@ -1,0 +1,34 @@
+EVAL SPLIT: dev
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: /home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.2300, 0.2646, 0.5739, 0.7615, 0.5902, 0.5887
+
+EVAL SPLIT: test
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: /home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1940, 0.2467, 0.5439, 0.7657, 0.5826, 0.5860
+

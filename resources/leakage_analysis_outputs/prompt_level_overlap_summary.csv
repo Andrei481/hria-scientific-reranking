@@ -1,0 +1,9 @@
+left_set,right_set,left_docs,right_docs,source_id_pairs,source_id_left_docs,source_id_right_docs,arxiv_id_pairs,arxiv_id_left_docs,arxiv_id_right_docs,doi_pairs,doi_left_docs,doi_right_docs,title_hash_pairs,title_hash_left_docs,title_hash_right_docs,text_hash_pairs,text_hash_left_docs,text_hash_right_docs
+DORIS actual prompt candidates,CSFCube eval docs,8480,4205,0,0,0,113,113,113,0,0,0,127,126,127,123,123,123
+DORIS actual prompt positive candidates,CSFCube eval docs,7216,4205,0,0,0,100,100,100,0,0,0,111,111,111,108,108,108
+DORIS actual prompt candidates,CSFCube query docs,8480,34,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1
+DORIS actual prompt candidates,CSFCube candidate docs,8480,4174,0,0,0,113,113,113,0,0,0,127,126,127,123,123,123
+DORIS actual prompt candidates,LitSearch local IDs,8480,48501,0,0,0,0,0,0,0,0,0,762,762,762,222,222,222
+DORIS actual prompt positive candidates,LitSearch local IDs,7216,48501,0,0,0,0,0,0,0,0,0,672,672,672,198,198,198
+DORIS actual prompt candidates,LitSearch text docs,8480,64183,0,0,0,0,0,0,0,0,0,779,775,779,227,226,227
+DORIS actual prompt positive candidates,LitSearch text docs,7216,64183,0,0,0,0,0,0,0,0,0,687,683,687,202,201,202

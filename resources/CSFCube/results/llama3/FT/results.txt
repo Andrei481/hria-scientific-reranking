@@ -1,0 +1,91 @@
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/     --experiment llama3.1_8b_finetune_vllm_full_list     --facet background
+EVAL SPLIT: dev
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1656, 0.2063, 0.3290, 0.6918, 0.4382, 0.4340
+
+EVAL SPLIT: test
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1460, 0.1938, 0.3100, 0.7066, 0.4428, 0.4475
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/     --experiment llama3.1_8b_finetune_vllm_full_list     --facet method
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0863, 0.1000, 0.4092, 0.5745, 0.3022, 0.2905
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0930, 0.1083, 0.4126, 0.5652, 0.2950, 0.2849
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/     --experiment llama3.1_8b_finetune_vllm_full_list     --facet result
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1250, 0.1875, 0.4419, 0.6446, 0.4092, 0.4084
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1193, 0.1938, 0.3964, 0.6279, 0.3798, 0.3944
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/     --experiment llama3.1_8b_finetune_vllm_full_list     --facet all
+EVAL SPLIT: dev
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1256, 0.1646, 0.3934, 0.6370, 0.3832, 0.3776
+
+EVAL SPLIT: test
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1192, 0.1650, 0.3742, 0.6314, 0.3709, 0.3739

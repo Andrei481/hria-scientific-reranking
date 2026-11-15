@@ -1,0 +1,5 @@
+left_set,right_set,left_queries,right_queries,exact_query_hash_pairs,exact_left_queries,exact_right_queries,near_query_pairs,near_left_queries,near_right_queries
+DORIS original queries,LitSearch queries,100,597,0,0,0,0,0,0
+DORIS aspect training queries,LitSearch queries,1465,597,0,0,0,0,0,0
+DORIS original queries,CSFCube title+facet queries,100,52,0,0,0,0,0,0
+DORIS aspect training queries,CSFCube title+facet queries,1465,52,0,0,0,0,0,0

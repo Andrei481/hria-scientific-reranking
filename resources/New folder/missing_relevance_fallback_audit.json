@@ -1,0 +1,54 @@
+{
+  "audit_name": "missing_relevance_fallback_audit",
+  "definition": "A pair is missing only when (abstract_id, aspect_id) is absent from the original Annotation.json lookup.",
+  "annotation_path": "DorisMAE\\Annotation.json",
+  "annotation_sha256": "720f62a097034b317781a7f2b2a5230cba0cfd68ef0b31d16ea3bb5a50731891",
+  "constructed_dataset_path": "HRIA\\reranking_dataset_doris_mae.jsonl",
+  "constructed_dataset_sha256": "3ce744c032aa6b8437de74f338b65351e06857c7ea6084622f194fb4733b6cbf",
+  "unique_annotation_keys": 165104,
+  "repeated_annotation_records": 40,
+  "conflicting_duplicate_keys": 2,
+  "conflicting_annotation_examples": [
+    {
+      "abstract_id": 179896,
+      "aspect_id": "83",
+      "first_score": 0,
+      "conflicting_score": 1
+    },
+    {
+      "abstract_id": 61785,
+      "aspect_id": "449",
+      "first_score": 0,
+      "conflicting_score": 1
+    }
+  ],
+  "all_constructed_rows": {
+    "rows": 1501,
+    "candidate_aspect_pairs": 164307,
+    "missing_pairs": 0,
+    "explicit_zero_pairs": 88623,
+    "positive_pairs": 75684,
+    "score_counts": {
+      "0": 88623,
+      "1": 56702,
+      "2": 18982
+    },
+    "missing_examples": [],
+    "score_mismatch_examples": []
+  },
+  "training_subset": {
+    "rows": 1498,
+    "candidate_aspect_pairs": 163969,
+    "missing_pairs": 0,
+    "explicit_zero_pairs": 88285,
+    "positive_pairs": 75684,
+    "score_counts": {
+      "0": 88285,
+      "1": 56702,
+      "2": 18982
+    },
+    "missing_examples": [],
+    "score_mismatch_examples": []
+  },
+  "fallback_triggered": false
+}

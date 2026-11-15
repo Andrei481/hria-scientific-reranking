@@ -1,0 +1,40 @@
+evaluation:
+  k_eval: 100
+
+ablations:
+  - id: standard_v3_k50_max_positives_5
+    variants_per_query: 3
+    k_train: 50
+    max_positives: 5
+  - id: v1_only_2
+    variants_per_query: 1
+    augmentation: only_2
+    k_train: 50
+    max_positives: 5
+  - id: no_augmentation_v1_any
+    variants_per_query: 1
+    augmentation: any
+    k_train: 50
+    max_positives: 5
+  - id: k_train_20
+    variants_per_query: 3
+    k_train: 20
+    max_positives: 5
+  - id: k_train_100
+    variants_per_query: 3
+    k_train: 100
+    max_positives: 5
+  - id: max_positives_1
+    variants_per_query: 3
+    k_train: 50
+    max_positives: 1
+  - id: max_positives_10
+    variants_per_query: 3
+    k_train: 50
+    max_positives: 10
+  - id: full_query_no_aspect
+    variants_per_query: 3
+    k_train: 50
+    max_positives: 5
+    query_representation: full_query
+    aspect_decomposition: false

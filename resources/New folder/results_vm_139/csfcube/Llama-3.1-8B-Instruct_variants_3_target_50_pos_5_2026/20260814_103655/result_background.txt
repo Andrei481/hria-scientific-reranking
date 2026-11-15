@@ -1,0 +1,18 @@
+EVAL SPLIT: dev
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5_2026/20260814_103655/test-pid2pool-csfcube-Llama-3.1-8B-Instruct_variants_3_target_50_pos_5_2026-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1920, 0.3063, 0.4269, 0.8103, 0.6180, 0.6121
+
+EVAL SPLIT: test
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5_2026/20260814_103655/test-pid2pool-csfcube-Llama-3.1-8B-Instruct_variants_3_target_50_pos_5_2026-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1619, 0.2906, 0.4174, 0.7773, 0.5802, 0.5689
+

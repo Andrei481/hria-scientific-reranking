@@ -1,0 +1,17 @@
+[
+  [
+    "DorisMAE/Corpus.json",
+    1017026208,
+    "large upstream data; SHA256=11c6796d25fa5c4b022c64932c85991710df5a5e1da4e3cfb2d3a84f74a36e4f"
+  ],
+  [
+    "DorisMAE/Annotation.json",
+    105799944,
+    "large upstream data; SHA256=720f62a097034b317781a7f2b2a5230cba0cfd68ef0b31d16ea3bb5a50731891"
+  ],
+  [
+    "DorisMAE/DORIS-MAE_dataset_v1.json",
+    1142989325,
+    "large upstream data; SHA256=2fb6838e784dc11fa9ad7289c6301daa2482102582c163eaafa1a8aab8eb403b"
+  ]
+]

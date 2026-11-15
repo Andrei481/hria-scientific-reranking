@@ -1,0 +1,53 @@
+{
+  "bm25": {
+    "R@5": 0.5606365159128978,
+    "nDCG@5": 0.4338596399064241,
+    "R@20": 0.673143495254048,
+    "nDCG@20": 0.4675450197302616,
+    "queries": 597,
+    "exact_permutation_rate": 0.0,
+    "format_only_rate": 1.0,
+    "fallback_rate": 0.0,
+    "missing_ids_rate": 1.0,
+    "mean_missing_ids": 49.16247906197655,
+    "duplicate_ids_rate": 0.0016750418760469012,
+    "mean_duplicate_ids": 0.06197654941373534,
+    "invalid_ids_rate": 0.0,
+    "mean_invalid_ids": 0.0,
+    "length_finish_rate": 0.0
+  },
+  "grit": {
+    "R@5": 0.5896705750977107,
+    "nDCG@5": 0.45085857473020574,
+    "R@20": 0.805499720826354,
+    "nDCG@20": 0.5167284340622429,
+    "queries": 597,
+    "exact_permutation_rate": 0.0,
+    "format_only_rate": 1.0,
+    "fallback_rate": 0.0,
+    "missing_ids_rate": 1.0,
+    "mean_missing_ids": 49.289782244556115,
+    "duplicate_ids_rate": 0.0033500837520938024,
+    "mean_duplicate_ids": 0.1490787269681742,
+    "invalid_ids_rate": 0.0,
+    "mean_invalid_ids": 0.0,
+    "length_finish_rate": 0.0
+  },
+  "qwen3": {
+    "R@5": 0.6206588498045784,
+    "nDCG@5": 0.4646201234637167,
+    "R@20": 0.7982691233947515,
+    "nDCG@20": 0.5169991908813754,
+    "queries": 597,
+    "exact_permutation_rate": 0.0,
+    "format_only_rate": 1.0,
+    "fallback_rate": 0.0,
+    "missing_ids_rate": 1.0,
+    "mean_missing_ids": 49.13400335008375,
+    "duplicate_ids_rate": 0.0,
+    "mean_duplicate_ids": 0.0,
+    "invalid_ids_rate": 0.0,
+    "mean_invalid_ids": 0.0,
+    "length_finish_rate": 0.0
+  }
+}

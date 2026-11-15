@@ -1,0 +1,35 @@
+{
+  "source_files": {
+    "frozen_lists": {
+      "relative_path": "New folder\\modernbert_supervised_baseline\\modernbert_supervised_baseline\\dorismae_listwise_4494.jsonl",
+      "sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f"
+    },
+    "original_parents": {
+      "relative_path": "DorisMAE\\Query.json",
+      "sha256": "2794e23cf3f62515d2f5c33ff54c2278ade1e6e9e6f50adf24a97aec52eda3d4"
+    },
+    "aspects": {
+      "relative_path": "HRIA\\reranking_dataset_doris_mae.jsonl",
+      "sha256": "3ce744c032aa6b8437de74f338b65351e06857c7ea6084622f194fb4733b6cbf"
+    }
+  },
+  "files": {
+    "lists.jsonl.gz": "e336ede6e8080bb8a9cb8eaf39d6f8ef34b1f728dba7e72ce0a434be077014ee",
+    "documents.json.gz": "6e7edfcb50b735a5364ea32fa31ea8797b7abbff1b1b235073e66d4947779af4",
+    "parents.json": "c05745b1f837a2e259bfc9a33867178d475af2b292577052d3ab9cb5a2cfdbd8"
+  },
+  "audit": {
+    "examples": 4494,
+    "parents": 100,
+    "aspects": 1498,
+    "list_size_histogram": {
+      "50": 4312,
+      "51": 182
+    },
+    "lists_above_five_positives": 1392,
+    "maximum_positives": 47
+  },
+  "unique_documents": 8477,
+  "parent_mapping": "aspect_id -> verified query, category, candidate grades -> unique full parent pool",
+  "cohort": "new selection-sensitivity cohort using retained frozen lists; historical checkpoint input identity not established"
+}

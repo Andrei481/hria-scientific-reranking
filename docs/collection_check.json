@@ -1,0 +1,13 @@
+{
+  "files": 1421,
+  "MiB": 691.8,
+  "hash_mismatches": [],
+  "guide_missing_links": [],
+  "analysis_configs_missing_inputs": [],
+  "notebooks_with_outputs": [],
+  "credential_pattern_files": [],
+  "python_syntax_issues": [],
+  "largest_file_MiB": 81.3,
+  "validation_scope": "Packaging checks only: source/copy hashes, gzip recovery, guide links, statistical input presence, cleared notebook outputs, credential-pattern scan and Python syntax. No training or evaluation rerun.",
+  "ignored_intended_resources": []
+}

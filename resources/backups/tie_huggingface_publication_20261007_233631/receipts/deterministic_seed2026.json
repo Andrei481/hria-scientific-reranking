@@ -1,0 +1,89 @@
+{
+  "commit": "b5508f87a5bcad546c9e147be8639898024a6ff1",
+  "files": {
+    "LICENSE": {
+      "sha256": "64e1b2889b7892e6bbe7a7ed5bfe6ff793c61f9d584345f8f41cf9f5cb30a369",
+      "size": 7627
+    },
+    "NOTICE": {
+      "sha256": "9b4ce1898c6fdbefd6d0ca4d40a55cb994ed86ae3fd56166866b988bee7a6464",
+      "size": 116
+    },
+    "README.md": {
+      "sha256": "b3d870b164deb20a6c9ca2f0ae3497777bc72ab7ec38dfffdabf4093b1629a89",
+      "size": 4558
+    },
+    "USE_POLICY.md": {
+      "sha256": "a568f2ebc73cec3fd74ba2afd992d4e945a8c7a9d851f9b66163aac834b7b859",
+      "size": 4691
+    },
+    "adapter_config.json": {
+      "sha256": "fb64263a30003933d94399fc3e27760dec2d1a98cfc7378b2fe97d41228eb92b",
+      "size": 1289
+    },
+    "adapter_model.safetensors": {
+      "sha256": "38301691f18a2f2260d43207b35161deb644964a06400d315a6c5e265f7776d3",
+      "size": 1342238560
+    },
+    "chat_template.jinja": {
+      "sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+      "size": 4614
+    },
+    "evaluation_summary.json": {
+      "sha256": "61d177c2983bfabcfeee6c96c1b1c7a609d20f8c6cd2cffd2c74cb496227d34b",
+      "size": 1803
+    },
+    "provenance/adapter_config.original.json": {
+      "sha256": "7297154318620e1fcb0bd428b0f8f28554ec44b6ce4459200961482e1949e1db",
+      "size": 1250
+    },
+    "provenance/evaluation_complete.json": {
+      "sha256": "c8e7d79c3fd18fe6f2d5a10ae60abffbbe01fc1c4152272675899b8377fd6ca2",
+      "size": 352
+    },
+    "provenance/evaluation_protocol.json": {
+      "sha256": "989716c89b18c21c75b5ad2f2bbb1319a45f65f4a04526ea0266a772bd8bab63",
+      "size": 1175
+    },
+    "provenance/preflight.json": {
+      "sha256": "8a8f30b0fd7a27752bb821716ebd13c1635b598140d7c81c2ca411e469c070ca",
+      "size": 2612
+    },
+    "provenance/training_manifest.json": {
+      "sha256": "aa0eeb33221d24caa8999f3e4d2f219f3e27fefd909070eeea009eda081c7d34",
+      "size": 5487
+    },
+    "publication_manifest.json": {
+      "sha256": "b709593e4768b46d9585d3d35d1a20d989491fd00059648fbc58f778cb1446f0",
+      "size": 3227
+    },
+    "tokenizer.json": {
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "size": 17209920
+    },
+    "tokenizer_config.json": {
+      "sha256": "e796b2ab5afcac53cae73722e219858096a5d589fcf8ad7286762426f8035337",
+      "size": 325
+    },
+    "tokenizer_v4/chat_template.jinja": {
+      "sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+      "size": 4614
+    },
+    "tokenizer_v4/compatibility_check.json": {
+      "sha256": "c8d2d631d9fb33b847aa4f04e2f045c31c5c847ad777d7e673ded316797ca4c9",
+      "size": 497
+    },
+    "tokenizer_v4/tokenizer.json": {
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "size": 17209920
+    },
+    "tokenizer_v4/tokenizer_config.json": {
+      "sha256": "75e56ed831874fb114e1cd5ca89413c39abe3a9f473ff6e196e0ef94138d81be",
+      "size": 331
+    }
+  },
+  "repo_id": "Andrei48155/Llama-3.1-8B-DORIS-tie-deterministic-seed2026",
+  "status": "public_downloads_sha256_verified",
+  "url": "https://huggingface.co/Andrei48155/Llama-3.1-8B-DORIS-tie-deterministic-seed2026/tree/b5508f87a5bcad546c9e147be8639898024a6ff1",
+  "verified_at": "2026-10-07T20:29:53.041245+00:00"
+}

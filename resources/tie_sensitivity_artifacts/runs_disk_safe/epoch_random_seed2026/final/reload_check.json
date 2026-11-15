@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checkpoint": "/home/andreij/tie_sensitivity_artifacts/runs_disk_safe/epoch_random_seed2026/final",
+  "device": "cuda",
+  "unsloth_imported": false,
+  "torch": "2.10.0+cu128",
+  "transformers": "5.5.0",
+  "logits_shape": [
+    1,
+    7,
+    128256
+  ],
+  "scope": "native Transformers reload and finite logits; not equivalence or ranking quality"
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "selection": {
+    "match_types": [
+      "text_hash"
+    ],
+    "left_set": "DORIS actual prompt candidates",
+    "right_set": "LitSearch text docs"
+  },
+  "configuration": {
+    "source_depth": 200,
+    "target_k": 100,
+    "exclude_gold_overlap": true,
+    "dataset_revision": "9573fb2"
+  },
+  "counts": {
+    "input_queries": 597,
+    "kept_queries": 595,
+    "excluded_queries": 2,
+    "blacklisted_doc_ids": 227,
+    "removed_retrieved_mentions": 831,
+    "source_depth": 200,
+    "target_k": 100
+  },
+  "files": {
+    "input": {
+      "path": "results/retrieval/LitSearch.title_abstract.bm25.jsonl",
+      "sha256": "b0d1e21b71005d6f4f71d64f7ce3c6059efcb4ac2e1a1fa8cea7f8b94ec06f67"
+    },
+    "overlap_details": {
+      "path": "leakage_analysis_outputs/prompt_level_overlap_details.csv",
+      "sha256": "a2d9b9d96ae7da85b850a9189d41d90b9ebaf0a369a2ca15292c1dbb92f92c32"
+    },
+    "output": {
+      "path": "results/litsearch_document_disjoint/strict_rerun/filtered_retrieval_inputs/LitSearch.title_abstract.bm25.document_disjoint.jsonl",
+      "sha256": "b71f3784a027602356e30c0f240a22e4e02d4e0cb0e29da8ed738db2f74a3f4a"
+    },
+    "excluded": {
+      "path": "results/litsearch_document_disjoint/strict_rerun/filtered_retrieval_inputs/LitSearch.title_abstract.bm25.excluded_overlap_queries.jsonl",
+      "sha256": "39bf4468ee602f496f8bd9f9c58162f2cdecb9e40543c6359d65f9a54ebbf90f"
+    }
+  }
+}

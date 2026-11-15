@@ -1,0 +1,8 @@
+{
+  "protocol_sha256": "63e45f4fa737e4195fbcef46349a484c948e1c46938fbca0e62fb81f2b31e288",
+  "results": {
+    "bm25": "ac3e1efe4b9fadbb7c8838943acb13a0ea9bb92c3b1282bde8918db442dbaf0d",
+    "grit": "6e1d5c61870a3b093f0b60f263670d29afb4f903b04a0736cd2450aba86d8420",
+    "qwen3": "2d1bcfcf920172d1a61336dc35a3c25759ffd92c39fb4d31560044c3aaa60812"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "experiment": "gte_modernbert_zero_shot_and_dorismae_litsearch_frozen_top100",
+  "model_variants": {
+    "zero_shot": {
+      "source": "Alibaba-NLP/gte-reranker-modernbert-base",
+      "revision": "204bdd4d405882a9e8ca9452c223fc49f02e8451",
+      "output_slug": "gte_modernbert_zeroshot"
+    },
+    "dorismae_adapted": {
+      "source": "/home/andreij/ranking_pretrained_compact_baseline/models/gte_modernbert_dorismae_lambda_seed3407/final",
+      "revision": null,
+      "output_slug": "gte_modernbert_dorismae"
+    }
+  },
+  "dataset_id": "princeton-nlp/LitSearch",
+  "dataset_revision": "9573fb2",
+  "rerank_depth": 100,
+  "max_length": 1024,
+  "predict_batch_size": 64,
+  "runs": {
+    "zero_shot": {
+      "bm25": {
+        "input": "/home/andreij/LitSearch.title_abstract.bm25.jsonl",
+        "input_sha256": "b0d1e21b71005d6f4f71d64f7ce3c6059efcb4ac2e1a1fa8cea7f8b94ec06f67",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.bm25.gte_modernbert_zeroshot.reranked.jsonl",
+        "output_sha256": "5aa0588e7795e97bf3ac7721dc6dd22c7bc764cafdcf77cc9bee8bd64817c316",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 264.3653433190193,
+        "queries_per_second": 2.2582385138114653,
+        "documents_per_second": 225.82385138114654,
+        "peak_vram": 4.314453125
+      },
+      "grit": {
+        "input": "/home/andreij/LitSearch.title_abstract.grit.jsonl",
+        "input_sha256": "25508122e61dd0454a8bc1af2e685a9abc6c94266473d30e9699797be8aba55e",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.grit.gte_modernbert_zeroshot.reranked.jsonl",
+        "output_sha256": "47351aecacbdb25dc23e6ac622fbdc585737dbbf70f6f158d445705eaf8edeb2",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 273.5903118730057,
+        "queries_per_second": 2.1820948114460776,
+        "documents_per_second": 218.2094811446078,
+        "peak_vram": 4.314453125
+      },
+      "qwen3": {
+        "input": "/home/andreij/LitSearch.title_abstract.qwen3.jsonl",
+        "input_sha256": "41563d0dc3fc51701fc76be39dd54d7548b85142521e18c3ad5e73c5b85d0aea",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.qwen3.gte_modernbert_zeroshot.reranked.jsonl",
+        "output_sha256": "c1872be0aa7be9b784de91954bbe1e30edfb63e75f0d94c5e4c889ab3a9d49ed",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 248.79805098404177,
+        "queries_per_second": 2.39953648205344,
+        "documents_per_second": 239.953648205344,
+        "peak_vram": 4.314453125
+      }
+    },
+    "dorismae_adapted": {
+      "bm25": {
+        "input": "/home/andreij/LitSearch.title_abstract.bm25.jsonl",
+        "input_sha256": "b0d1e21b71005d6f4f71d64f7ce3c6059efcb4ac2e1a1fa8cea7f8b94ec06f67",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.bm25.gte_modernbert_dorismae.reranked.jsonl",
+        "output_sha256": "da64acb3785228741d470576f1ef94e1e209c0da6db215edde858c2582c05bb8",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 106.34441309398971,
+        "queries_per_second": 5.613835110193868,
+        "documents_per_second": 561.3835110193868,
+        "peak_vram": 2.623046875
+      },
+      "grit": {
+        "input": "/home/andreij/LitSearch.title_abstract.grit.jsonl",
+        "input_sha256": "25508122e61dd0454a8bc1af2e685a9abc6c94266473d30e9699797be8aba55e",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.grit.gte_modernbert_dorismae.reranked.jsonl",
+        "output_sha256": "a12916026a8ec78f8dbf308ec15d734b813232309ed8941272c6c0b51101799f",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 95.205149439862,
+        "queries_per_second": 6.270669218129903,
+        "documents_per_second": 627.0669218129902,
+        "peak_vram": 2.623046875
+      },
+      "qwen3": {
+        "input": "/home/andreij/LitSearch.title_abstract.qwen3.jsonl",
+        "input_sha256": "41563d0dc3fc51701fc76be39dd54d7548b85142521e18c3ad5e73c5b85d0aea",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/litsearch/LitSearch.title_abstract.qwen3.gte_modernbert_dorismae.reranked.jsonl",
+        "output_sha256": "e12fae0fe1fc7cc0fb8c635c4c4d9e8607a35c889383a47b3115d925e5bdcc6a",
+        "queries": 597,
+        "documents": 59700,
+        "elapsed_seconds": 84.25389406108297,
+        "queries_per_second": 7.085725908017769,
+        "documents_per_second": 708.5725908017769,
+        "peak_vram": 2.623046875
+      }
+    }
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "1.26.4",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB"
+    ]
+  }
+}

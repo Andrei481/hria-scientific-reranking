@@ -1,0 +1,31 @@
+python ./evaluate_results.py --input results/repeat/20260218_181123/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           72.93           56.72           53.14           48.03
+inline_specific              231           79.65           69.70           62.86           60.03
+author_broad                  35           85.71           71.43           62.49           57.56
+author_specific              211           91.47           84.36           76.27           74.20
+broad_avg                    155           75.82           60.04           55.25           50.18
+specific_avg                 442           85.29           76.70           69.26           66.79
+overall_avg                  597           82.83           72.37           65.63           62.48
+
+Saved JSON summary to: results/repeat/20260218_181123/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python ./evaluate_results.py --input results/repeat/20260218_181123/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           74.11           57.25           52.38           47.29
+inline_specific              231           80.09           67.97           63.45           59.78
+author_broad                  35           82.86           65.71           65.75           60.75
+author_specific              211           89.57           83.41           76.24           74.39
+broad_avg                    155           76.09           59.16           55.40           50.33
+specific_avg                 442           84.62           75.34           69.56           66.75
+overall_avg                  597           82.40           71.14           65.88           62.49
+
+Saved JSON summary to: results/repeat/20260218_181123/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json

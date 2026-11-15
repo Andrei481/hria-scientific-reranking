@@ -1,0 +1,56 @@
+{
+  "expected_contrasts_per_family_additions": {
+    "litsearch_compact_supervised_baseline": 3,
+    "csfcube_compact_supervised_baseline": 1
+  },
+  "contrasts": [
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_compact_supervised_baseline",
+      "comparison": "Gemma 3 27B FT minus ModernBERT supervised | BM25",
+      "model": "Gemma 3 27B versus ModernBERT-base",
+      "retriever": "BM25",
+      "reference_label": "ModernBERT supervised",
+      "candidate_label": "Gemma 3 27B FT",
+      "reference": "artifacts/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.bm25.modernbert.reranked.jsonl",
+      "candidate": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.bm25.reranked.jsonl",
+      "expected_cases": 597
+    },
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_compact_supervised_baseline",
+      "comparison": "Gemma 3 27B FT minus ModernBERT supervised | GRIT",
+      "model": "Gemma 3 27B versus ModernBERT-base",
+      "retriever": "GRIT",
+      "reference_label": "ModernBERT supervised",
+      "candidate_label": "Gemma 3 27B FT",
+      "reference": "artifacts/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.grit.modernbert.reranked.jsonl",
+      "candidate": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.grit.reranked.jsonl",
+      "expected_cases": 597
+    },
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_compact_supervised_baseline",
+      "comparison": "Gemma 3 27B FT minus ModernBERT supervised | Qwen3",
+      "model": "Gemma 3 27B versus ModernBERT-base",
+      "retriever": "Qwen3",
+      "reference_label": "ModernBERT supervised",
+      "candidate_label": "Gemma 3 27B FT",
+      "reference": "artifacts/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.qwen3.modernbert.reranked.jsonl",
+      "candidate": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl",
+      "expected_cases": 597
+    },
+    {
+      "dataset": "csfcube",
+      "family": "csfcube_compact_supervised_baseline",
+      "comparison": "Gemma 3 27B FT minus ModernBERT supervised | pooled 50 cases",
+      "model": "Gemma 3 27B versus ModernBERT-base",
+      "reference_label": "ModernBERT supervised",
+      "candidate_label": "Gemma 3 27B FT",
+      "reference": "artifacts/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-all-perq.csv",
+      "candidate": "CSFCube/eval_scripts/runs_gemma3_27b_finetune_vllm_full_list/test-pid2pool-csfcube-gemma3-27b-finetune-vllm-full-list-all-perq.csv",
+      "expected_cases": 50,
+      "expected_clusters": 34
+    }
+  ]
+}

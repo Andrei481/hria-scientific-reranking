@@ -1,0 +1,79 @@
+{
+  "inline_broad": {
+    "count": 0,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "inline_specific": {
+    "count": 2,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "author_broad": {
+    "count": 0,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "author_specific": {
+    "count": 0,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "broad_avg": {
+    "count": 0,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "specific_avg": {
+    "count": 2,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  },
+  "overall_avg": {
+    "count": 2,
+    "R@20": 0.0,
+    "R@5": 0.0,
+    "NDCG@20": 0.0,
+    "NDCG@5": 0.0,
+    "R@20_percent": 0.0,
+    "R@5_percent": 0.0,
+    "NDCG@20_percent": 0.0,
+    "NDCG@5_percent": 0.0
+  }
+}

@@ -1,0 +1,217 @@
+policy,seed,retriever,metric,value,unit
+deterministic,42,bm25,R@5,55.03070910106086,percent
+deterministic,42,bm25,R@20,67.98994974874371,percent
+deterministic,42,bm25,nDCG@20,50.21412285031438,percent
+deterministic,42,bm25,exact_permutation,69.84924623115577,percent
+deterministic,42,bm25,fallback,0.0,percent
+deterministic,42,bm25,missing_id_rate,27.63819095477387,percent
+deterministic,42,bm25,duplicate_id_rate,4.355108877721943,percent
+deterministic,42,bm25,invalid_id_rate,0.6700167504187605,percent
+deterministic,42,bm25,mean_missing_ids,0.8107202680067002,candidate count
+deterministic,42,grit,R@5,69.80457844779453,percent
+deterministic,42,grit,R@20,81.68900055834729,percent
+deterministic,42,grit,nDCG@20,64.71950861488845,percent
+deterministic,42,grit,exact_permutation,47.73869346733669,percent
+deterministic,42,grit,fallback,0.0,percent
+deterministic,42,grit,missing_id_rate,46.56616415410385,percent
+deterministic,42,grit,duplicate_id_rate,10.552763819095476,percent
+deterministic,42,grit,invalid_id_rate,1.8425460636515913,percent
+deterministic,42,grit,mean_missing_ids,1.4773869346733668,candidate count
+deterministic,42,qwen3,R@5,69.68732551647125,percent
+deterministic,42,qwen3,R@20,80.69793411501955,percent
+deterministic,42,qwen3,nDCG@20,64.80635449943613,percent
+deterministic,42,qwen3,exact_permutation,46.733668341708544,percent
+deterministic,42,qwen3,fallback,0.0,percent
+deterministic,42,qwen3,missing_id_rate,48.073701842546065,percent
+deterministic,42,qwen3,duplicate_id_rate,10.050251256281408,percent
+deterministic,42,qwen3,invalid_id_rate,2.512562814070352,percent
+deterministic,42,qwen3,mean_missing_ids,1.5795644891122278,candidate count
+deterministic,42,retriever_average,R@5,64.84087102177554,percent
+deterministic,42,retriever_average,R@20,76.79229480737018,percent
+deterministic,42,retriever_average,nDCG@20,59.91332865487965,percent
+deterministic,42,retriever_average,exact_permutation,54.773869346733676,percent
+deterministic,42,retriever_average,fallback,0.0,percent
+deterministic,42,retriever_average,missing_id_rate,40.75935231714126,percent
+deterministic,42,retriever_average,duplicate_id_rate,8.319374651032941,percent
+deterministic,42,retriever_average,invalid_id_rate,1.675041876046901,percent
+deterministic,42,retriever_average,mean_missing_ids,1.2892238972640984,candidate count
+deterministic,2026,bm25,R@5,54.44444444444444,percent
+deterministic,2026,bm25,R@20,66.64991624790619,percent
+deterministic,2026,bm25,nDCG@20,49.62154346019151,percent
+deterministic,2026,bm25,exact_permutation,68.67671691792296,percent
+deterministic,2026,bm25,fallback,0.0,percent
+deterministic,2026,bm25,missing_id_rate,30.15075376884422,percent
+deterministic,2026,bm25,duplicate_id_rate,2.680067001675042,percent
+deterministic,2026,bm25,invalid_id_rate,0.16750418760469013,percent
+deterministic,2026,bm25,mean_missing_ids,1.1591289782244556,candidate count
+deterministic,2026,grit,R@5,69.72082635399218,percent
+deterministic,2026,grit,R@20,83.25237297599107,percent
+deterministic,2026,grit,nDCG@20,64.96532620211333,percent
+deterministic,2026,grit,exact_permutation,47.90619765494137,percent
+deterministic,2026,grit,fallback,0.0,percent
+deterministic,2026,grit,missing_id_rate,48.24120603015075,percent
+deterministic,2026,grit,duplicate_id_rate,7.705192629815745,percent
+deterministic,2026,grit,invalid_id_rate,0.6700167504187605,percent
+deterministic,2026,grit,mean_missing_ids,1.3651591289782246,candidate count
+deterministic,2026,qwen3,R@5,69.9106644332775,percent
+deterministic,2026,qwen3,R@20,81.75879396984925,percent
+deterministic,2026,qwen3,nDCG@20,65.09297173439519,percent
+deterministic,2026,qwen3,exact_permutation,47.06867671691792,percent
+deterministic,2026,qwen3,fallback,0.0,percent
+deterministic,2026,qwen3,missing_id_rate,48.91122278056951,percent
+deterministic,2026,qwen3,duplicate_id_rate,8.040201005025125,percent
+deterministic,2026,qwen3,invalid_id_rate,0.33500837520938026,percent
+deterministic,2026,qwen3,mean_missing_ids,1.5728643216080402,candidate count
+deterministic,2026,retriever_average,R@5,64.69197841057137,percent
+deterministic,2026,retriever_average,R@20,77.22036106458216,percent
+deterministic,2026,retriever_average,nDCG@20,59.893280465566676,percent
+deterministic,2026,retriever_average,exact_permutation,54.55053042992741,percent
+deterministic,2026,retriever_average,fallback,0.0,percent
+deterministic,2026,retriever_average,missing_id_rate,42.434394193188155,percent
+deterministic,2026,retriever_average,duplicate_id_rate,6.141820212171971,percent
+deterministic,2026,retriever_average,invalid_id_rate,0.3908431044109435,percent
+deterministic,2026,retriever_average,mean_missing_ids,1.36571747627024,candidate count
+deterministic,3407,bm25,R@5,54.02568397543271,percent
+deterministic,3407,bm25,R@20,66.98492462311557,percent
+deterministic,3407,bm25,nDCG@20,49.841150179846814,percent
+deterministic,3407,bm25,exact_permutation,63.31658291457286,percent
+deterministic,3407,bm25,fallback,0.0,percent
+deterministic,3407,bm25,missing_id_rate,34.84087102177554,percent
+deterministic,3407,bm25,duplicate_id_rate,4.355108877721943,percent
+deterministic,3407,bm25,invalid_id_rate,0.6700167504187605,percent
+deterministic,3407,bm25,mean_missing_ids,1.2680067001675042,candidate count
+deterministic,3407,grit,R@5,69.80457844779453,percent
+deterministic,3407,grit,R@20,82.77777777777779,percent
+deterministic,3407,grit,nDCG@20,64.677008252737,percent
+deterministic,3407,grit,exact_permutation,41.87604690117253,percent
+deterministic,3407,grit,fallback,0.0,percent
+deterministic,3407,grit,missing_id_rate,53.936348408710224,percent
+deterministic,3407,grit,duplicate_id_rate,9.547738693467336,percent
+deterministic,3407,grit,invalid_id_rate,1.0050251256281406,percent
+deterministic,3407,grit,mean_missing_ids,1.7068676716917923,candidate count
+deterministic,3407,qwen3,R@5,70.16192071468453,percent
+deterministic,3407,qwen3,R@20,80.36292573981017,percent
+deterministic,3407,qwen3,nDCG@20,64.624911235626,percent
+deterministic,3407,qwen3,exact_permutation,40.871021775544385,percent
+deterministic,3407,qwen3,fallback,0.0,percent
+deterministic,3407,qwen3,missing_id_rate,53.09882747068677,percent
+deterministic,3407,qwen3,duplicate_id_rate,12.227805695142377,percent
+deterministic,3407,qwen3,invalid_id_rate,0.33500837520938026,percent
+deterministic,3407,qwen3,mean_missing_ids,1.8542713567839195,candidate count
+deterministic,3407,retriever_average,R@5,64.66406104597058,percent
+deterministic,3407,retriever_average,R@20,76.70854271356784,percent
+deterministic,3407,retriever_average,nDCG@20,59.71435655606994,percent
+deterministic,3407,retriever_average,exact_permutation,48.687883863763254,percent
+deterministic,3407,retriever_average,fallback,0.0,percent
+deterministic,3407,retriever_average,missing_id_rate,47.29201563372417,percent
+deterministic,3407,retriever_average,duplicate_id_rate,8.710217755443885,percent
+deterministic,3407,retriever_average,invalid_id_rate,0.6700167504187605,percent
+deterministic,3407,retriever_average,mean_missing_ids,1.609715242881072,candidate count
+epoch_random,42,bm25,R@5,55.97989949748744,percent
+epoch_random,42,bm25,R@20,66.9570072585148,percent
+epoch_random,42,bm25,nDCG@20,47.30499017076216,percent
+epoch_random,42,bm25,exact_permutation,0.16750418760469013,percent
+epoch_random,42,bm25,fallback,0.0,percent
+epoch_random,42,bm25,missing_id_rate,98.99497487437185,percent
+epoch_random,42,bm25,duplicate_id_rate,12.39530988274707,percent
+epoch_random,42,bm25,invalid_id_rate,0.0,percent
+epoch_random,42,bm25,mean_missing_ids,40.835845896147404,candidate count
+epoch_random,42,grit,R@5,61.33165829145728,percent
+epoch_random,42,grit,R@20,79.9860413176996,percent
+epoch_random,42,grit,nDCG@20,52.63083697488465,percent
+epoch_random,42,grit,exact_permutation,0.0,percent
+epoch_random,42,grit,fallback,0.0,percent
+epoch_random,42,grit,missing_id_rate,99.49748743718592,percent
+epoch_random,42,grit,duplicate_id_rate,18.592964824120603,percent
+epoch_random,42,grit,invalid_id_rate,0.0,percent
+epoch_random,42,grit,mean_missing_ids,37.731993299832496,candidate count
+epoch_random,42,qwen3,R@5,60.9212730318258,percent
+epoch_random,42,qwen3,R@20,78.79955332216639,percent
+epoch_random,42,qwen3,nDCG@20,52.664084793308874,percent
+epoch_random,42,qwen3,exact_permutation,0.5025125628140703,percent
+epoch_random,42,qwen3,fallback,0.0,percent
+epoch_random,42,qwen3,missing_id_rate,98.49246231155779,percent
+epoch_random,42,qwen3,duplicate_id_rate,16.582914572864322,percent
+epoch_random,42,qwen3,invalid_id_rate,0.0,percent
+epoch_random,42,qwen3,mean_missing_ids,37.72026800670017,candidate count
+epoch_random,42,retriever_average,R@5,59.410943606923496,percent
+epoch_random,42,retriever_average,R@20,75.24753396612692,percent
+epoch_random,42,retriever_average,nDCG@20,50.86663731298523,percent
+epoch_random,42,retriever_average,exact_permutation,0.2233389168062535,percent
+epoch_random,42,retriever_average,fallback,0.0,percent
+epoch_random,42,retriever_average,missing_id_rate,98.99497487437185,percent
+epoch_random,42,retriever_average,duplicate_id_rate,15.857063093243994,percent
+epoch_random,42,retriever_average,invalid_id_rate,0.0,percent
+epoch_random,42,retriever_average,mean_missing_ids,38.76270240089336,candidate count
+epoch_random,2026,bm25,R@5,56.063651591289776,percent
+epoch_random,2026,bm25,R@20,67.31434952540481,percent
+epoch_random,2026,bm25,nDCG@20,46.754501973026215,percent
+epoch_random,2026,bm25,exact_permutation,0.0,percent
+epoch_random,2026,bm25,fallback,0.0,percent
+epoch_random,2026,bm25,missing_id_rate,100.0,percent
+epoch_random,2026,bm25,duplicate_id_rate,0.16750418760469013,percent
+epoch_random,2026,bm25,invalid_id_rate,0.0,percent
+epoch_random,2026,bm25,mean_missing_ids,49.16247906197655,candidate count
+epoch_random,2026,grit,R@5,58.96705750977107,percent
+epoch_random,2026,grit,R@20,80.5499720826354,percent
+epoch_random,2026,grit,nDCG@20,51.67284340622431,percent
+epoch_random,2026,grit,exact_permutation,0.0,percent
+epoch_random,2026,grit,fallback,0.0,percent
+epoch_random,2026,grit,missing_id_rate,100.0,percent
+epoch_random,2026,grit,duplicate_id_rate,0.33500837520938026,percent
+epoch_random,2026,grit,invalid_id_rate,0.0,percent
+epoch_random,2026,grit,mean_missing_ids,49.289782244556115,candidate count
+epoch_random,2026,qwen3,R@5,62.06588498045784,percent
+epoch_random,2026,qwen3,R@20,79.82691233947517,percent
+epoch_random,2026,qwen3,nDCG@20,51.69991908813757,percent
+epoch_random,2026,qwen3,exact_permutation,0.0,percent
+epoch_random,2026,qwen3,fallback,0.0,percent
+epoch_random,2026,qwen3,missing_id_rate,100.0,percent
+epoch_random,2026,qwen3,duplicate_id_rate,0.0,percent
+epoch_random,2026,qwen3,invalid_id_rate,0.0,percent
+epoch_random,2026,qwen3,mean_missing_ids,49.13400335008375,candidate count
+epoch_random,2026,retriever_average,R@5,59.032198027172896,percent
+epoch_random,2026,retriever_average,R@20,75.89707798250512,percent
+epoch_random,2026,retriever_average,nDCG@20,50.04242148912936,percent
+epoch_random,2026,retriever_average,exact_permutation,0.0,percent
+epoch_random,2026,retriever_average,fallback,0.0,percent
+epoch_random,2026,retriever_average,missing_id_rate,100.0,percent
+epoch_random,2026,retriever_average,duplicate_id_rate,0.16750418760469013,percent
+epoch_random,2026,retriever_average,invalid_id_rate,0.0,percent
+epoch_random,2026,retriever_average,mean_missing_ids,49.195421552205474,candidate count
+epoch_random,3407,bm25,R@5,56.45449469570072,percent
+epoch_random,3407,bm25,R@20,67.34785036292574,percent
+epoch_random,3407,bm25,nDCG@20,49.15256192276126,percent
+epoch_random,3407,bm25,exact_permutation,0.5025125628140703,percent
+epoch_random,3407,bm25,fallback,0.0,percent
+epoch_random,3407,bm25,missing_id_rate,98.65996649916248,percent
+epoch_random,3407,bm25,duplicate_id_rate,68.67671691792296,percent
+epoch_random,3407,bm25,invalid_id_rate,0.0,percent
+epoch_random,3407,bm25,mean_missing_ids,9.420435510887772,candidate count
+epoch_random,3407,grit,R@5,62.643774427694034,percent
+epoch_random,3407,grit,R@20,81.01898380792854,percent
+epoch_random,3407,grit,nDCG@20,55.69567840829129,percent
+epoch_random,3407,grit,exact_permutation,0.5025125628140703,percent
+epoch_random,3407,grit,fallback,0.0,percent
+epoch_random,3407,grit,missing_id_rate,97.15242881072027,percent
+epoch_random,3407,grit,duplicate_id_rate,72.02680067001675,percent
+epoch_random,3407,grit,invalid_id_rate,0.0,percent
+epoch_random,3407,grit,mean_missing_ids,8.822445561139029,candidate count
+epoch_random,3407,qwen3,R@5,64.91345616973757,percent
+epoch_random,3407,qwen3,R@20,79.49748743718594,percent
+epoch_random,3407,qwen3,nDCG@20,55.42600936674443,percent
+epoch_random,3407,qwen3,exact_permutation,0.5025125628140703,percent
+epoch_random,3407,qwen3,fallback,0.0,percent
+epoch_random,3407,qwen3,missing_id_rate,96.4824120603015,percent
+epoch_random,3407,qwen3,duplicate_id_rate,74.87437185929649,percent
+epoch_random,3407,qwen3,invalid_id_rate,0.0,percent
+epoch_random,3407,qwen3,mean_missing_ids,8.17252931323283,candidate count
+epoch_random,3407,retriever_average,R@5,61.33724176437744,percent
+epoch_random,3407,retriever_average,R@20,75.95477386934674,percent
+epoch_random,3407,retriever_average,nDCG@20,53.42474989926566,percent
+epoch_random,3407,retriever_average,exact_permutation,0.5025125628140703,percent
+epoch_random,3407,retriever_average,fallback,0.0,percent
+epoch_random,3407,retriever_average,missing_id_rate,97.43160245672809,percent
+epoch_random,3407,retriever_average,duplicate_id_rate,71.85929648241206,percent
+epoch_random,3407,retriever_average,invalid_id_rate,0.0,percent
+epoch_random,3407,retriever_average,mean_missing_ids,8.805136795086545,candidate count

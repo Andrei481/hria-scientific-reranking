@@ -1,0 +1,24 @@
+reconstructed_seed_groups:
+  cohort: reconstructed
+  llama_3_1_8b:
+    model: meta-llama/Llama-3.1-8B-Instruct
+    runs:
+      - seed: 3407
+        run_id: 20260807_012357
+      - seed: 42
+        run_id: 20260814_015141
+      - seed: 2026
+        run_id: 20260814_103655
+  gemma_3_12b:
+    model: unsloth/gemma-3-12b-it
+    runs:
+      - seed: 3407
+        run_id: 20260810_025539
+      - seed: 42
+        run_id: 20260814_044352
+      - seed: 2026
+        run_id: 20260814_130840
+
+statistical_reproducibility:
+  seed: 20260815
+  bootstrap_resamples: 10000

@@ -1,0 +1,49 @@
+{
+  "experiment": "controlled_supervised_compact_reranker",
+  "source": "same DORIS-MAE-derived supervision as train_llama_seed.ipynb",
+  "input_supervision_path": "/DATA/j_andrei/disertatie/DorisMAE/reranking_dataset_doris_mae.jsonl",
+  "input_supervision_sha256": "010261f259e715a362e9f52bb478603a674e020fdc07156ec66de376889dc42b",
+  "input_corpus_path": "/DATA/j_andrei/disertatie/DorisMAE/splits/Corpus.json",
+  "input_corpus_sha256": "25d3fb7cd9153ba099f9b13225cf7d39e680788b203130e3eabb8500eabdf7f2",
+  "output_path": "/DATA/j_andrei/modernbert_supervised_baseline/dorismae_listwise_4494.jsonl",
+  "output_sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f",
+  "pool_seed": "md5(source_row_id || query_text), first 8 hex digits",
+  "audit": {
+    "input_rows": 1501,
+    "eligible_rows": 1498,
+    "removed_zero_positive_rows": 3,
+    "removed_source_row_ids": [
+      603,
+      683,
+      920
+    ],
+    "variants_per_eligible_row": 3,
+    "target_documents_per_list": 50,
+    "maximum_positives_per_list": 5,
+    "hard_negative_prefix": 100,
+    "document_word_limit": 300,
+    "output_examples": 4494,
+    "list_size_histogram": {
+      "50": 4312,
+      "51": 182
+    },
+    "minimum_generated_variants": 3,
+    "maximum_generated_variants": 3
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "2.3.2",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200 NVL, 580.173.02, 143771 MiB"
+    ]
+  }
+}

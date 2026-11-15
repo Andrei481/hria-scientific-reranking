@@ -1,0 +1,62 @@
+{
+  "experiment": "modernbert-dorismae-lambda-seed3407",
+  "model_directory": "/DATA/j_andrei/modernbert_supervised_baseline/models/modernbert_base_dorismae_lambda_seed3407/final",
+  "query_representation": "query-paper title plus full abstract",
+  "candidate_representation": "candidate-paper title plus full abstract",
+  "max_length": 1024,
+  "predict_batch_size": 64,
+  "runs": {
+    "background": {
+      "gold_path": "/DATA/j_andrei/disertatie/CSFCube/test-pid2anns-csfcube-background.json",
+      "gold_sha256": "35c370e3fb805f2c71b8b7a0e607811b20ba77e251af26dbbdb207b3bfa704c2",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-background-ranked.json",
+      "output_sha256": "6fbdaf3ab1eaf1bb0f9d2e68191724bab0315e6897a4fceb6f701cbfbe822d1d",
+      "queries": 16,
+      "documents": 1877,
+      "elapsed_seconds": 4.668070247396827,
+      "queries_per_second": 3.4275405364609672,
+      "documents_per_second": 402.09334918357723,
+      "peak_vram": 3.06640625
+    },
+    "method": {
+      "gold_path": "/DATA/j_andrei/disertatie/CSFCube/test-pid2anns-csfcube-method.json",
+      "gold_sha256": "4d9b48f4b6a7a4fc24a30e0c0e74d1cc53eb4214ec4b855e3cd98e86829323a2",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-method-ranked.json",
+      "output_sha256": "40c1c35c882163153d7dbecd69e0ad48f086f51d38bb21930c506ddbb16a30ab",
+      "queries": 17,
+      "documents": 2174,
+      "elapsed_seconds": 4.158422956243157,
+      "queries_per_second": 4.088088243760155,
+      "documents_per_second": 522.7943436432104,
+      "peak_vram": 1.955078125
+    },
+    "result": {
+      "gold_path": "/DATA/j_andrei/disertatie/CSFCube/test-pid2anns-csfcube-result.json",
+      "gold_sha256": "edb14fa1480f2a76dcfab019d54d63bee7f7235e259bad5680b4a7f7e0a4330e",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-result-ranked.json",
+      "output_sha256": "bd0de1aabd4c7c9f862ac14c82f9cd271d91f0297c2ebea28c4b4c40fad10fe7",
+      "queries": 17,
+      "documents": 2193,
+      "elapsed_seconds": 3.8170755887404084,
+      "queries_per_second": 4.453671300130005,
+      "documents_per_second": 574.5235977167707,
+      "peak_vram": 1.955078125
+    }
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "1.26.4",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200 NVL, 580.173.02, 143771 MiB"
+    ]
+  }
+}

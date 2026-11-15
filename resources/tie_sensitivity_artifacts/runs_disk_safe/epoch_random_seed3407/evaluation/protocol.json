@@ -1,0 +1,23 @@
+{
+  "training_manifest_sha256": "5b0db4691ccc6dcd80873531309ca6ad9d8d94b0d54b3ff3db317b266b4cc55d",
+  "inputs_manifest_sha256": "7d02c25f5587abb4758a5e4dc2a8218fc746cb4aaba14c9cb0cde738c4b27bb9",
+  "served_model": "epoch_random_seed3407",
+  "url": "http://127.0.0.1:8005/v1",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "generation_seed": 0,
+  "max_tokens": 1024,
+  "limit": 0,
+  "source_hashes": {
+    "analyze.py": "73cd2b63ded2b4e6ab215059bb048f5ca16dc996ae48919bbb120c8240d64221",
+    "evaluate.py": "dbea1cce60bc92bffcc0b53fa87af6845a60f205afcac53b3daa2293f135f78c",
+    "experiment.py": "3e25aab803ee2ed9f4cefa685f767774170f873620caf39bac894f956862f13c",
+    "export_checkpoint.py": "577d46a49ade69432a928cc8bb8ef408bac6b5d1cad398e6032856ec71fda262",
+    "prepare_data.py": "33761563986ac75b1178d9637a7e5014a16f5387e62bb41fcc2b3c172ab15317",
+    "prepare_evaluation.py": "29c482969edd803dd22f44faae4e7f15d61fa3aa9c71b7638f449282aee5ff4c",
+    "train.py": "fcb129d964457ad38e39b221dcc4490834af04cdc87717854e28ec0244c31ee7",
+    "verify_checkpoint.py": "1800cb42b602c6634c2aae4be301d25936c54a827ce3a020a53ba92e6f614e60"
+  },
+  "context_failure_policy": "abort; never shrink lists",
+  "vllm_version": "0.19.0"
+}

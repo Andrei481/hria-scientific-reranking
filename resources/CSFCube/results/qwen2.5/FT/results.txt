@@ -1,0 +1,91 @@
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/     --experiment qwen2.5_14b_finetune_vllm_full_list     --facet background
+EVAL SPLIT: dev
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1728, 0.2125, 0.3226, 0.7193, 0.4810, 0.4802
+
+EVAL SPLIT: test
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1538, 0.1969, 0.2961, 0.7284, 0.4809, 0.4813
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/     --experiment qwen2.5_14b_finetune_vllm_full_list     --facet method
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0744, 0.1000, 0.2582, 0.5497, 0.2638, 0.2696
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0760, 0.0944, 0.2829, 0.5521, 0.2701, 0.2723
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/     --experiment qwen2.5_14b_finetune_vllm_full_list     --facet result
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1110, 0.1375, 0.3230, 0.6527, 0.3918, 0.3915
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0993, 0.1271, 0.2498, 0.5992, 0.3147, 0.3216
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking     --gold_path CSFCube     --ranked_path CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/     --experiment qwen2.5_14b_finetune_vllm_full_list     --facet all
+EVAL SPLIT: dev
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1194, 0.1500, 0.3013, 0.6406, 0.3789, 0.3805
+
+EVAL SPLIT: test
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1090, 0.1385, 0.2759, 0.6242, 0.3524, 0.3556

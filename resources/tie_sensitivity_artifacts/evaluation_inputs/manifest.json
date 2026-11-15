@@ -1,0 +1,33 @@
+{
+  "dataset": "princeton-nlp/LitSearch",
+  "revision": "9573fb284a1026c998df47024b888a163f0f0e25",
+  "max_k": 100,
+  "candidate_word_limit": 300,
+  "files": {
+    "bm25": {
+      "input_sha256": "b1555d05ee9bd22137beda40946b6a3a460f60e14a7614f8024572963b2b48df",
+      "retrieval_sha256": "b0d1e21b71005d6f4f71d64f7ce3c6059efcb4ac2e1a1fa8cea7f8b94ec06f67",
+      "queries": 597
+    },
+    "grit": {
+      "input_sha256": "1414adfdb6495ca58c408e65c30fe8dd50ef9c88c8239f2c21672391ad491d61",
+      "retrieval_sha256": "25508122e61dd0454a8bc1af2e685a9abc6c94266473d30e9699797be8aba55e",
+      "queries": 597
+    },
+    "qwen3": {
+      "input_sha256": "55ebba0db129c224a3eb7ff58214ce863d194092bd0923016b078825817bcbd4",
+      "retrieval_sha256": "41563d0dc3fc51701fc76be39dd54d7548b85142521e18c3ad5e73c5b85d0aea",
+      "queries": 597
+    }
+  },
+  "source_hashes": {
+    "analyze.py": "73cd2b63ded2b4e6ab215059bb048f5ca16dc996ae48919bbb120c8240d64221",
+    "evaluate.py": "dbea1cce60bc92bffcc0b53fa87af6845a60f205afcac53b3daa2293f135f78c",
+    "experiment.py": "3e25aab803ee2ed9f4cefa685f767774170f873620caf39bac894f956862f13c",
+    "export_checkpoint.py": "577d46a49ade69432a928cc8bb8ef408bac6b5d1cad398e6032856ec71fda262",
+    "prepare_data.py": "33761563986ac75b1178d9637a7e5014a16f5387e62bb41fcc2b3c172ab15317",
+    "prepare_evaluation.py": "29c482969edd803dd22f44faae4e7f15d61fa3aa9c71b7638f449282aee5ff4c",
+    "train.py": "fcb129d964457ad38e39b221dcc4490834af04cdc87717854e28ec0244c31ee7",
+    "verify_checkpoint.py": "1800cb42b602c6634c2aae4be301d25936c54a827ce3a020a53ba92e6f614e60"
+  }
+}

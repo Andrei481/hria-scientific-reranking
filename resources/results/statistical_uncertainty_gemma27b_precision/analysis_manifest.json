@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "master_seed": 20260815,
+    "bootstrap_replicates": 10000,
+    "permutation_replicates": 10000,
+    "confidence_level": 0.95,
+    "bootstrap_interval": "percentile",
+    "hypothesis_test": "two-sided paired sign-flip permutation test",
+    "multiplicity_correction": "Holm-Bonferroni within each family and metric"
+  },
+  "expected_contrasts_per_family": {
+    "litsearch_gemma27b_precision_16_vs_4": 3
+  },
+  "contrasts": [
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_gemma27b_precision_16_vs_4",
+      "comparison": "Gemma 3 27B 16-bit LoRA minus 4-bit QLoRA | BM25",
+      "model": "Gemma 3 27B",
+      "retriever": "BM25",
+      "reference_label": "4-bit QLoRA",
+      "candidate_label": "16-bit LoRA",
+      "reference": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.bm25.reranked.jsonl",
+      "candidate": "New folder/gemma-3-27b-it_variants_3_target_50_pos_5_2026/20260824_091901/k_100/LitSearch.title_abstract.bm25.reranked.jsonl",
+      "expected_cases": 597
+    },
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_gemma27b_precision_16_vs_4",
+      "comparison": "Gemma 3 27B 16-bit LoRA minus 4-bit QLoRA | GRIT",
+      "model": "Gemma 3 27B",
+      "retriever": "GRIT",
+      "reference_label": "4-bit QLoRA",
+      "candidate_label": "16-bit LoRA",
+      "reference": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.grit.reranked.jsonl",
+      "candidate": "New folder/gemma-3-27b-it_variants_3_target_50_pos_5_2026/20260824_091901/k_100/LitSearch.title_abstract.grit.reranked.jsonl",
+      "expected_cases": 597
+    },
+    {
+      "dataset": "litsearch",
+      "family": "litsearch_gemma27b_precision_16_vs_4",
+      "comparison": "Gemma 3 27B 16-bit LoRA minus 4-bit QLoRA | Qwen3",
+      "model": "Gemma 3 27B",
+      "retriever": "Qwen3",
+      "reference_label": "4-bit QLoRA",
+      "candidate_label": "16-bit LoRA",
+      "reference": "LitSearch/results/reranking/gemma3_27b/FT/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl",
+      "candidate": "New folder/gemma-3-27b-it_variants_3_target_50_pos_5_2026/20260824_091901/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl",
+      "expected_cases": 597
+    }
+  ]
+}

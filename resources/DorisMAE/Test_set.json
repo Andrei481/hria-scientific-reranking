@@ -1,0 +1,2252 @@
+[
+    {
+        "aspect_id": "12",
+        "abstract_id": 69210,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "247",
+        "abstract_id": 347548,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "733",
+        "abstract_id": 154781,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "206",
+        "abstract_id": 58799,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "753",
+        "abstract_id": 97694,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "21",
+        "abstract_id": 353891,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "542",
+        "abstract_id": 336781,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "544",
+        "abstract_id": 160221,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "244",
+        "abstract_id": 270624,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "210",
+        "abstract_id": 72003,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "590",
+        "abstract_id": 361624,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "739",
+        "abstract_id": 123706,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "701",
+        "abstract_id": 87490,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "738",
+        "abstract_id": 60966,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "451",
+        "abstract_id": 280202,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "226",
+        "abstract_id": 233206,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "357",
+        "abstract_id": 28429,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "272",
+        "abstract_id": 253153,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "447",
+        "abstract_id": 248889,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "351",
+        "abstract_id": 218658,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "639",
+        "abstract_id": 44891,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "12",
+        "abstract_id": 165396,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "26",
+        "abstract_id": 213553,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "4",
+        "abstract_id": 117539,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "515",
+        "abstract_id": 269500,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "22",
+        "abstract_id": 21027,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "710",
+        "abstract_id": 19117,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "591",
+        "abstract_id": 143767,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "269",
+        "abstract_id": 113527,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "637",
+        "abstract_id": 230928,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "738",
+        "abstract_id": 289268,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "184",
+        "abstract_id": 301918,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "204",
+        "abstract_id": 50869,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "461",
+        "abstract_id": 83550,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "405",
+        "abstract_id": 342053,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "649",
+        "abstract_id": 119213,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "190",
+        "abstract_id": 309656,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "229",
+        "abstract_id": 231985,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "427",
+        "abstract_id": 202383,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "555",
+        "abstract_id": 1322,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "327",
+        "abstract_id": 158274,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "333",
+        "abstract_id": 170492,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "225",
+        "abstract_id": 244732,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "681",
+        "abstract_id": 17070,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "452",
+        "abstract_id": 26982,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "765",
+        "abstract_id": 100873,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "65",
+        "abstract_id": 287067,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "155",
+        "abstract_id": 290710,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "90",
+        "abstract_id": 63306,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "760",
+        "abstract_id": 164032,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "465",
+        "abstract_id": 36476,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "285",
+        "abstract_id": 71759,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "616",
+        "abstract_id": 253997,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "629",
+        "abstract_id": 85120,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "322",
+        "abstract_id": 171566,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "565",
+        "abstract_id": 270743,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "617",
+        "abstract_id": 44891,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "663",
+        "abstract_id": 166741,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "250",
+        "abstract_id": 13561,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "476",
+        "abstract_id": 137310,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "331",
+        "abstract_id": 324543,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "326",
+        "abstract_id": 64998,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "4",
+        "abstract_id": 177274,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "575",
+        "abstract_id": 345088,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "690",
+        "abstract_id": 317974,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "376",
+        "abstract_id": 149260,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "722",
+        "abstract_id": 317592,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "592",
+        "abstract_id": 321124,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "278",
+        "abstract_id": 133200,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "415",
+        "abstract_id": 105074,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "332",
+        "abstract_id": 271973,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "92",
+        "abstract_id": 253215,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "639",
+        "abstract_id": 265292,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "112",
+        "abstract_id": 311814,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "577",
+        "abstract_id": 178575,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "556",
+        "abstract_id": 290032,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "270",
+        "abstract_id": 347254,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "602",
+        "abstract_id": 154511,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "725",
+        "abstract_id": 57677,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "331",
+        "abstract_id": 182163,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "66",
+        "abstract_id": 218656,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "359",
+        "abstract_id": 216765,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "520",
+        "abstract_id": 190621,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "742",
+        "abstract_id": 113677,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "227",
+        "abstract_id": 231398,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "737",
+        "abstract_id": 92839,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "767",
+        "abstract_id": 243373,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "428",
+        "abstract_id": 237379,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "504",
+        "abstract_id": 247777,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "445",
+        "abstract_id": 132577,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "713",
+        "abstract_id": 37381,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "712",
+        "abstract_id": 330735,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "565",
+        "abstract_id": 261098,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "127",
+        "abstract_id": 45038,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "454",
+        "abstract_id": 104761,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "237",
+        "abstract_id": 302822,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "742",
+        "abstract_id": 239242,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "488",
+        "abstract_id": 176543,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "507",
+        "abstract_id": 155370,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "616",
+        "abstract_id": 26940,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "191",
+        "abstract_id": 250292,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "554",
+        "abstract_id": 168789,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "21",
+        "abstract_id": 285457,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "118",
+        "abstract_id": 260493,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "378",
+        "abstract_id": 235909,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "352",
+        "abstract_id": 2430,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "30",
+        "abstract_id": 240377,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "313",
+        "abstract_id": 60170,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "290",
+        "abstract_id": 190051,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "574",
+        "abstract_id": 186472,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "360",
+        "abstract_id": 270743,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "116",
+        "abstract_id": 294799,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "503",
+        "abstract_id": 45996,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "141",
+        "abstract_id": 301423,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "62",
+        "abstract_id": 193311,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "222",
+        "abstract_id": 316228,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "413",
+        "abstract_id": 195179,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "0",
+        "abstract_id": 63825,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "175",
+        "abstract_id": 83081,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "168",
+        "abstract_id": 181695,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "400",
+        "abstract_id": 163633,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "173",
+        "abstract_id": 127613,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "595",
+        "abstract_id": 197647,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "621",
+        "abstract_id": 297452,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "208",
+        "abstract_id": 360671,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "325",
+        "abstract_id": 193061,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "542",
+        "abstract_id": 3529,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "7",
+        "abstract_id": 180880,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "149",
+        "abstract_id": 109628,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "361",
+        "abstract_id": 238732,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "517",
+        "abstract_id": 233771,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "58",
+        "abstract_id": 271606,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "607",
+        "abstract_id": 227230,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "411",
+        "abstract_id": 225026,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "32",
+        "abstract_id": 214174,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "282",
+        "abstract_id": 205998,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "214",
+        "abstract_id": 329848,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "512",
+        "abstract_id": 229205,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "9",
+        "abstract_id": 236347,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "644",
+        "abstract_id": 163902,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "238",
+        "abstract_id": 267530,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "397",
+        "abstract_id": 247136,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "230",
+        "abstract_id": 217602,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "268",
+        "abstract_id": 67990,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "287",
+        "abstract_id": 219151,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "552",
+        "abstract_id": 357561,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "692",
+        "abstract_id": 109770,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "295",
+        "abstract_id": 250183,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "749",
+        "abstract_id": 289816,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "709",
+        "abstract_id": 80837,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "377",
+        "abstract_id": 79143,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "175",
+        "abstract_id": 184148,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "103",
+        "abstract_id": 164216,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "197",
+        "abstract_id": 243880,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "217",
+        "abstract_id": 120122,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "705",
+        "abstract_id": 192777,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "85",
+        "abstract_id": 81107,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "30",
+        "abstract_id": 232472,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "96",
+        "abstract_id": 134561,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "208",
+        "abstract_id": 154778,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "101",
+        "abstract_id": 237379,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "168",
+        "abstract_id": 22111,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "95",
+        "abstract_id": 160996,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "752",
+        "abstract_id": 266198,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "486",
+        "abstract_id": 221626,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "650",
+        "abstract_id": 184520,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "665",
+        "abstract_id": 80112,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "457",
+        "abstract_id": 236245,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "659",
+        "abstract_id": 257267,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "468",
+        "abstract_id": 128274,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "91",
+        "abstract_id": 222198,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "646",
+        "abstract_id": 151228,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "735",
+        "abstract_id": 188218,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "506",
+        "abstract_id": 105871,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "149",
+        "abstract_id": 121,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "154",
+        "abstract_id": 90803,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "575",
+        "abstract_id": 143441,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "123",
+        "abstract_id": 29406,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "508",
+        "abstract_id": 271606,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "494",
+        "abstract_id": 10934,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "341",
+        "abstract_id": 294778,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "338",
+        "abstract_id": 272516,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "4",
+        "abstract_id": 227262,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "537",
+        "abstract_id": 274997,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "46",
+        "abstract_id": 135770,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "61",
+        "abstract_id": 124311,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "311",
+        "abstract_id": 87635,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "236",
+        "abstract_id": 137115,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "596",
+        "abstract_id": 148684,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "89",
+        "abstract_id": 122165,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "489",
+        "abstract_id": 46329,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "313",
+        "abstract_id": 111131,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "325",
+        "abstract_id": 170071,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "293",
+        "abstract_id": 13441,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "241",
+        "abstract_id": 244266,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "345",
+        "abstract_id": 329836,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "161",
+        "abstract_id": 257782,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "339",
+        "abstract_id": 212887,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "701",
+        "abstract_id": 160526,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "336",
+        "abstract_id": 131685,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "51",
+        "abstract_id": 105532,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "238",
+        "abstract_id": 298948,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "107",
+        "abstract_id": 145777,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "594",
+        "abstract_id": 234617,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "172",
+        "abstract_id": 45104,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "640",
+        "abstract_id": 156881,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "273",
+        "abstract_id": 41352,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "200",
+        "abstract_id": 66906,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "524",
+        "abstract_id": 48248,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "388",
+        "abstract_id": 189512,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "601",
+        "abstract_id": 14608,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "730",
+        "abstract_id": 262300,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "40",
+        "abstract_id": 124611,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "598",
+        "abstract_id": 200703,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "654",
+        "abstract_id": 10799,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "431",
+        "abstract_id": 152436,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "233",
+        "abstract_id": 202383,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "179",
+        "abstract_id": 131868,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "188",
+        "abstract_id": 89870,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "66",
+        "abstract_id": 34691,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "381",
+        "abstract_id": 268162,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "417",
+        "abstract_id": 166455,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "312",
+        "abstract_id": 23847,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "344",
+        "abstract_id": 259476,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "552",
+        "abstract_id": 361624,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "200",
+        "abstract_id": 220974,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "315",
+        "abstract_id": 167838,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "690",
+        "abstract_id": 158894,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "239",
+        "abstract_id": 279528,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "526",
+        "abstract_id": 240617,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "429",
+        "abstract_id": 214400,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "649",
+        "abstract_id": 325705,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "206",
+        "abstract_id": 261768,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "306",
+        "abstract_id": 59780,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "418",
+        "abstract_id": 320072,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "225",
+        "abstract_id": 258857,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "150",
+        "abstract_id": 97694,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "524",
+        "abstract_id": 171902,
+        "human_annotation": {
+            "annotator_1": 2,
+            "annotator_2": 2,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "651",
+        "abstract_id": 11324,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    },
+    {
+        "aspect_id": "223",
+        "abstract_id": 227230,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 2
+        }
+    },
+    {
+        "aspect_id": "482",
+        "abstract_id": 30335,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "679",
+        "abstract_id": 49207,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "193",
+        "abstract_id": 105637,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "481",
+        "abstract_id": 21959,
+        "human_annotation": {
+            "annotator_1": 1,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "43",
+        "abstract_id": 35706,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "1",
+        "abstract_id": 21641,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "326",
+        "abstract_id": 76471,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "285",
+        "abstract_id": 356643,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 0,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "329",
+        "abstract_id": 102723,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 0
+        }
+    },
+    {
+        "aspect_id": "601",
+        "abstract_id": 149962,
+        "human_annotation": {
+            "annotator_1": 0,
+            "annotator_2": 1,
+            "annotator_3": 1
+        }
+    }
+]

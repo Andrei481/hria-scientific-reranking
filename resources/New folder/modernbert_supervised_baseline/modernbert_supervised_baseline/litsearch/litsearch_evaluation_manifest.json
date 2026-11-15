@@ -1,0 +1,63 @@
+{
+  "experiment": "modernbert_litsearch_frozen_top100",
+  "model_directory": "/DATA/j_andrei/modernbert_supervised_baseline/models/modernbert_base_dorismae_lambda_seed3407/final",
+  "dataset_id": "princeton-nlp/LitSearch",
+  "dataset_revision": "9573fb2",
+  "rerank_depth": 100,
+  "max_length": 1024,
+  "predict_batch_size": 64,
+  "runs": {
+    "bm25": {
+      "input": "/DATA/j_andrei/disertatie/LitSearch/results/retrieval/LitSearch.title_abstract.bm25.jsonl",
+      "input_sha256": "b0d1e21b71005d6f4f71d64f7ce3c6059efcb4ac2e1a1fa8cea7f8b94ec06f67",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.bm25.modernbert.reranked.jsonl",
+      "output_sha256": "1307019176edf4df78247f48eb44dfa7e673b00dd64a86e46e5bd61b5b51e311",
+      "queries": 597,
+      "documents": 59700,
+      "elapsed_seconds": 103.58948698965833,
+      "queries_per_second": 5.763133087623076,
+      "documents_per_second": 576.3133087623075,
+      "peak_vram": 2.599609375
+    },
+    "grit": {
+      "input": "/DATA/j_andrei/disertatie/LitSearch/results/retrieval/LitSearch.title_abstract.grit.jsonl",
+      "input_sha256": "25508122e61dd0454a8bc1af2e685a9abc6c94266473d30e9699797be8aba55e",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.grit.modernbert.reranked.jsonl",
+      "output_sha256": "e7508f2a68273ec29cbf0f194eac241587b47ef7ab319e496abde9fdddd941fa",
+      "queries": 597,
+      "documents": 59700,
+      "elapsed_seconds": 95.85922771971673,
+      "queries_per_second": 6.22788242928027,
+      "documents_per_second": 622.788242928027,
+      "peak_vram": 2.634765625
+    },
+    "qwen3": {
+      "input": "/DATA/j_andrei/disertatie/LitSearch/results/retrieval/LitSearch.title_abstract.qwen3.jsonl",
+      "input_sha256": "41563d0dc3fc51701fc76be39dd54d7548b85142521e18c3ad5e73c5b85d0aea",
+      "output": "/DATA/j_andrei/modernbert_supervised_baseline/litsearch/LitSearch.title_abstract.qwen3.modernbert.reranked.jsonl",
+      "output_sha256": "05805d170530bd376550fd7836b477b34d1a1e9eaffdd1ac91c28c990c090eb2",
+      "queries": 597,
+      "documents": 59700,
+      "elapsed_seconds": 84.84514024714008,
+      "queries_per_second": 7.036348790997766,
+      "documents_per_second": 703.6348790997766,
+      "peak_vram": 2.634765625
+    }
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "1.26.4",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200 NVL, 580.173.02, 143771 MiB"
+    ]
+  }
+}

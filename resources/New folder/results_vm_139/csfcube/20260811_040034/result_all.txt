@@ -1,0 +1,34 @@
+EVAL SPLIT: dev
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Qwen2.5-14B-Instruct_variants_3_target_50_pos_5/20260811_040034/test-pid2pool-csfcube-Qwen2.5-14B-Instruct_variants_3_target_50_pos_5-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1144, 0.1625, 0.3443, 0.6466, 0.3924, 0.3884
+
+EVAL SPLIT: test
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Qwen2.5-14B-Instruct_variants_3_target_50_pos_5/20260811_040034/test-pid2pool-csfcube-Qwen2.5-14B-Instruct_variants_3_target_50_pos_5-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1085, 0.1505, 0.3266, 0.6431, 0.3789, 0.3832
+

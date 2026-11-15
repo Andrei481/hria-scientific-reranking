@@ -1,0 +1,96 @@
+{
+  "input": "D:\\Code\\disertatie\\LitSearch\\results\\reranking\\qwen2.5\\base\\k_100\\LitSearch.title_abstract.bm25.reranked.jsonl",
+  "overlap_details": "leakage_analysis_outputs\\prompt_level_overlap_details.csv",
+  "match_types": [
+    "text_hash"
+  ],
+  "left_set": "DORIS actual prompt candidates",
+  "right_set": "LitSearch text docs",
+  "exclude_gold_overlap": true,
+  "input_queries": 597,
+  "kept_queries": 595,
+  "excluded_queries": 2,
+  "blacklisted_doc_ids": 227,
+  "original_retrieved_mentions": 59700,
+  "filtered_retrieved_mentions": 59069,
+  "removed_retrieved_mentions": 631,
+  "metrics": {
+    "inline_broad": {
+      "count": 120,
+      "R@20": 0.38666666666666666,
+      "R@5": 0.33222222222222225,
+      "NDCG@20": 0.29041950635178176,
+      "NDCG@5": 0.27280440007214,
+      "R@20_percent": 38.6667,
+      "R@5_percent": 33.2222,
+      "NDCG@20_percent": 29.042,
+      "NDCG@5_percent": 27.2804
+    },
+    "inline_specific": {
+      "count": 229,
+      "R@20": 0.5917030567685589,
+      "R@5": 0.49563318777292575,
+      "NDCG@20": 0.45389293991034546,
+      "NDCG@5": 0.42559081905979734,
+      "R@20_percent": 59.1703,
+      "R@5_percent": 49.5633,
+      "NDCG@20_percent": 45.3893,
+      "NDCG@5_percent": 42.5591
+    },
+    "author_broad": {
+      "count": 35,
+      "R@20": 0.5428571428571428,
+      "R@5": 0.45714285714285713,
+      "NDCG@20": 0.3942765681192318,
+      "NDCG@5": 0.3704640479910112,
+      "R@20_percent": 54.2857,
+      "R@5_percent": 45.7143,
+      "NDCG@20_percent": 39.4277,
+      "NDCG@5_percent": 37.0464
+    },
+    "author_specific": {
+      "count": 211,
+      "R@20": 0.7582938388625592,
+      "R@5": 0.6587677725118484,
+      "NDCG@20": 0.5967647303548853,
+      "NDCG@5": 0.567272017965131,
+      "R@20_percent": 75.8294,
+      "R@5_percent": 65.8768,
+      "NDCG@20_percent": 59.6765,
+      "NDCG@5_percent": 56.7272
+    },
+    "broad_avg": {
+      "count": 155,
+      "R@20": 0.4219354838709678,
+      "R@5": 0.3604301075268817,
+      "NDCG@20": 0.31387110094443177,
+      "NDCG@5": 0.2948565786344658,
+      "R@20_percent": 42.1935,
+      "R@5_percent": 36.043,
+      "NDCG@20_percent": 31.3871,
+      "NDCG@5_percent": 29.4857
+    },
+    "specific_avg": {
+      "count": 440,
+      "R@20": 0.6715909090909091,
+      "R@5": 0.5738636363636364,
+      "NDCG@20": 0.5224064576007952,
+      "NDCG@5": 0.49353339398940055,
+      "R@20_percent": 67.1591,
+      "R@5_percent": 57.3864,
+      "NDCG@20_percent": 52.2406,
+      "NDCG@5_percent": 49.3533
+    },
+    "overall_avg": {
+      "count": 595,
+      "R@20": 0.6065546218487394,
+      "R@5": 0.5182633053221288,
+      "NDCG@20": 0.46808212099283497,
+      "NDCG@5": 0.4417772488129049,
+      "R@20_percent": 60.6555,
+      "R@5_percent": 51.8263,
+      "NDCG@20_percent": 46.8082,
+      "NDCG@5_percent": 44.1777
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "experiment": "controlled_supervised_compact_reranker",
+  "model_id": "answerdotai/ModernBERT-base",
+  "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "initialization_supervision": "generic masked-language-model pretraining; no ranking labels",
+  "training_supervision_path": "/DATA/j_andrei/modernbert_supervised_baseline/dorismae_listwise_4494.jsonl",
+  "training_supervision_sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f",
+  "training_examples": 4494,
+  "hyperparameter_selection_split": "none; fixed a priori and no benchmark tuning",
+  "seed": 3407,
+  "quantization": "none",
+  "max_length": 1024,
+  "loss": "LambdaLoss with default NDCGLoss2PP weighting",
+  "lambda_k": 20,
+  "loss_document_mini_batch_size": 8,
+  "epochs": 2,
+  "learning_rate": 2e-05,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01,
+  "per_device_list_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "training_seconds": 2702.138921672944,
+  "peak_vram_allocated_gib": 15.104115009307861,
+  "peak_vram_reserved_gib": 16.341796875,
+  "peak_vram": 16.341796875,
+  "train_metrics": {
+    "train_runtime": 2701.9267,
+    "train_samples_per_second": 3.327,
+    "train_steps_per_second": 0.416,
+    "total_flos": 0.0,
+    "train_loss": 0.4323763280205455,
+    "epoch": 2.0
+  },
+  "parameter_count": 149605633,
+  "trainable_parameter_count": 149605633,
+  "checkpoint_directory": "/DATA/j_andrei/modernbert_supervised_baseline/models/modernbert_base_dorismae_lambda_seed3407/final",
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "2.3.2",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200 NVL, 580.173.02, 143771 MiB"
+    ]
+  }
+}

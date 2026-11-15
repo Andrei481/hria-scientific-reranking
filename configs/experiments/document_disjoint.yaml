@@ -1,0 +1,9 @@
+litsearch_strict_protocol:
+  query_count: 595
+  overlap_blacklist_count: 227
+  retrieval_refill_depth: 200
+  reranking_prompt_depth: 100
+  policy: exclude blacklisted training-exposed documents before reranking and refill retrieval candidates to preserve a 100-document prompt.
+
+csfcube:
+  limitation: Document-disjoint filtering is post-hoc because CSFCube uses released fixed candidate pools; it does not establish a fully document-disjoint training-time evaluation.

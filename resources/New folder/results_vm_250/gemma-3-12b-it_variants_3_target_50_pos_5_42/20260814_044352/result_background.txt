@@ -1,0 +1,18 @@
+EVAL SPLIT: dev
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/gemma-3-12b-it_variants_3_target_50_pos_5_42/20260814_044352/test-pid2pool-csfcube-gemma-3-12b-it_variants_3_target_50_pos_5_42-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.2159, 0.3063, 0.5202, 0.7910, 0.6107, 0.6033
+
+EVAL SPLIT: test
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/gemma-3-12b-it_variants_3_target_50_pos_5_42/20260814_044352/test-pid2pool-csfcube-gemma-3-12b-it_variants_3_target_50_pos_5_42-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1708, 0.2562, 0.4165, 0.7708, 0.5584, 0.5592
+

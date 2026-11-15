@@ -1,0 +1,56 @@
+{
+  "protocol": {
+    "candidate_source": "/DATA/j_andrei/disertatie/LitSearch/results/retrieval/LitSearch.title_abstract.qwen3.jsonl",
+    "candidate_source_name": "Qwen3",
+    "dataset_revision": "9573fb2",
+    "queries": 20,
+    "documents_per_query": 100,
+    "document_word_limit": 300,
+    "warmup_runs": 1,
+    "measured_runs": 3,
+    "execution": "sequential, one model at a time on an otherwise idle GPU"
+  },
+  "modernbert": {
+    "measured_seconds": [
+      1.2967924731783569,
+      1.2941835061646998,
+      1.2970133321359754
+    ],
+    "median_seconds": 1.2967924731783569,
+    "median_query_latency_ms": 64.83962365891784,
+    "queries_per_second": 15.42266817062969,
+    "documents_per_second": 1542.266817062969,
+    "peak_vram": 1.630859375
+  },
+  "generative_llm": {
+    "model_id": "models/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/",
+    "measured_seconds": [
+      58.282810313627124,
+      58.28752433182672,
+      58.360031611286104
+    ],
+    "median_seconds": 58.28752433182672,
+    "median_query_latency_ms": 2914.376216591336,
+    "queries_per_second": 0.34312659920399824,
+    "documents_per_second": 34.312659920399824,
+    "peak_vram": null,
+    "complete_format_rate": 0.35,
+    "mean_parsed_indices": 98.2
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "1.26.4",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200 NVL, 580.173.02, 143771 MiB"
+    ]
+  }
+}

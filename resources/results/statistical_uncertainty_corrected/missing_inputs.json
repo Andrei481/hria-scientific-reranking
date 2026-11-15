@@ -1,0 +1,34 @@
+[
+  {
+    "dataset": "litsearch",
+    "family": "litsearch_ranking_pretrained_compact",
+    "comparison": "Gemma 3 27B FT minus GTE-ModernBERT supervised | BM25",
+    "missing_paths": [
+      "New folder\\ranking_pretrained_compact_baseline\\ranking_pretrained_compact_baseline\\litsearch\\LitSearch.title_abstract.bm25.gte_modernbert_dorismae.reranked.jsonl"
+    ]
+  },
+  {
+    "dataset": "litsearch",
+    "family": "litsearch_ranking_pretrained_compact",
+    "comparison": "Gemma 3 27B FT minus GTE-ModernBERT supervised | GRIT",
+    "missing_paths": [
+      "New folder\\ranking_pretrained_compact_baseline\\ranking_pretrained_compact_baseline\\litsearch\\LitSearch.title_abstract.grit.gte_modernbert_dorismae.reranked.jsonl"
+    ]
+  },
+  {
+    "dataset": "litsearch",
+    "family": "litsearch_ranking_pretrained_compact",
+    "comparison": "Gemma 3 27B FT minus GTE-ModernBERT supervised | Qwen3",
+    "missing_paths": [
+      "New folder\\ranking_pretrained_compact_baseline\\ranking_pretrained_compact_baseline\\litsearch\\LitSearch.title_abstract.qwen3.gte_modernbert_dorismae.reranked.jsonl"
+    ]
+  },
+  {
+    "dataset": "csfcube",
+    "family": "csfcube_ranking_pretrained_compact",
+    "comparison": "Gemma 3 27B FT minus GTE-ModernBERT supervised | pooled 50 cases",
+    "missing_paths": [
+      "New folder\\ranking_pretrained_compact_baseline\\ranking_pretrained_compact_baseline\\csfcube\\test-pid2pool-csfcube-gte-modernbert-dorismae-lambda-seed3407-all-perq.csv"
+    ]
+  }
+]

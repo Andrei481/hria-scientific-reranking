@@ -1,0 +1,67 @@
+{
+  "protocol": {
+    "candidate_source": "/home/andreij/LitSearch.title_abstract.qwen3.jsonl",
+    "candidate_source_name": "Qwen3",
+    "dataset_revision": "9573fb2",
+    "queries": 20,
+    "documents_per_query": 100,
+    "document_word_limit": 300,
+    "warmup_runs": 1,
+    "measured_runs": 3,
+    "execution": "sequential, one model at a time on an otherwise idle GPU"
+  },
+  "gte_modernbert": {
+    "model_directory": "/home/andreij/ranking_pretrained_compact_baseline/models/gte_modernbert_dorismae_lambda_seed3407/final",
+    "total_parameters": 149605633,
+    "trainable_parameters": 149605633,
+    "batch_size": 64,
+    "measured_seconds": [
+      1.251118458007113,
+      1.2316720399976475,
+      1.2311678269979893
+    ],
+    "median_seconds": 1.2316720399976475,
+    "median_query_latency_ms": 61.583601999882376,
+    "queries_per_second": 16.238088834133315,
+    "documents_per_second": 1623.8088834133314,
+    "peak_vram": 1.630859375
+  },
+  "generative_llm": {
+    "model_id": "llama-3.1-8b-ft",
+    "measured_seconds": [
+      50.508941316002165,
+      50.52124816599826,
+      50.45085850999749
+    ],
+    "median_seconds": 50.508941316002165,
+    "median_query_latency_ms": 2525.4470658001082,
+    "queries_per_second": 0.39596949527951464,
+    "documents_per_second": 39.59694952795146,
+    "peak_vram": 129.573,
+    "complete_format_rate": 0.3,
+    "mean_parsed_indices": 98.3
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "2.3.5",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB"
+    ]
+  }
+}

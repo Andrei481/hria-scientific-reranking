@@ -1,0 +1,18 @@
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Qwen2.5-14B-Instruct_variants_3_target_50_pos_5/20260811_040034/test-pid2pool-csfcube-Qwen2.5-14B-Instruct_variants_3_target_50_pos_5-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1017, 0.1688, 0.4002, 0.6774, 0.4414, 0.4381
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/Qwen2.5-14B-Instruct_variants_3_target_50_pos_5/20260811_040034/test-pid2pool-csfcube-Qwen2.5-14B-Instruct_variants_3_target_50_pos_5-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0974, 0.1510, 0.3230, 0.6400, 0.3765, 0.3905
+

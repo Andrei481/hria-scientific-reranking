@@ -1,0 +1,274 @@
+{
+  "base": {
+    "source_csv": "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-all-perq.csv",
+    "cases": 50,
+    "parent_papers": 34,
+    "total_candidates": 6244,
+    "max_per_case_csv_error": 1.1102230246251565e-16,
+    "all_rankings_complete_unique_permutations": true,
+    "all_original_V2_log_aggregates_match_at_four_decimals": true,
+    "aggregates": {
+      "background": {
+        "dev": {
+          "precision": 0.21875,
+          "recall": 0.3975529100529101,
+          "f1": 0.25050998833193683,
+          "r_precision": 0.15808432327020253,
+          "mean_av_precision": 0.3987820987653845,
+          "mean_reciprocal_rank": 0.7270833333333333,
+          "ndcg": 0.7933408301794571,
+          "ndcg@20": 0.6059420755837736,
+          "ndcg%20": 0.6055185336967495
+        },
+        "test": {
+          "precision": 0.234375,
+          "recall": 0.392084066532596,
+          "f1": 0.27170355595502116,
+          "r_precision": 0.14774947466986,
+          "mean_av_precision": 0.3456604346684051,
+          "mean_reciprocal_rank": 0.677157738095238,
+          "ndcg": 0.770808773379791,
+          "ndcg@20": 0.5711508649898137,
+          "ndcg%20": 0.5692473457463751
+        }
+      },
+      "method": {
+        "dev": {
+          "precision": 0.10625000000000001,
+          "recall": 0.2857142857142857,
+          "f1": 0.14638899037876021,
+          "r_precision": 0.06891943741669146,
+          "mean_av_precision": 0.12633480216327542,
+          "mean_reciprocal_rank": 0.20750175070028012,
+          "ndcg": 0.5420423906722398,
+          "ndcg@20": 0.26378135848188494,
+          "ndcg%20": 0.2728728982265749
+        },
+        "test": {
+          "precision": 0.11423611111111112,
+          "recall": 0.3558201058201058,
+          "f1": 0.16165113961007682,
+          "r_precision": 0.08026441854382244,
+          "mean_av_precision": 0.15073011556708238,
+          "mean_reciprocal_rank": 0.34306063965990435,
+          "ndcg": 0.5760098772382667,
+          "ndcg@20": 0.30934508462324684,
+          "ndcg%20": 0.31686142132454453
+        }
+      },
+      "result": {
+        "dev": {
+          "precision": 0.20625,
+          "recall": 0.46530414030414036,
+          "f1": 0.28148593836024316,
+          "r_precision": 0.099698302765634,
+          "mean_av_precision": 0.29012704744115536,
+          "mean_reciprocal_rank": 0.738095238095238,
+          "ndcg": 0.7143519867368532,
+          "ndcg@20": 0.526671665483512,
+          "ndcg%20": 0.5267335167476799
+        },
+        "test": {
+          "precision": 0.18368055555555557,
+          "recall": 0.4120171495171495,
+          "f1": 0.24035221442404175,
+          "r_precision": 0.10333237522781209,
+          "mean_av_precision": 0.2774074252841573,
+          "mean_reciprocal_rank": 0.6458078958078958,
+          "ndcg": 0.678272374811099,
+          "ndcg@20": 0.4544409541230884,
+          "ndcg%20": 0.4656468422260888
+        }
+      },
+      "all": {
+        "dev": {
+          "precision": 0.17708333333333334,
+          "recall": 0.3828571120237787,
+          "f1": 0.22612830569031342,
+          "r_precision": 0.10890068781750933,
+          "mean_av_precision": 0.2717479827899384,
+          "mean_reciprocal_rank": 0.5575601073762838,
+          "ndcg": 0.6832450691961837,
+          "ndcg@20": 0.4654650331830568,
+          "ndcg%20": 0.4683749828903347
+        },
+        "test": {
+          "precision": 0.17604166666666665,
+          "recall": 0.38671368189656274,
+          "f1": 0.22322497981800185,
+          "r_precision": 0.10995995227038222,
+          "mean_av_precision": 0.2570014770383123,
+          "mean_reciprocal_rank": 0.5539169360365628,
+          "ndcg": 0.6734637821528562,
+          "ndcg@20": 0.4428276842244572,
+          "ndcg%20": 0.44865865051268883
+        }
+      }
+    },
+    "pooled": {
+      "r_precision": 0.11000232284849712,
+      "precision": 0.176,
+      "recall": 0.3868679446914741,
+      "ndcg": 0.6730725306711229,
+      "ndcg@20": 0.4419221902661131,
+      "ndcg%20": 0.44786999721758297
+    }
+  },
+  "FT": {
+    "source_csv": "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-all-perq.csv",
+    "cases": 50,
+    "parent_papers": 34,
+    "total_candidates": 6244,
+    "max_per_case_csv_error": 1.1102230246251565e-16,
+    "all_rankings_complete_unique_permutations": true,
+    "all_original_V2_log_aggregates_match_at_four_decimals": true,
+    "aggregates": {
+      "background": {
+        "dev": {
+          "precision": 0.28750000000000003,
+          "recall": 0.4396825396825397,
+          "f1": 0.3067716531322355,
+          "r_precision": 0.15982123418069122,
+          "mean_av_precision": 0.3716923284337816,
+          "mean_reciprocal_rank": 0.7283653846153846,
+          "ndcg": 0.7464189320885164,
+          "ndcg@20": 0.5441773290782332,
+          "ndcg%20": 0.5413409687278614
+        },
+        "test": {
+          "precision": 0.259375,
+          "recall": 0.3916630754866049,
+          "f1": 0.28762710293838656,
+          "r_precision": 0.14632040820658848,
+          "mean_av_precision": 0.34015366235348,
+          "mean_reciprocal_rank": 0.762099358974359,
+          "ndcg": 0.7453832994375987,
+          "ndcg@20": 0.5291078218511678,
+          "ndcg%20": 0.5243054420774595
+        }
+      },
+      "method": {
+        "dev": {
+          "precision": 0.09375,
+          "recall": 0.26860119047619047,
+          "f1": 0.12956038393618316,
+          "r_precision": 0.07554326587712966,
+          "mean_av_precision": 0.1250236280369477,
+          "mean_reciprocal_rank": 0.27703823953823953,
+          "ndcg": 0.5759687681030443,
+          "ndcg@20": 0.29118680383370116,
+          "ndcg%20": 0.2957223364581765
+        },
+        "test": {
+          "precision": 0.096875,
+          "recall": 0.30427414021164023,
+          "f1": 0.13773940565442946,
+          "r_precision": 0.07251436914881874,
+          "mean_av_precision": 0.13368094863914934,
+          "mean_reciprocal_rank": 0.31419441912862967,
+          "ndcg": 0.5913394705595503,
+          "ndcg@20": 0.3218490241173393,
+          "ndcg%20": 0.3202322183807619
+        }
+      },
+      "result": {
+        "dev": {
+          "precision": 0.23125,
+          "recall": 0.5323537573537573,
+          "f1": 0.31522091512080397,
+          "r_precision": 0.12481000032052023,
+          "mean_av_precision": 0.28813070800452445,
+          "mean_reciprocal_rank": 0.65,
+          "ndcg": 0.6892138512088485,
+          "ndcg@20": 0.4892287154787548,
+          "ndcg%20": 0.4860585895100053
+        },
+        "test": {
+          "precision": 0.20173611111111112,
+          "recall": 0.46873419790086457,
+          "f1": 0.2650521667762396,
+          "r_precision": 0.12640280587099795,
+          "mean_av_precision": 0.2616141519821239,
+          "mean_reciprocal_rank": 0.5367475060199518,
+          "ndcg": 0.6547909213757066,
+          "ndcg@20": 0.42731801705706324,
+          "ndcg%20": 0.43661509195351234
+        }
+      },
+      "all": {
+        "dev": {
+          "precision": 0.20416666666666664,
+          "recall": 0.4135458291708292,
+          "f1": 0.2505176507297408,
+          "r_precision": 0.12005816679278036,
+          "mean_av_precision": 0.26161555482508453,
+          "mean_reciprocal_rank": 0.551801208051208,
+          "ndcg": 0.670533850466803,
+          "ndcg@20": 0.4415309494635631,
+          "ndcg%20": 0.44104063156534784
+        },
+        "test": {
+          "precision": 0.18477564102564098,
+          "recall": 0.38859415392927843,
+          "f1": 0.22901030679170614,
+          "r_precision": 0.11464228363557744,
+          "mean_av_precision": 0.24361244581629415,
+          "mean_reciprocal_rank": 0.5324443956313151,
+          "ndcg": 0.6621608639895752,
+          "ndcg@20": 0.42410342827639613,
+          "ndcg%20": 0.4252392114695923
+        }
+      }
+    },
+    "pooled": {
+      "r_precision": 0.11442564830928932,
+      "precision": 0.184,
+      "recall": 0.38759608691961633,
+      "ndcg": 0.6618259445304863,
+      "ndcg@20": 0.4234063274289095,
+      "ndcg%20": 0.4246071546657621
+    }
+  },
+  "sha256": {
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-all-perq.csv": "1c44ddb9129ed18dbd37096e8f6fddc9e774cf26cede104fc56ff59dc36695d4",
+    "CSFCube/test-pid2anns-csfcube-background.json": "b1f425249b629410e42a70298d7a819f8a8863f64b0fadd152d3dc3d726f1a15",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-background-ranked.json": "5fb53c785a9ccafcc5cc3c0e18322a1a5dc27ad5edddc2d88beb2fc4acb3278c",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-background-perq.csv": "ee78e2f7fa8f573ca930bc180cd2cd35bf6a996ea603b9a7b0b6db719715fe05",
+    "CSFCube/test-pid2anns-csfcube-method.json": "4d9b48f4b6a7a4fc24a30e0c0e74d1cc53eb4214ec4b855e3cd98e86829323a2",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-method-ranked.json": "29546d13b5aed8bbce4e084ea7453b2203c2312eaf44137e241af7d3422ff545",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-method-perq.csv": "e536b88a9980f668133bc8821c2090cd52af0a7d36e0d0fe0705a43bfa7596ef",
+    "CSFCube/test-pid2anns-csfcube-result.json": "7c56a3705af7daf3a554d7a853019fef8d0d57c89d66382bc8e70c7a373c8ccc",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-result-ranked.json": "20b1763971532480e7734c7ea1c74e43d538234760544ba54c8b378466f738d2",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_base_19102026_full_list-4096-result-perq.csv": "8bc907228c006d840a5bc269d2b0c6e988180e85b1cb23caac4c8fec6de57610",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/metrics_background.txt": "0eff866a7ae61a424322f549d7e75d8bff9cb96e49553f71a06764bdb130a649",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/metrics_method.txt": "b63a82b2d571fb68b3f39dd8da356e7cfe8b79526aa3896b8483ae2de5d2892b",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/metrics_result.txt": "f39eb1be07ab6db40198af5a44045eb3e67ef6eb2a73d2f21ac5b06594c3af0e",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_base_19102026_vllm_full_list_4096/metrics_all.txt": "6b284c1ace219793e636a487381436e399e8a2747f5993c31634d313f220c198",
+    "reproducibility_package/results/csfcube/gemma3_27b/base/results.txt": "ef0738b0c1022b13de2e55cedc22a7d3bae57d55059ceb44d4ea72c2709cb73a",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-all-perq.csv": "acf1b1e4868337912cf50a0aa854ec9217945cf6da3ab9e8d31fc5abb9da2548",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-background-ranked.json": "e78175ef9864e3b3b3a975de3cb7782a9fcc15bb4760cc52efce540187c3c97c",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-background-perq.csv": "a016287bd65ecad22ea5b75b2a684d232ccacb38d71f556d49b20f5d1ca711ab",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-method-ranked.json": "fdc9476038e38f5d212e776acc57a1583b6da685bd8ad10a5c401de3345b1dcb",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-method-perq.csv": "a724f2ac22b5668354e1afdd6b931145809aaa2b758dc31bc33b759ab1c93166",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-result-ranked.json": "1b878b7d6beb9c1e3a8b0c722cf92fc0f9dbf4858dcf8817d9e5720d15f7c92c",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/test-pid2pool-csfcube-gemma_3_27b_20260218-181123_full_list-4096-result-perq.csv": "955d5af7323b788120942e4728c4f492f02bb644d2a5ba024809f33b9f097ce3",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/metrics_background.txt": "c025d79354a51073ddad0bbcffd9c907fb0467d816f6c145486cea9723aecde2",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/metrics_method.txt": "ad0988953252ea0b67041c41f2fc156c774d061e91466e955ed216ed3e5d70d3",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/metrics_result.txt": "33198d1212891743ede8b21e5b272e1a8d16dc72dadd177901d08986e7aa975b",
+    "CSFCube/eval_scripts/runs_gemma_3_27b_20260218-181123_vllm_full_list_4096/metrics_all.txt": "458d749f42f9010e7e2dabb0081e14918a05bef2f66bec3045e6d8f20b511047",
+    "reproducibility_package/results/csfcube/gemma3_27b/FT/results.txt": "40e947842e5d281198b1ddb10c87cee13de9a0fb76600839c46cd9937985312b",
+    "CSFCube/eval_scripts/ranking_eval.py": "33bac000e6d5591b83bbf140ca59147d8e4c8a62257ae123ba6f9f5f5bd6a538",
+    "CSFCube/eval_scripts/rank_metrics.py": "c9e7c12cc543357ba2196c9280580c0f23baba115d0c38db7a97ccb60a565a39",
+    "configs/paired_statistical_uncertainty_csfcube_v2_20261020.json": "46d913390f2e27506590343e50564ac26727850cd383f603a72554ff4b1fd6fc",
+    "CSFCube/eval_scripts/runs_llama3.1_8b_base_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_base_vllm_full_list-all-perq.csv": "31654c5d9c2e17c7ba02c10923283f1626ca4c2bb053e54b0b4f6d9618c2956d",
+    "New folder/results_review/runs_llama3.1_8b_finetune_vllm_full_list/test-pid2pool-csfcube-llama3.1_8b_finetune_vllm_full_list-all-perq.csv": "7de4f8aeb82daf3f7f5f8fba408294efa90e5ac1710f93fb076867489c588a1e",
+    "CSFCube/eval_scripts/runs_gemma3_12b_base_vllm_full_list/test-pid2pool-csfcube-gemma3-12b-base-vllm-full-list-all-perq.csv": "7acbb29ab86f9e2b0fd27157301ad09098fa850b53065b2d262cb06be485c5a6",
+    "CSFCube/eval_scripts/runs_gemma3_12b_finetune_vllm_full_list/test-pid2pool-csfcube-gemma3-12b-finetune-vllm-full-list-all-perq.csv": "26f7349118e00993614b02a8ce9a4f7efe8714814e563b648a4daeb9c60498c6",
+    "CSFCube/eval_scripts/runs_qwen2.5_14b_base_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_base_vllm_full_list-all-perq.csv": "6a03403b4dca7e802ebeab1e67d0568a603f81ecfe17b4d8f02b8fa7cd8c0586",
+    "New folder/results_review/runs_qwen2.5_14b_finetune_vllm_full_list/test-pid2pool-csfcube-qwen2.5_14b_finetune_vllm_full_list-all-perq.csv": "f6dbcca68f2c2f42b3aac75186b4670be94750692d2632fec5aee4275d2c5698",
+    "New folder/modernbert_supervised_baseline/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-all-perq.csv": "583344f905b10978a20b74ced0a077e459f69ec13c376d8cea4e0083809f571a",
+    "tools/paired_statistical_uncertainty.py": "dd95e75756588851f25decf2c2b9764d215dc56bd1fcbadfc24a59ad98529d35",
+    "tools/litsearch_document_disjoint.py": "f8a178ad1ebcf9447c4c7a7a257385233bce772c4fa79b0decf6bee38d3b1d4f",
+    "results/statistical_uncertainty_csfcube_v2_20261020/verify_sources.py": "b6355c33da86e6d4bfd53c8be54833e8c7a49f9af172fbe1232a41d138275fca"
+  }
+}

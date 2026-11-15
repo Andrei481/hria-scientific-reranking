@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-28",
+  "operation": "selected four complete GTE comparison families from existing saved analysis; no statistical rerun",
+  "source_csv": "results/statistical_uncertainty/paired_uncertainty.csv",
+  "source_csv_sha256": "9045afcfed7af2d9d5cf2b48ae5845c5b6773e802db00e14cf42f9dc00a458a7",
+  "source_json": "results/statistical_uncertainty/paired_uncertainty.json",
+  "source_json_sha256": "4dc3fe4be4be36bddfcdef2054390ccda8af9178134a6ac93e36f69cb250dd8f",
+  "families": [
+    "csfcube_ranking_pretrained_adaptation",
+    "csfcube_ranking_pretrained_compact",
+    "litsearch_ranking_pretrained_adaptation",
+    "litsearch_ranking_pretrained_compact"
+  ],
+  "rows": 22,
+  "compact_table_numeric_fields_checked": 110,
+  "mismatches": []
+}

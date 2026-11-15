@@ -1,0 +1,149 @@
+{
+  "status": "complete",
+  "config": {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "data_sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f",
+    "seed": 3407,
+    "policy": "epoch_random",
+    "max_length": 16384,
+    "logical_epochs": 2,
+    "batch_size": 2,
+    "gradient_accumulation": 1,
+    "learning_rate": 1e-05,
+    "warmup_steps": 20,
+    "weight_decay": 0.01,
+    "scheduler": "cosine",
+    "lora_rank": 128,
+    "lora_alpha": 256,
+    "lora_dropout": 0.05,
+    "precision": "bf16",
+    "quantization": "none",
+    "export_method": "peft_merge_and_unload_loaded_base",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "epoch_implementation": "two fixed logical epochs in one sequential Trainer pass",
+    "smoke_steps": 0,
+    "source_hashes": {
+      "analyze.py": "73cd2b63ded2b4e6ab215059bb048f5ca16dc996ae48919bbb120c8240d64221",
+      "evaluate.py": "dbea1cce60bc92bffcc0b53fa87af6845a60f205afcac53b3daa2293f135f78c",
+      "experiment.py": "3e25aab803ee2ed9f4cefa685f767774170f873620caf39bac894f956862f13c",
+      "export_checkpoint.py": "577d46a49ade69432a928cc8bb8ef408bac6b5d1cad398e6032856ec71fda262",
+      "prepare_data.py": "33761563986ac75b1178d9637a7e5014a16f5387e62bb41fcc2b3c172ab15317",
+      "prepare_evaluation.py": "29c482969edd803dd22f44faae4e7f15d61fa3aa9c71b7638f449282aee5ff4c",
+      "train.py": "fcb129d964457ad38e39b221dcc4490834af04cdc87717854e28ec0244c31ee7",
+      "verify_checkpoint.py": "1800cb42b602c6634c2aae4be301d25936c54a827ce3a020a53ba92e6f614e60"
+    }
+  },
+  "packages": {
+    "torch": "2.10.0",
+    "transformers": "5.5.0",
+    "trl": "0.24.0",
+    "unsloth": "2026.7.3",
+    "unsloth_zoo": "2026.7.3",
+    "peft": "0.19.1",
+    "accelerate": "1.14.0",
+    "datasets": "4.3.0",
+    "bitsandbytes": "0.49.2"
+  },
+  "hardware": "NVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB\nNVIDIA H200, 595.71.05, 143771 MiB",
+  "training_seconds": 18385.84860763396,
+  "peak_training_vram": {
+    "allocated_gib": 31.731572151184082,
+    "reserved_gib": 32.89453125
+  },
+  "optimizer_steps": 4494,
+  "preflight": {
+    "config": {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "data_sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f",
+      "seed": 3407,
+      "policy": "epoch_random",
+      "max_length": 16384,
+      "logical_epochs": 2,
+      "batch_size": 2,
+      "gradient_accumulation": 1,
+      "learning_rate": 1e-05,
+      "warmup_steps": 20,
+      "weight_decay": 0.01,
+      "scheduler": "cosine",
+      "lora_rank": 128,
+      "lora_alpha": 256,
+      "lora_dropout": 0.05,
+      "precision": "bf16",
+      "quantization": "none",
+      "export_method": "peft_merge_and_unload_loaded_base",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "epoch_implementation": "two fixed logical epochs in one sequential Trainer pass",
+      "smoke_steps": 0,
+      "source_hashes": {
+        "analyze.py": "73cd2b63ded2b4e6ab215059bb048f5ca16dc996ae48919bbb120c8240d64221",
+        "evaluate.py": "dbea1cce60bc92bffcc0b53fa87af6845a60f205afcac53b3daa2293f135f78c",
+        "experiment.py": "3e25aab803ee2ed9f4cefa685f767774170f873620caf39bac894f956862f13c",
+        "export_checkpoint.py": "577d46a49ade69432a928cc8bb8ef408bac6b5d1cad398e6032856ec71fda262",
+        "prepare_data.py": "33761563986ac75b1178d9637a7e5014a16f5387e62bb41fcc2b3c172ab15317",
+        "prepare_evaluation.py": "29c482969edd803dd22f44faae4e7f15d61fa3aa9c71b7638f449282aee5ff4c",
+        "train.py": "fcb129d964457ad38e39b221dcc4490834af04cdc87717854e28ec0244c31ee7",
+        "verify_checkpoint.py": "1800cb42b602c6634c2aae4be301d25936c54a827ce3a020a53ba92e6f614e60"
+      }
+    },
+    "epochs": [
+      {
+        "examples": 4494,
+        "input_tokens": 54134682,
+        "response_tokens": 899528,
+        "max_tokens": 14298
+      },
+      {
+        "examples": 4494,
+        "input_tokens": 54134682,
+        "response_tokens": 899528,
+        "max_tokens": 14298
+      }
+    ],
+    "changed_targets_between_epochs": 4494,
+    "epoch_target_sha256": [
+      "93de9f7b0f6618eb2f177e78737371a6472a528d1a497321d8fa2bc925c31cb8",
+      "103d091e82795f7fa91911732d99c83932b0074e29faa4babc0996ed181fe36e"
+    ],
+    "schedule_sha256": "4580f1873ad788c4adc58dc8e0702abf43ff5987669cc951fd8354bd3ed26f66",
+    "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+    "packages": {
+      "torch": "2.10.0",
+      "transformers": "5.5.0",
+      "trl": "0.24.0",
+      "unsloth": "2026.7.3",
+      "unsloth_zoo": "2026.7.3",
+      "peft": "0.19.1",
+      "accelerate": "1.14.0",
+      "datasets": "4.3.0",
+      "bitsandbytes": "0.49.2"
+    }
+  },
+  "train_metrics": {
+    "train_runtime": 18384.9107,
+    "train_samples_per_second": 0.489,
+    "train_steps_per_second": 0.244,
+    "total_flos": 5.274157478900761e+18,
+    "train_loss": 0.7094265450145278,
+    "epoch": 1.0
+  },
+  "checkpoint": "/home/andreij/tie_sensitivity_artifacts/runs_disk_safe/epoch_random_seed3407/final",
+  "trainable_parameters": 335544320
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "left_set": "DORIS original queries",
+    "right_set": "LitSearch queries",
+    "left_queries": 100,
+    "right_queries": 597,
+    "exact_query_hash_pairs": 0,
+    "exact_left_queries": 0,
+    "exact_right_queries": 0,
+    "near_query_pairs": 0,
+    "near_left_queries": 0,
+    "near_right_queries": 0
+  },
+  {
+    "left_set": "DORIS aspect training queries",
+    "right_set": "LitSearch queries",
+    "left_queries": 1465,
+    "right_queries": 597,
+    "exact_query_hash_pairs": 0,
+    "exact_left_queries": 0,
+    "exact_right_queries": 0,
+    "near_query_pairs": 0,
+    "near_left_queries": 0,
+    "near_right_queries": 0
+  },
+  {
+    "left_set": "DORIS original queries",
+    "right_set": "CSFCube title+facet queries",
+    "left_queries": 100,
+    "right_queries": 52,
+    "exact_query_hash_pairs": 0,
+    "exact_left_queries": 0,
+    "exact_right_queries": 0,
+    "near_query_pairs": 0,
+    "near_left_queries": 0,
+    "near_right_queries": 0
+  },
+  {
+    "left_set": "DORIS aspect training queries",
+    "right_set": "CSFCube title+facet queries",
+    "left_queries": 1465,
+    "right_queries": 52,
+    "exact_query_hash_pairs": 0,
+    "exact_left_queries": 0,
+    "exact_right_queries": 0,
+    "near_query_pairs": 0,
+    "near_left_queries": 0,
+    "near_right_queries": 0
+  }
+]

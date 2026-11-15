@@ -1,0 +1,18 @@
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: /DATA/j_andrei/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1061, 0.1313, 0.3190, 0.5946, 0.3184, 0.3115
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: /DATA/j_andrei/modernbert_supervised_baseline/csfcube/test-pid2pool-csfcube-modernbert-dorismae-lambda-seed3407-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0952, 0.1101, 0.2467, 0.5431, 0.2396, 0.2494
+

@@ -1,0 +1,383 @@
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           49.50           32.53           30.23           25.33
+inline_specific              231           64.72           51.95           46.72           42.95
+author_broad                  35           65.71           57.14           51.36           48.92
+author_specific              211           78.67           72.04           66.22           64.11
+broad_avg                    155           53.16           38.09           35.00           30.66
+specific_avg                 442           71.38           61.54           56.03           53.05
+overall_avg                  597           66.65           55.45           50.57           47.24
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           45.33           32.25           29.74           25.70
+inline_specific              231           61.47           49.57           45.64           41.97
+author_broad                  35           71.43           54.29           50.61           45.46
+author_specific              211           79.15           72.04           66.95           64.76
+broad_avg                    155           51.23           37.23           34.45           30.16
+specific_avg                 442           69.91           60.29           55.81           52.85
+overall_avg                  597           65.06           54.30           50.27           46.96
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           43.67           29.19           29.30           24.87
+inline_specific              231           62.99           47.84           45.03           40.60
+author_broad                  35           60.00           51.43           49.23           46.64
+author_specific              211           77.73           69.67           64.19           61.86
+broad_avg                    155           47.35           34.22           33.80           29.79
+specific_avg                 442           70.02           58.26           54.17           50.75
+overall_avg                  597           64.14           52.02           48.88           45.31
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           49.50           36.69           30.93           27.17
+inline_specific              231           61.04           52.60           45.62           43.11
+author_broad                  35           65.71           51.43           46.99           42.53
+author_specific              211           79.62           72.51           64.88           62.82
+broad_avg                    155           53.16           40.02           34.55           30.64
+specific_avg                 442           69.91           62.10           54.81           52.52
+overall_avg                  597           65.56           56.37           49.55           46.84
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           47.00           31.69           29.22           24.53
+inline_specific              231           65.15           50.87           46.54           42.13
+author_broad                  35           71.43           54.29           50.52           45.01
+author_specific              211           81.52           73.93           66.99           64.69
+broad_avg                    155           52.52           36.80           34.03           29.15
+specific_avg                 442           72.96           61.88           56.30           52.90
+overall_avg                  597           67.65           55.37           50.52           46.73
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           49.22           33.78           30.80           26.21
+inline_specific              231           62.34           50.43           46.27           42.69
+author_broad                  35           71.43           40.00           44.59           35.03
+author_specific              211           77.25           67.77           64.29           61.53
+broad_avg                    155           54.24           35.18           33.92           28.20
+specific_avg                 442           69.46           58.71           54.88           51.68
+overall_avg                  597           65.51           52.60           49.43           45.59
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           46.17           30.86           28.86           24.05
+inline_specific              231           62.34           49.35           44.60           40.69
+author_broad                  35           68.57           42.86           44.43           37.12
+author_specific              211           79.15           70.14           64.51           61.74
+broad_avg                    155           51.23           33.57           32.38           27.00
+specific_avg                 442           70.36           59.28           54.10           50.74
+overall_avg                  597           65.39           52.60           48.46           44.58
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.bm25.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           37.42           22.94           23.17           18.68
+inline_specific              231           55.84           38.53           36.96           31.85
+author_broad                  35           48.57           37.14           36.48           33.28
+author_specific              211           73.46           62.56           55.68           52.48
+broad_avg                    155           39.94           26.15           26.17           21.98
+specific_avg                 442           64.25           50.00           45.90           41.70
+overall_avg                  597           57.94           43.81           40.78           36.58
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.bm25.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           69.32           53.25           52.26           47.19
+inline_specific              231           79.00           69.70           62.25           59.56
+author_broad                  35           82.86           68.57           61.71           57.67
+author_specific              211           89.10           83.41           74.42           72.67
+broad_avg                    155           72.38           56.71           54.40           49.55
+specific_avg                 442           83.82           76.24           68.06           65.82
+overall_avg                  597           80.85           71.17           64.51           61.59
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           66.12           50.06           48.90           43.84
+inline_specific              231           79.22           68.61           63.20           60.00
+author_broad                  35           74.29           65.71           57.54           55.06
+author_specific              211           90.05           81.04           76.82           74.02
+broad_avg                    155           67.97           53.59           50.85           46.38
+specific_avg                 442           84.39           74.55           69.70           66.69
+overall_avg                  597           80.13           69.11           64.81           61.42
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           70.99           52.14           51.31           45.59
+inline_specific              231           80.09           69.48           61.59           58.55
+author_broad                  35           80.00           65.71           62.43           58.44
+author_specific              211           90.05           81.52           73.58           70.95
+broad_avg                    155           73.02           55.20           53.82           48.49
+specific_avg                 442           84.84           75.23           67.31           64.47
+overall_avg                  597           81.77           70.03           63.81           60.32
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           70.57           51.83           51.54           45.52
+inline_specific              231           78.35           68.18           62.13           59.02
+author_broad                  35           82.86           71.43           61.98           58.82
+author_specific              211           91.00           83.89           75.49           73.28
+broad_avg                    155           73.34           56.26           53.89           48.52
+specific_avg                 442           84.39           75.68           68.51           65.83
+overall_avg                  597           81.52           70.64           64.71           61.34
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           68.07           49.78           50.45           44.62
+inline_specific              231           80.74           68.40           62.94           59.40
+author_broad                  35           85.71           65.71           62.09           56.81
+author_specific              211           91.94           84.36           75.99           73.62
+broad_avg                    155           72.05           53.38           53.08           47.37
+specific_avg                 442           86.09           76.02           69.17           66.19
+overall_avg                  597           82.44           70.14           64.99           61.30
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           65.57           49.36           48.03           42.84
+inline_specific              231           75.54           62.77           60.11           56.38
+author_broad                  35           82.86           68.57           60.43           56.63
+author_specific              211           87.20           81.99           74.23           72.67
+broad_avg                    155           69.47           53.70           50.83           45.95
+specific_avg                 442           81.11           71.95           66.85           64.16
+overall_avg                  597           78.09           67.21           62.69           59.43
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           67.51           49.08           49.51           43.80
+inline_specific              231           79.87           68.83           62.37           59.34
+author_broad                  35           82.86           68.57           59.76           55.76
+author_specific              211           89.10           82.46           75.18           73.24
+broad_avg                    155           70.98           53.48           51.82           46.50
+specific_avg                 442           84.28           75.34           68.48           65.97
+overall_avg                  597           80.82           69.66           64.16           60.92
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.grit.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           69.74           52.69           50.22           45.03
+inline_specific              231           77.92           67.75           61.25           58.25
+author_broad                  35           74.29           54.29           53.26           47.58
+author_specific              211           89.10           82.46           71.66           69.74
+broad_avg                    155           70.76           53.05           50.91           45.61
+specific_avg                 442           83.26           74.77           66.22           63.74
+overall_avg                  597           80.01           69.13           62.25           59.03
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.grit.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           69.25           52.67           49.55           44.44
+inline_specific              231           80.30           68.40           62.77           59.17
+author_broad                  35           80.00           65.71           62.89           59.01
+author_specific              211           90.52           83.89           77.02           74.99
+broad_avg                    155           71.68           55.61           52.56           47.73
+specific_avg                 442           85.18           75.79           69.57           66.72
+overall_avg                  597           81.68           70.55           65.15           61.79
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5/20260718_085334/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           68.56           52.11           50.53           45.57
+inline_specific              231           78.35           68.40           63.39           60.42
+author_broad                  35           80.00           57.14           59.19           52.92
+author_specific              211           87.68           79.62           75.87           73.40
+broad_avg                    155           71.14           53.25           52.49           47.23
+specific_avg                 442           82.81           73.76           69.34           66.61
+overall_avg                  597           79.78           68.43           64.97           61.58
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_1_target_50_pos_5_NO_AUGMENTATION/20260718_103129/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           71.06           53.36           51.44           46.24
+inline_specific              231           80.52           69.48           62.62           59.31
+author_broad                  35           80.00           62.86           60.71           55.96
+author_specific              211           89.57           81.52           75.45           73.15
+broad_avg                    155           73.08           55.51           53.53           48.43
+specific_avg                 442           84.84           75.23           68.75           65.92
+overall_avg                  597           81.79           70.11           64.80           61.38
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_1/20260717_154429/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           70.36           51.69           51.41           45.57
+inline_specific              231           79.87           69.05           63.08           59.76
+author_broad                  35           65.71           62.86           55.73           54.90
+author_specific              211           90.52           82.46           77.11           74.56
+broad_avg                    155           69.31           54.22           52.39           47.68
+specific_avg                 442           84.95           75.45           69.78           66.82
+overall_avg                  597           80.89           69.94           65.26           61.85
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_20_pos_5/20260717_105229/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           71.33           51.00           50.71           44.63
+inline_specific              231           79.87           69.05           62.93           59.64
+author_broad                  35           85.71           68.57           62.61           58.24
+author_specific              211           89.57           80.09           76.10           73.22
+broad_avg                    155           74.58           54.97           53.40           47.70
+specific_avg                 442           84.50           74.32           69.22           66.12
+overall_avg                  597           81.93           69.30           65.11           61.34
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_5/20260807_012357/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+ python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           70.50           49.75           49.91           43.58
+inline_specific              231           73.59           63.42           59.02           55.87
+author_broad                  35           74.29           60.00           53.92           50.29
+author_specific              211           83.89           75.83           72.95           70.55
+broad_avg                    155           71.35           52.06           50.82           45.10
+specific_avg                 442           78.51           69.34           65.67           62.88
+overall_avg                  597           76.65           64.86           61.81           58.26
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_100_pos_5/20260717_084410/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           67.03           51.00           49.35           44.45
+inline_specific              231           78.35           68.40           62.12           59.15
+author_broad                  35           77.14           68.57           58.27           56.01
+author_specific              211           89.10           81.52           76.85           74.56
+broad_avg                    155           69.31           54.97           51.36           47.06
+specific_avg                 442           83.48           74.66           69.15           66.51
+overall_avg                  597           79.80           69.55           64.53           61.46
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_variants_3_target_50_pos_10/20260717_154614/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json
+
+python evaluate_results.py --input results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.qwen3.reranked.jsonl 
+
+Evaluation results (values are percentages):
+
+Category                   Count            R@20             R@5         NDCG@20          NDCG@5
+------------------------------------------------------------------------------------------------
+inline_broad                 120           69.25           53.36           49.69           44.78
+inline_specific              231           80.30           68.83           61.29           57.94
+author_broad                  35           71.43           57.14           53.90           49.69
+author_specific              211           88.63           80.09           73.87           71.39
+broad_avg                    155           69.74           54.22           50.64           45.89
+specific_avg                 442           84.28           74.21           67.29           64.36
+overall_avg                  597           80.50           69.02           62.97           59.56
+
+Saved JSON summary to: results/Llama-3.1-8B-Instruct_no_aspect_decomp_variants_3_target_50_pos_5/20260718_150748/k_100/LitSearch.title_abstract.qwen3.reranked.metrics.json

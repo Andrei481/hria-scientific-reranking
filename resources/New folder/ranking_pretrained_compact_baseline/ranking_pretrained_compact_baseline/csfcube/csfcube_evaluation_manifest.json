@@ -1,0 +1,124 @@
+{
+  "experiment": "gte_modernbert_zero_shot_and_dorismae_csfcube",
+  "model_variants": {
+    "zero_shot": {
+      "source": "Alibaba-NLP/gte-reranker-modernbert-base",
+      "revision": "204bdd4d405882a9e8ca9452c223fc49f02e8451",
+      "experiment": "gte-modernbert-zeroshot"
+    },
+    "dorismae_adapted": {
+      "source": "/home/andreij/ranking_pretrained_compact_baseline/models/gte_modernbert_dorismae_lambda_seed3407/final",
+      "revision": null,
+      "experiment": "gte-modernbert-dorismae-lambda-seed3407"
+    }
+  },
+  "query_representation": "query-paper title plus full abstract",
+  "candidate_representation": "candidate-paper title plus full abstract",
+  "max_length": 1024,
+  "predict_batch_size": 64,
+  "runs": {
+    "zero_shot": {
+      "background": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-background.json",
+        "gold_sha256": "b1f425249b629410e42a70298d7a819f8a8863f64b0fadd152d3dc3d726f1a15",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-background-ranked.json",
+        "output_sha256": "e67015aad7a50d771ab3e96e84832252c9f4cd17a72e776cd9cd7291068dbe0f",
+        "queries": 16,
+        "documents": 1877,
+        "elapsed_seconds": 9.203562608003267,
+        "queries_per_second": 1.7384572346024638,
+        "documents_per_second": 203.94276433430156,
+        "peak_vram": 4.572265625
+      },
+      "method": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-method.json",
+        "gold_sha256": "4d9b48f4b6a7a4fc24a30e0c0e74d1cc53eb4214ec4b855e3cd98e86829323a2",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-method-ranked.json",
+        "output_sha256": "12058753b6e398e0af52a41ca4620e2a0c04a76c1452afc12d06aa7e91a66f13",
+        "queries": 17,
+        "documents": 2174,
+        "elapsed_seconds": 10.006605746995774,
+        "queries_per_second": 1.698877764331208,
+        "documents_per_second": 217.2564858621204,
+        "peak_vram": 3.541015625
+      },
+      "result": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-result.json",
+        "gold_sha256": "7c56a3705af7daf3a554d7a853019fef8d0d57c89d66382bc8e70c7a373c8ccc",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-result-ranked.json",
+        "output_sha256": "36852aacb16443b68b7a0ec8ab2e5220c5caf4dbe9f38271136b143157f2f878",
+        "queries": 17,
+        "documents": 2193,
+        "elapsed_seconds": 10.13791662400763,
+        "queries_per_second": 1.6768731318762526,
+        "documents_per_second": 216.3166340120366,
+        "peak_vram": 3.541015625
+      }
+    },
+    "dorismae_adapted": {
+      "background": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-background.json",
+        "gold_sha256": "b1f425249b629410e42a70298d7a819f8a8863f64b0fadd152d3dc3d726f1a15",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-dorismae-lambda-seed3407-background-ranked.json",
+        "output_sha256": "a9f5db70c27aac3b2dc7496464a6bca729bb1fac2360f1e3278e845142bc1246",
+        "queries": 16,
+        "documents": 1877,
+        "elapsed_seconds": 4.190704573004041,
+        "queries_per_second": 3.81797373717772,
+        "documents_per_second": 447.8960440426613,
+        "peak_vram": 3.078125
+      },
+      "method": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-method.json",
+        "gold_sha256": "4d9b48f4b6a7a4fc24a30e0c0e74d1cc53eb4214ec4b855e3cd98e86829323a2",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-dorismae-lambda-seed3407-method-ranked.json",
+        "output_sha256": "e60ed64346e8f80d6c940c63b634462602bde50e76b5271337f10f7fc83d108c",
+        "queries": 17,
+        "documents": 2174,
+        "elapsed_seconds": 4.213581389994943,
+        "queries_per_second": 4.03457259431754,
+        "documents_per_second": 515.9506364733136,
+        "peak_vram": 1.884765625
+      },
+      "result": {
+        "gold_path": "/home/andreij/CSFCube/test-pid2anns-csfcube-result.json",
+        "gold_sha256": "7c56a3705af7daf3a554d7a853019fef8d0d57c89d66382bc8e70c7a373c8ccc",
+        "output": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-dorismae-lambda-seed3407-result-ranked.json",
+        "output_sha256": "eae7dbb717eb7e7fae76803639415fe90f09c29cbabb9a98d1368765f9ebe489",
+        "queries": 17,
+        "documents": 2193,
+        "elapsed_seconds": 3.7347848330100533,
+        "queries_per_second": 4.551801712844281,
+        "documents_per_second": 587.1824209569122,
+        "peak_vram": 1.884765625
+      }
+    }
+  },
+  "paired_statistics_inputs": {
+    "zero_shot": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-zeroshot-all-perq.csv",
+    "dorismae_adapted": "/home/andreij/ranking_pretrained_compact_baseline/csfcube/test-pid2pool-csfcube-gte-modernbert-dorismae-lambda-seed3407-all-perq.csv"
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.13.0",
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "datasets": "5.0.1",
+      "accelerate": "1.14.0",
+      "numpy": "1.26.4",
+      "scipy": "1.16.1"
+    },
+    "nvidia_smi": [
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB",
+      "NVIDIA H200, 595.71.05, 143771 MiB"
+    ]
+  }
+}

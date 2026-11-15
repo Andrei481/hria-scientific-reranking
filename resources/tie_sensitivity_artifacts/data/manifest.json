@@ -1,0 +1,20 @@
+{
+  "data_sha256": "7c649c816c78778777afcddc011dafd345a6847d2fd6d4e082b58bad75e5bc4f",
+  "source": "/home/andreij/dorismae_listwise_4494.jsonl",
+  "audit": {
+    "examples": 4494,
+    "list_size_histogram": {
+      "50": 4312,
+      "51": 182
+    },
+    "grade_counts": {
+      "0": 181859,
+      "2": 27367,
+      "1": 15656
+    },
+    "max_positives_observed": 47,
+    "lists_above_five_positives": 1392
+  },
+  "cohort": "new matched tie-sensitivity cohort; do not assume historical LLM list identity",
+  "sampling": "none; actual 50/51-document lists and all relevance grades preserved"
+}

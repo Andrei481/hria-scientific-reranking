@@ -1,0 +1,44 @@
+# Model checkpoints and parameter-efficient adapters
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.bin
+adapters/
+*.safetensors
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Generated corpora and local experiment outputs
+/data/
+corpora/
+generated_corpora/
+results/**/*.jsonl
+*.jsonl
+
+# Local environments
+.venv/
+venv/
+env/
+.envrc
+
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.yaml
+
+# Curated research records included intentionally
+!/resources/**/*.jsonl

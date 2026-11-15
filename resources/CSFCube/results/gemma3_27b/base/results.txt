@@ -1,0 +1,91 @@
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking --gold_path CSFCube --ranked_path CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/ --experiment gemma_3_27b_base_V2_vllm_full_list --facet background
+EVAL SPLIT: dev
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1581, 0.2188, 0.3976, 0.7933, 0.6059, 0.6055
+
+EVAL SPLIT: test
+Gold query pids: 16
+Valid ranked query pids: 16
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-background-perq.csv
+Total queries: 16; Total candidates: 1877
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1477, 0.2344, 0.3921, 0.7708, 0.5712, 0.5692
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking --gold_path CSFCube --ranked_path CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/ --experiment gemma_3_27b_base_V2_vllm_full_list --facet method
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0689, 0.1063, 0.2857, 0.5420, 0.2638, 0.2729
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-method-perq.csv
+Total queries: 17; Total candidates: 2174
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0803, 0.1142, 0.3558, 0.5760, 0.3093, 0.3169
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking --gold_path CSFCube --ranked_path CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/ --experiment gemma_3_27b_base_V2_vllm_full_list --facet result
+EVAL SPLIT: dev
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.0997, 0.2062, 0.4653, 0.7144, 0.5267, 0.5267
+
+EVAL SPLIT: test
+Gold query pids: 17
+Valid ranked query pids: 17
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-result-perq.csv
+Total queries: 17; Total candidates: 2193
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1033, 0.1837, 0.4120, 0.6783, 0.4544, 0.4656
+
+python CSFCube/eval_scripts/ranking_eval.py eval_pool_ranking --gold_path CSFCube --ranked_path CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/ --experiment gemma_3_27b_base_V2_vllm_full_list --facet all
+EVAL SPLIT: dev
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1089, 0.1771, 0.3829, 0.6832, 0.4655, 0.4684
+
+EVAL SPLIT: test
+Reading facet: background
+Gold query pids: 16
+Valid ranked query pids: 16
+Reading facet: method
+Gold query pids: 17
+Valid ranked query pids: 17
+Reading facet: result
+Gold query pids: 17
+Valid ranked query pids: 17
+Total queries: 50
+Precision and recall at rank: 20
+Wrote: CSFCube/eval_scripts/runs_gemma_3_27b_base_V2_vllm_full_list/test-pid2pool-csfcube-gemma_3_27b_base_V2_vllm_full_list-all-perq.csv
+Total queries: 50; Total candidates: 6244
+R-Precision; Precision@20; Recall@20; NDCG; NDCG@20; NDCG%20
+0.1100, 0.1760, 0.3867, 0.6735, 0.4428, 0.4487

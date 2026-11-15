@@ -1,0 +1,8 @@
+primary:
+  id: standard_v3_k50_max_positives_5
+  training_data:
+    variants_per_query: 3
+    k_train: 50
+    max_positives: 5
+  evaluation:
+    k_eval: 100

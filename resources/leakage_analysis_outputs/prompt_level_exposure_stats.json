@@ -1,0 +1,12 @@
+{
+  "filtered_positive_aspect_rows": 1498,
+  "prompt_training_examples": 4494,
+  "target_size": 50,
+  "unique_prompt_candidate_docs": 8480,
+  "unique_prompt_positive_candidate_docs": 7216,
+  "score_mentions": {
+    "0": 181859,
+    "1": 15656,
+    "2": 27367
+  }
+}
