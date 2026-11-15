@@ -39,7 +39,7 @@
 \begin{center}
 {\Large\bfseries Online Resource 1: Supplementary Information\par}
 \medskip
-{\large Are 100 Queries Enough? Small-Data Adaptation of Open LLMs for Scientific Reranking\par}
+{\large Are 100 Queries Enough? Small-Data Adaptation of Open-Weight LLMs for Scientific Reranking\par}
 \medskip
 Journal of Intelligent Information Systems
 \end{center}
@@ -81,10 +81,11 @@ Passages:\newline[1] Title: \{title\} Abstract: \{abstract\}\newline
 Your ranking (most to least relevant):
 \end{quote}
 
-This identifier-based ranking approach follows the prompt format used by the
-LitSearch GPT-4o reranker~\cite{Ajith}. We apply \emph{train-on-responses-only}
-masking so that the model does not learn from prompt-specific tokens. Consequently,
-the loss is computed only over tokens in the assistant turn. The selected chat
+This identifier-based ranking approach follows the RankGPT-style format also
+used by the LitSearch GPT-4o reranker~\cite{Ajith}. We apply
+\emph{train-on-responses-only} masking: loss terms at prompt positions are masked,
+and the objective optimizes assistant-response tokens conditioned on the full
+prompt. The selected chat
 template determines the instruction and response delimiters; Gemma 3, for
 example, uses \texttt{<start\_of\_turn>user} and
 \texttt{<start\_of\_turn>model}.
@@ -93,11 +94,14 @@ We distinguish between the sampled \emph{training} list length,
 $K_{\mathrm{train}}$, and the \emph{inference} reranking depth,
 $K_{\mathrm{eval}}$. Our standard training configuration uses
 $K_{\mathrm{train}}=50$, while the main LitSearch experiment reranks the top
-$K_{\mathrm{eval}}=100$ first-stage candidates. At inference, we place all 100
-candidates in one RankGPT-style prompt and re-index them from $[1]$ to $[100]$.
+$K_{\mathrm{eval}}=100$ first-stage candidates. At inference, the nominal prompt
+contains all 100 candidates in one RankGPT-style list, indexed from $[1]$ to
+$[100]$. On failures, the inference code retries with a progressively smaller
+candidate prefix.
 We retain the title-abstract representation used in training and truncate each
-candidate to approximately 300 words. The model returns a raw permutation
-of identifiers, which the parser described below validates and completes.
+candidate to approximately 300 words. The model is prompted to return a
+permutation of identifiers; its raw response need not be valid. The parser
+described below repairs and completes the ranking over the original input list.
 
 This setup deliberately evaluates the standard model on a list length it did not
 encounter during fine-tuning. We do not use a sliding window for the main
@@ -108,8 +112,8 @@ $K_{\mathrm{eval}}$.
 To make sampling reproducible, we derive deterministic seeds for every randomized
 pool-construction step from the row index and query text. When an aspect-level
 instance contains more than 100 zero-scored candidates, we sample negatives from
-the first 100. This choice keeps the pool connected to the higher-ranked portion
-of the original DORIS-MAE candidates while retaining negative diversity. We
+the first 100 in the stored candidate-pool order. This restriction does not
+establish that the selected negatives have higher retrieval ranks. We
 select hyperparameters on a temporary split of the DORIS-MAE-derived data. After
 selection, we train the final models on all 1,498 filtered aspect-level instances;
 LitSearch and CSFCube remain held-out evaluation benchmarks throughout.
@@ -210,8 +214,9 @@ frozen top-100 BM25, GRIT and Qwen3 candidate lists used by the LLMs. On
 CSFCube, they score every candidate in the released facet-specific pool. The
 query representation is the query paper's title and full abstract, and the
 candidate representation is its title and full abstract, subject to the
-1,024-token pair limit. Unlike the generative facet-conditioned prompt, this
-representation does not explicitly name the facet. We use prediction batches of
+1,024-token pair limit. Neither this representation nor the retained generative
+prompt explicitly names the facet; both are scored against facet-specific
+judgments. We use prediction batches of
 64 pairs and the same benchmark metric implementations as for the LLM outputs.
 
 \subsection{Evaluation harness and retriever integration}
@@ -368,7 +373,7 @@ For the original LLM experiments, we distinguish two cohorts. The
 \emph{primary cohort} contains
 the original training checkpoints and all original main, external-baseline,
 CSFCube and exploratory evaluations. Because changes in software dependencies prevented exact reproduction of the original software environment during ablation experiments, we constructed and pinned a \emph{reconstructed environment}. In this second environment, we ran
-the ablations, the training-seed study and the strict document-disjoint
+the ablations, the training-seed study and the exact-text-overlap-filtered
 LitSearch evaluation, always comparing against a standard-recipe control trained
 under the same conditions. We do not interpret numerical differences across the
 two environments as treatment effects. For transparency,
@@ -438,7 +443,9 @@ over the top $k\%$ of the pool rather than at one fixed rank. For a pool of size
 $n$, the cutoff is $\lfloor (k/100) \cdot n \rfloor$. Thus, nDCG\%@$20$ is
 equivalent to nDCG at rank 20 for a pool of 100 candidates, but to nDCG at rank
 30 for a pool of 150. We use the graded labels directly as DCG gains, without
-binarization, and apply a logarithmic position discount. Normalization uses the
+binarization, and retain the released evaluator's \texttt{method=0} discount:
+the first two ranks have weight 1, and rank $i\geq3$ has weight $1/\log_2(i)$.
+This differs from the LitSearch discount above. Normalization uses the
 ideal DCG obtained by sorting the pool's labels in descending order, which gives
 values in $[0,1]$.
 
@@ -541,8 +548,8 @@ bootstrap intervals and Holm-corrected sign-flip permutation $p$-values.}
 Higher precision does not consistently improve nDCG@$20$. Relative to 4-bit
 QLoRA, 16-bit LoRA gains $0.92$ pp with BM25 but changes GRIT and Qwen3 by
 $-0.26$ and $-0.88$ pp. All three intervals include zero, and none of the
-comparisons is significant after Holm correction. The mixed top-rank behavior
-therefore cannot be attributed to 4-bit quantization alone. This control covers
+comparisons is significant after Holm correction. These differences do not
+isolate the contribution of quantization to the mixed top-rank behavior. This control covers
 LitSearch only, so we do not use it to explain the CSFCube regression.
 
 \FloatBarrier
@@ -571,7 +578,9 @@ Parent queries & Aspect rows & Optimizer steps & R@20 & R@5 & nDCG@20 \\
 \caption{Retriever-averaged parent-query learning curve. Training rows report
 mean $\pm$ sample standard deviation over three seeds; aspect rows and optimizer
 steps report mean $[\min,\max]$. The zero-shot row is a single checkpoint and is
-not included in the seed statistics. Bold marks the best trained budget for each
+not included in the seed statistics. It comes from the primary cohort, whereas
+the trained budget points use the reconstructed cohort; comparisons with zero-shot
+are therefore descriptive across cohorts. Bold marks the best trained budget for each
 metric. Values are percentages. Differences are calculated from unrounded
 scores and rounded only for presentation; they may therefore differ slightly
 from differences between displayed values.}
@@ -728,7 +737,7 @@ $K_{\mathrm{eval}}=200$; a 200-document prompt would require substantially more
 prefill compute, and we make no claim about that setting.
 
 \FloatBarrier
-\section{Uncertainty for local open-reranker comparisons}
+\section{Uncertainty for local open-weight reranker comparisons}
 \label{supp:local}
 
 \begin{table}[t]
@@ -1189,10 +1198,12 @@ reconstructed-environment experiments.
 
 \subsection{Alternative efficiency-oriented formulation via single-token decoding}
 
-We also implement an ablation experiment inspired by \textit{Faster improved listwise reranking with single token
-decoding} (FIRST)~\cite{Reddy}. Instead of generating a multi-token permutation
-autoregressively, FIRST obtains the complete ranking in one forward pass by
-reading the last-position logits at the $K$ candidate-label positions.
+We also implement a custom variant inspired by \textit{Faster improved listwise
+reranking with single token decoding} (FIRST)~\cite{Reddy}. Like FIRST's scoring
+of the first output identifier within a candidate window, our variant uses
+last-position logits at candidate-label token IDs. It ranks the supplied list in
+one forward pass instead of generating a multi-token permutation autoregressively.
+Its different training objective means this is not an isolated decoding ablation.
 
 \paragraph{Identifier design} We assign a short label to each candidate
 (\texttt{A}, \texttt{B}, \dots, \texttt{Z}, \texttt{AA}, \dots). Every label
@@ -1202,17 +1213,19 @@ comfortably covering our $K = 50$ setting.
 
 \paragraph{Training objective} From the last-position logits, we gather the values
 at the $K$ label token IDs and obtain the score vector
-$z \in \mathbb{R}^K$. We then apply a \emph{gain-weighted ListMLE}
-loss~\cite{Xia}:
+$z \in \mathbb{R}^K$. We then apply our gain-weighted variant of the
+ListMLE loss~\cite{Xia}:
 \[
 \mathcal{L}(z, \pi) = \sum_{i=1}^{K} g_{\pi(i)} \left(
-\log \sum_{j \ge i} \exp(z_{\pi(j)}) - z_{\pi(i)} \right),
+\log \sum_{j=i}^{K} \exp(z_{\pi(j)}) - z_{\pi(i)} \right),
 \]
-where $\pi$ denotes the ideal relevance-sorted permutation and
-$g_r = 2^r - 1$ denotes the DCG-style gain derived from each 0-2 graded label.
-Negative candidates ($r = 0$) contribute no gain, but remain in the partition
+where $\pi$ denotes the ideal relevance-sorted permutation, candidate $j$ has
+grade $r_j\in\{0,1,2\}$, and $g_j=2^{r_j}-1$ is its DCG-style gain.
+Negative candidates ($r_j = 0$) contribute no gain, but remain in the partition
 function. We normalize each sample loss by its total gain
-$\sum_i g_{\pi(i)}$ and average the mini-batch loss over samples.
+$\sum_i g_{\pi(i)}$ and average the mini-batch loss over samples. This objective
+differs from published FIRST's combination of language-modeling and weighted
+RankNet losses~\cite{Reddy}.
 
 \paragraph{Training setup} We train this variant for $2$ epochs at
 $2 \times 10^{-5}$, with a per-device batch size of $1$ and gradient
@@ -1221,7 +1234,8 @@ accumulation of $16$ (effective batch size $16$).
 \paragraph{Inference} At inference time, we run the model once on the reranking
 prompt and gather the last-position logits for the $K$ label token IDs. A
 descending \texttt{argsort} over this $K$-dimensional vector gives the ranking.
-The approach reduces reranking from $O(K)$ decoded tokens to one forward pass.
+This removes sequential permutation decoding, although the forward pass still
+processes the full input list. We do not report a measured speedup for this variant.
 
 \begin{table}[htbp]
 \centering
@@ -1234,7 +1248,7 @@ The approach reduces reranking from $O(K)$ decoded tokens to one forward pass.
 Configuration & R@20 & R@5 & nDCG@20 \\
 \hline
 Gemma 3 12B FT, generative (GRIT) & \textbf{81.2} & \textbf{70.2} & \textbf{64.1} \\
-Gemma 3 12B FT, FIRST (GRIT)      & 70.8 & 35.8 & 35.0 \\
+Gemma 3 12B FT, single-token variant (GRIT) & 70.8 & 35.8 & 35.0 \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -1245,10 +1259,11 @@ GRIT as the first-stage retriever. Values are percentages.}
 \end{table}
 
 As Table~\ref{tab:first-ablation} shows, our FIRST-inspired variant performs substantially worse than
-the final generative listwise method, particularly on top-rank metrics. Its single
-forward pass makes inference more efficient, but the loss in ranking quality is too
-large for our scientific reranking setting. We therefore exclude FIRST from the
-main comparisons and the final pipeline.
+the final generative listwise method, particularly on top-rank metrics. Although
+it removes sequential decoding, the loss in ranking quality is too large for
+our evaluated setting. We therefore exclude this tested variant from the main
+comparisons and the final pipeline. This result does not establish the performance
+of the published FIRST training recipe, which we do not evaluate here.
 
 \subsection{Prompt repetition at inference time}
 
