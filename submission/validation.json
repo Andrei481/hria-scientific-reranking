@@ -1,9 +1,9 @@
 {
   "article": {
-    "pages": 23,
+    "pages": 24,
     "pdf": "article.pdf",
     "source_archive": "manuscript_source.zip",
-    "pdf_sha256": "b8113a19baa8b642a7dc709744696fc9eb9c664fdf7a6be116d7aeb4b8c3bc22"
+    "pdf_sha256": "f0cdeae605f29b911bb3334e94a82f276c17ff818dcd9c5b67698bae57d7a950"
   },
   "article_supplement": {
     "pages": 22,

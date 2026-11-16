@@ -17,8 +17,12 @@ https://link.springer.com/journal/10844/submission-guidelines
 - Romanian names use explicit LaTeX accents, including comma-below accents.
 - The article includes funding, competing interests, author contributions,
   and data/code availability under Statements and Declarations.
-- The author supplied the no-competing-interests declaration, equal-contribution
-  wording, and confirmation that all authors reviewed and approved the manuscript.
+- The author supplied the no-competing-interests declaration and confirmation
+  that all authors reviewed and approved the manuscript. On 17 November 2026,
+  the equal-contribution statement was replaced with the supplied individual
+  roles: Andrei-Răzvan Joldea led conception, code and experiments, analysis, and
+  original writing; the other four authors contributed to conceptualization,
+  methodology, supervision, and critical revision.
 - The availability statement explicitly excludes trained model checkpoints and
   some raw experimental files. It does not promise access on request or complete
   end-to-end reproducibility from the repository alone.
@@ -49,7 +53,7 @@ PDF produced by the submission portal before completing submission.
 
 - Both documents compiled with pdfLaTeX and BibTeX (TeX Live 2026), including
   repeated LaTeX passes to resolve citations and cross-references.
-- Final lengths: main article **23 pages** including references (below the
+- Final lengths: main article **24 pages** including references (below the
   journal's 25-page limit); supplementary PDF **22 pages**.
 - The final logs contain no undefined references/citations, missing characters,
   or overfull boxes. Underfull spacing and nonfatal PDF-bookmark warnings remain.
