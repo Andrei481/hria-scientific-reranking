@@ -106,10 +106,14 @@ generative rerankers. In Section~\ref{sec:list-length-mismatch}, we separate the
 effect of changing $K_{\mathrm{train}}$ from the effect of changing
 $K_{\mathrm{eval}}$.
 
-We apply
-\emph{train-on-responses-only} masking: loss terms at prompt positions are masked,
-and the objective optimizes assistant-response tokens conditioned on the full
-prompt.
+To make sampling reproducible, we derive deterministic seeds for every randomized
+pool-construction step from the row index and query text. When an aspect-level
+instance contains more than 100 zero-scored candidates, we sample negatives from
+the first 100. This choice keeps the pool connected to the higher-ranked portion
+of the original DORIS-MAE candidates while retaining negative diversity. We
+select hyperparameters on a temporary split of the DORIS-MAE-derived data. After
+selection, we train the final models on all 1,498 filtered aspect-level instances;
+LitSearch and CSFCube remain held-out evaluation benchmarks throughout.
 
 \subsection{Output parsing and validity correction}
 \label{supp:output-parsing}
@@ -208,7 +212,7 @@ CSFCube, they score every candidate in the released facet-specific pool. The
 query representation is the query paper's title and full abstract, and the
 candidate representation is its title and full abstract, subject to the
 1,024-token pair limit. Neither this representation nor the retained generative
-prompt explicitly names the facet; both are scored against facet-specific
+prompt explicitly names the facet. Both are scored against facet-specific
 judgments. We use prediction batches of
 64 pairs and the same benchmark metric implementations as for the LLM outputs.
 
@@ -726,7 +730,7 @@ $K_{\mathrm{eval}}=200$; a 200-document prompt would require substantially more
 prefill compute, and we make no claim about that setting.
 
 \FloatBarrier
-\section{Uncertainty for local open-weight reranker comparisons}
+\section{Uncertainty for local open-reranker comparisons}
 \label{supp:local}
 
 \begin{table}[t]
