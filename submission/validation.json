@@ -3,12 +3,16 @@
     "pages": 24,
     "pdf": "article.pdf",
     "source_archive": "manuscript_source.zip",
-    "pdf_sha256": "7b9a65601659976cdf10e6743fbbfc2879ae1828036e321b2991509922e5df0d"
+    "pdf_sha256": "2357e314f6054bea6fe290d913c271d22fff65ee8164e10e62751908e9773007",
+    "references": 26,
+    "citation_order_verified": true
   },
   "article_supplement": {
     "pages": 22,
     "pdf": "ESM_1.pdf",
     "source_archive": "supplement_source.zip",
-    "pdf_sha256": "138bb15758abb362cbbe41406b80c425cdc71d0e3c9ac69fbddb16e061b1abcd"
+    "pdf_sha256": "2b64067980e5fcd6b0c9c8cb9ba41732a206dff327a8a0a5e0585d6dc8dfda17",
+    "references": 12,
+    "citation_order_verified": true
   }
 }

@@ -66,8 +66,9 @@ PDF produced by the submission portal before completing submission.
   a reproducible grouping error. No class internals were patched.
 - The standard `combelow.sty` package is included unchanged, with its license
   header, to preserve Romanian comma-below accents in a flat source package.
-- The source packages use the supplied, unmodified `sn-basic.bst`; references
-  are consecutively numbered in its default alphabetical order.
+- The source packages use the supplied `sn-basic.bst` with both `SORT` commands
+  commented out, as instructed in its header. Each document's references are
+  numbered consecutively in order of first citation.
 
 Recheck pagination if the manuscript or declarations change. The final portal
 build can differ because it may use a different TeX Live release.
