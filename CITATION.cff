@@ -1,8 +1,0 @@
-cff-version: 1.2.0
-message: "If you use this repository, please cite the associated article."
-type: software
-title: "Are 100 Queries Enough? Small-Data Adaptation of Open LLMs for Scientific Reranking"
-authors:
-  - family-names: Joldea
-    given-names: Andrei
-repository-code: "https://github.com/andrei-joldea/scientific-reranking-reproducibility"
