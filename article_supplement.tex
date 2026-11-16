@@ -1176,12 +1176,77 @@ and Gemma 3 12B.}
 \end{table}
 
 \FloatBarrier
-\section{Exploratory Variant Excluded from the Final Pipeline}
+\section{Exploratory Variants Excluded from the Final Pipeline}
 
-We explored prompt repetition but did not retain it in the final pipeline because
-its gains were inconsistent. These experiments use the original-environment
+We explored two additional variants but did not retain them in the main training
+recipe. Both are relevant to the broader design space. However, they either
+failed to improve the final system or produced gains that were too inconsistent for
+inclusion in the main pipeline. These experiments use the original-environment
 checkpoints, so we do not compare them numerically with the
 reconstructed-environment experiments.
+
+\subsection{Alternative efficiency-oriented formulation via single-token decoding}
+
+We also implement an ablation experiment inspired by \textit{Faster improved listwise reranking with single token
+decoding} (FIRST)~\cite{Reddy}. Instead of generating a multi-token permutation
+autoregressively, FIRST obtains the complete ranking in one forward pass by
+reading the last-position logits at the $K$ candidate-label positions.
+
+\paragraph{Identifier design} We assign a short label to each candidate
+(\texttt{A}, \texttt{B}, \dots, \texttt{Z}, \texttt{AA}, \dots). Every label
+must encode as exactly one token under the target model's tokenizer, which we
+verify before training. All labels are single tokens with the Gemma~3 tokenizer,
+comfortably covering our $K = 50$ setting.
+
+\paragraph{Training objective} From the last-position logits, we gather the values
+at the $K$ label token IDs and obtain the score vector
+$z \in \mathbb{R}^K$. We then apply a \emph{gain-weighted ListMLE}
+loss~\cite{Xia}:
+\[
+\mathcal{L}(z, \pi) = \sum_{i=1}^{K} g_{\pi(i)} \left(
+\log \sum_{j \ge i} \exp(z_{\pi(j)}) - z_{\pi(i)} \right),
+\]
+where $\pi$ denotes the ideal relevance-sorted permutation and
+$g_r = 2^r - 1$ denotes the DCG-style gain derived from each 0-2 graded label.
+Negative candidates ($r = 0$) contribute no gain, but remain in the partition
+function. We normalize each sample loss by its total gain
+$\sum_i g_{\pi(i)}$ and average the mini-batch loss over samples.
+
+\paragraph{Training setup} We train this variant for $2$ epochs at
+$2 \times 10^{-5}$, with a per-device batch size of $1$ and gradient
+accumulation of $16$ (effective batch size $16$).
+
+\paragraph{Inference} At inference time, we run the model once on the reranking
+prompt and gather the last-position logits for the $K$ label token IDs. A
+descending \texttt{argsort} over this $K$-dimensional vector gives the ranking.
+The approach reduces reranking from $O(K)$ decoded tokens to one forward pass.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{l c c c}
+\hline
+Configuration & R@20 & R@5 & nDCG@20 \\
+\hline
+Gemma 3 12B FT, generative (GRIT) & \textbf{81.2} & \textbf{70.2} & \textbf{64.1} \\
+Gemma 3 12B FT, FIRST (GRIT)      & 70.8 & 35.8 & 35.0 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{LitSearch overall-average comparison of our final generative listwise
+reranker and the FIRST-inspired single-token decoding variant. Both use Gemma 3 12B with
+GRIT as the first-stage retriever. Values are percentages.}
+\label{tab:first-ablation}
+\end{table}
+
+As Table~\ref{tab:first-ablation} shows, our FIRST-inspired variant performs substantially worse than
+the final generative listwise method, particularly on top-rank metrics. Its single
+forward pass makes inference more efficient, but the loss in ranking quality is too
+large for our scientific reranking setting. We therefore exclude FIRST from the
+main comparisons and the final pipeline.
 
 \subsection{Prompt repetition at inference time}
 
@@ -1391,6 +1456,8 @@ descriptive comparison without paired significance tests.
 \bibitem{Sun}Sun, W., Yan, L., Ma, X., Wang, S., Ren, P., Chen, Z., et al. (2023). Is ChatGPT good at search? Investigating large language models as re-ranking agents. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (pp. 14918--14937). doi: \url{https://doi.org/10.18653/v1/2023.emnlp-main.923}.
 
 \bibitem{Xia}Xia, F., Liu, T. Y., Wang, J., Zhang, W., \& Li, H. (2008). Listwise approach to learning to rank: Theory and algorithm. In Proceedings of the 25th International Conference on Machine Learning (pp. 1192--1199). doi: \url{https://doi.org/10.1145/1390156.1390306}.
+
+\bibitem{Reddy}Gangi Reddy, R., Doo, J., Xu, Y., Sultan, M. A., Swain, D., Sil, A., et al. (2024). FIRST: Faster improved listwise reranking with single token decoding. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (pp. 8642--8652). doi: \url{https://doi.org/10.18653/v1/2024.emnlp-main.491}.
 
 \bibitem{Zhang}Zhang, Y., Li, M., Long, D., Zhang, X., Lin, H., Yang, B., et al. (2025). Qwen3 Embedding: Advancing text embedding and reranking through foundation models. arXiv preprint arXiv:2506.05176. doi: \url{https://doi.org/10.48550/arXiv.2506.05176}.
 
