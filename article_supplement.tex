@@ -81,10 +81,11 @@ Passages:\newline[1] Title: \{title\} Abstract: \{abstract\}\newline
 Your ranking (most to least relevant):
 \end{quote}
 
-This identifier-based ranking approach follows the prompt format used by the
-LitSearch GPT-4o reranker~\cite{Ajith}. We apply \emph{train-on-responses-only}
-masking so that the model does not learn from prompt-specific tokens. Consequently,
-the loss is computed only over tokens in the assistant turn. The selected chat
+This identifier-based ranking approach follows the RankGPT-style format also
+used by the LitSearch GPT-4o reranker~\cite{Ajith}. We apply
+\emph{train-on-responses-only} masking: loss terms at prompt positions are masked,
+and the objective optimizes assistant-response tokens conditioned on the full
+prompt. The selected chat
 template determines the instruction and response delimiters; Gemma 3, for
 example, uses \texttt{<start\_of\_turn>user} and
 \texttt{<start\_of\_turn>model}.
@@ -210,8 +211,9 @@ frozen top-100 BM25, GRIT and Qwen3 candidate lists used by the LLMs. On
 CSFCube, they score every candidate in the released facet-specific pool. The
 query representation is the query paper's title and full abstract, and the
 candidate representation is its title and full abstract, subject to the
-1,024-token pair limit. Unlike the generative facet-conditioned prompt, this
-representation does not explicitly name the facet. We use prediction batches of
+1,024-token pair limit. Neither this representation nor the retained generative
+prompt explicitly names the facet. Both are scored against facet-specific
+judgments. We use prediction batches of
 64 pairs and the same benchmark metric implementations as for the LLM outputs.
 
 \subsection{Evaluation harness and retriever integration}
@@ -368,7 +370,7 @@ For the original LLM experiments, we distinguish two cohorts. The
 \emph{primary cohort} contains
 the original training checkpoints and all original main, external-baseline,
 CSFCube and exploratory evaluations. Because changes in software dependencies prevented exact reproduction of the original software environment during ablation experiments, we constructed and pinned a \emph{reconstructed environment}. In this second environment, we ran
-the ablations, the training-seed study and the strict document-disjoint
+the ablations, the training-seed study and the exact-text-overlap-filtered
 LitSearch evaluation, always comparing against a standard-recipe control trained
 under the same conditions. We do not interpret numerical differences across the
 two environments as treatment effects. For transparency,

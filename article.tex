@@ -62,8 +62,9 @@ the Llama 3.1 8B improvement appears by 10--25 parents. The 100-parent condition
 obtains the highest Recall@20 (R@20), while Recall@5 (R@5) and normalized
 discounted cumulative gain at 20 (nDCG@20) peak at 25 parents. Thus, 100 queries
 are sufficient for the observed transfer, but are not shown to be necessary.
-The training queries are disjoint from the evaluation queries in LitSearch and
-CSFCube. Matched controls support aspect-level supervision, but do not establish
+Our lexical audit finds no exact or near-duplicate query-text matches with
+LitSearch or CSFCube, although some papers are reused across datasets.
+Matched controls support aspect-level supervision, but do not establish
 an independent benefit from distinct-pool augmentation. A compact supervised
 cross-encoder provides a strong practical alternative. Together, these results
 support data-efficient adaptation while showing that the gains depend on the
@@ -151,21 +152,22 @@ document pairs or complete ranked lists. Listwise methods such as ListMLE
 \cite{Xia} optimize a probability over permutations and form the basis of much of the
 listwise reranking literature. For neural reranking, monoT5 \cite{Nogueira}
 reformulated the task as token generation: T5 is fine-tuned to emit ``true'' or
-``false,'' and the corresponding logits become relevance scores. RankT5
+``false,'' and relevance is scored by the probability of ``true'' after softmax
+normalization over these two token logits. RankT5
 \cite{Zhuang} added pairwise and listwise losses to T5-based reranking, while RankGPT \cite{Sun} adopted a generative formulation
 toward full listwise ranking. These systems are usually evaluated with top-weighted
 IR metrics that support graded relevance, such as (n)DCG.
 
 More recent work uses LLMs directly as rerankers. In RankGPT \cite{Sun}, for
 example, the model returns an ordering of candidate identifiers for a given query.
-This line of research has increased interest in open and reproducible listwise
+This line of research has increased interest in open-weight listwise
 rerankers. RankZephyr \cite{Pradeep} aims to approach proprietary-model
 performance, while enabling inference without relying on proprietary APIs. Other work
 addresses efficiency by reducing decoding or constraining the ranking interface.
 FIRST, for instance, performs listwise reranking through single-token decoding and
-a learning-to-rank objective \cite{Reddy}. Surveys of LLMs for IR bring these
-developments together and emphasize the need for reliable rerankers that can be
-trained with limited data \cite{Zhu}.
+a learning-to-rank objective \cite{Reddy}. Surveys of LLMs for IR discuss
+deployment costs and model adaptation \cite{Zhu}. These concerns motivate our
+study of reranking with limited task-specific supervision.
 
 \section{Methodology}
 \label{sec:methodology}
@@ -191,7 +193,7 @@ contains 100 complex, human-authored queries from several computer science
 subfields. Each query is divided into aspects and, when available, sub-aspects. It
 is also paired with a pool of approximately 99–138 paper abstracts and graded
 relevance labels. The underlying corpus contains 363,133 computer science paper
-abstracts from arXiv, published between 2011 and 2021. We use this corpus both to
+abstracts from arXiv. We use this corpus both to
 construct candidate pools and to retrieve paper text when formatting prompts.
 
 We do not treat a complete multi-aspect query as one atomic training unit.
@@ -216,9 +218,9 @@ leaving 1,498 valid records.
 Managing context length is a practical challenge in listwise LLM reranking. A
 prompt containing 100 abstracts can produce a training sequence that exceeds the
 model's context window. Even when it fits, transformer attention and KV-cache
-growth can cause out-of-memory errors. The same limitation appears throughout
-the LLM reranking literature and has motivated interfaces such as sliding windows
-\cite{Sun} and single-token decoding \cite{Reddy}.
+growth can cause out-of-memory errors. Sliding windows address input-length
+constraints by reranking subsets of candidates \cite{Sun}. Single-token decoding
+instead reduces output-generation cost \cite{Reddy}.
 
 To fine-tune efficiently on one GPU, we sample training lists with a target size
 $K$, denoted by \texttt{TARGET\_SIZE}, from each aspect-level candidate set.
@@ -492,7 +494,7 @@ from differences between displayed values.
 Table~\ref{tab:litsearch-main} presents the primary results and
 Table~\ref{tab:litsearch-bootstrap} their paired uncertainty. Without reranking,
 Qwen3 obtains overall R@20 of $80.5\%$, R@5 of $69.0\%$ and nDCG@20 of
-$62.9\%$. Fine-tuning consistently improves the mid-size models. The largest
+$62.9\%$. Fine-tuning generally improves the mid-size models. The largest
 R@5 change appears for Llama 3.1 8B with Qwen3, from $52.2\%$ to $68.4\%$
 ($+16.2$ pp), approaching the substantially larger base Gemma 3 27B model.
 
@@ -1130,7 +1132,7 @@ via a LitSearch sensitivity analysis. We remove all 227 exact
 normalized title-abstract matches to documents seen during DORIS-MAE prompt
 construction. Then, we retrieve each first-stage list to depth 200, remove the
 blacklisted documents and refill the list in its original order until it contains
-100 clean candidates. We exclude two queries whose gold relevant document is
+100 candidates outside the exact-text blacklist. We exclude two queries whose gold relevant document is
 blacklisted instead of changing their relevance sets. This leaves 595 queries.
 With each reconstructed-environment Llama checkpoint served through the local
 vLLM endpoint, we then rerank the same filtered BM25,
@@ -1215,7 +1217,7 @@ Broader recall and early ranking quality also differ. Fine-tuning can include
 more relevant papers in the top 20 while moving the earliest relevant paper
 downward. Examples are retained in Online Resource~1, Table~S9. Larger
 base models leave less room for improvement, and Gemma 3 27B has mixed nDCG
-behavior that the precision control does not consistently resolve. 
+behavior that the precision control does not consistently resolve.
 These findings motivate stronger top-rank-weighted
 losses, harder negatives and tie-aware objectives.
 
@@ -1238,7 +1240,7 @@ set-unique augmentation produce 4,494 correlated training lists from 100
 human-authored parent queries. Matched controls support aspect-level supervision,
 but do not establish an independent benefit from distinct-pool augmentation.
 
-For Llama 3.1 8B, most observed improvement appears with 10--25 parents. 
+For Llama 3.1 8B, most observed improvement appears with 10--25 parents.
 Among the tested
 budgets, 100 gives the highest mean R@20, while 25 gives the highest R@5 and
 nDCG@20. Thus, 100 parents suffice for the observed transfer but are not shown
