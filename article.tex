@@ -322,11 +322,11 @@ across datasets because each dataset uses a different ID namespace.
 We find no exact or near-duplicate query overlap between the DORIS-MAE training
 queries and the LitSearch or CSFCube queries. Document-level overlap does exist.
 As Table~\ref{tab:leakage-overlap} shows, DORIS-MAE prompt construction exposes
-8,480 unique documents. Exact normalized title-abstract matches identify 123
-documents in the CSFCube evaluation set and 227 documents in the LitSearch
-corpus. When we restrict exposure to positive DORIS-MAE prompt candidates,
-the corresponding evaluation-side counts are 108 for CSFCube and 202 for
-LitSearch. We therefore interpret the primary cohort as evidence of query-level
+8,480 unique documents. Of these, 123 have exact normalized title-abstract
+matches in the CSFCube evaluation documents, while 227 match documents in the
+LitSearch corpus. When we restrict the comparison to positive DORIS-MAE prompt
+candidates, the corresponding counts are 108 for CSFCube and 202 for LitSearch.
+We therefore interpret the primary cohort as evidence of query-level
 generalization across benchmarks. Section~\ref{sec:document-disjoint} supplements
 this analysis with a strict LitSearch rerun.
 
@@ -346,7 +346,7 @@ DORIS positive prompt docs vs LitSearch corpus & 7,216 & 64,183 & 202 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Exact normalized title-abstract matches between DORIS-MAE exposure and evaluation corpora. The Matches column counts distinct documents on the right-hand side. The separate lexical query-text audit found no exact or near-duplicate matches}
+\caption{Exact normalized title-abstract matches between DORIS-MAE exposure and evaluation corpora. No exact or near-duplicate query overlap was found}
 \label{tab:leakage-overlap}
 \end{table}
 
