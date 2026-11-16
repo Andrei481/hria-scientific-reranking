@@ -1,14 +1,15 @@
-\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}%
+\documentclass[pdflatex,sn-basic,Numbered]{sn-jnl}%
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
 \usepackage{amsmath,amssymb,amsfonts}%
-\usepackage{amsthm}%
 \usepackage{mathrsfs}%
 \usepackage[title]{appendix}%
 \usepackage{xcolor}%
 \usepackage{textcomp}%
-\usepackage{manyfoot}%
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{combelow}
 \usepackage{booktabs}%
 \usepackage{listings}%
 
@@ -43,11 +44,11 @@
 \medskip
 Journal of Intelligent Information Systems
 \end{center}
-\noindent\textbf{Authors:} Andrei-Răzvan Joldea; Andrei-Ștefan Bulzan; Bogdan Morariu;
-Diana Cernăzanu-Glăvan; Cosmin Cernăzanu-Glăvan.\\
+\noindent\textbf{Authors:} Andrei-R\u{a}zvan Joldea; Andrei-\cb{S}tefan Bulzan; Bogdan Morariu;
+Diana Cern\u{a}zanu-Gl\u{a}van; Cosmin Cern\u{a}zanu-Gl\u{a}van.\\
 \textbf{Affiliation (all authors):} Department of Computer and Information Technology,
-Universitatea Politehnica Timișoara, Timișoara, Romania.\\
-\textbf{Corresponding author:} Cosmin Cernăzanu-Glăvan (\href{mailto:cosmin.cernazanu@cs.upt.ro}{cosmin.cernazanu@cs.upt.ro}).
+Universitatea Politehnica Timi\cb{s}oara, Timi\cb{s}oara, Romania.\\
+\textbf{Corresponding author:} Cosmin Cern\u{a}zanu-Gl\u{a}van (\href{mailto:cosmin.cernazanu@cs.upt.ro}{cosmin.cernazanu@cs.upt.ro}).
 
 This supplement preserves detailed methods and supporting experiments from the full manuscript. Results retain their original numerical values. References to the main article identify its tables and sections explicitly; all other references are internal to this supplement.
 
@@ -274,6 +275,8 @@ driver 595.71.05 and 143,771 MiB of memory. Training takes 3,274.3 seconds
 manifests are retained separately from the LLM cohort records.
 
 \begin{table}[t]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -288,6 +291,8 @@ LitSearch inference & \multicolumn{2}{p{0.77\textwidth}}{Python 3.12.12; PyTorch
 CSFCube metrics & \multicolumn{2}{p{0.77\textwidth}}{Python 3.10.20; NumPy 1.26.4.} \\
 \hline
 \end{tabularx}
+
+
 \caption{Software environments used for the reported experiments. Versions are
 taken from the retained environment exports rather than inferred from current
 package installations.}
@@ -382,6 +387,8 @@ the main article, Section~5.3. Its refitted checkpoint is not substituted into
 the historical base--FT comparisons or ablation controls.
 
 \begin{table}[t]
+
+
   \centering
   \scriptsize
   \setlength{\tabcolsep}{3.5pt}
@@ -403,12 +410,14 @@ the historical base--FT comparisons or ablation controls.
   \end{tabular}
   \end{adjustbox}
   }
+  
+  
   \caption{Validation of our LitSearch metric script against the retrieval-only
   results reported by Ajith et al.~\cite{Ajith}. Values are percentages. IB/IS
   denote inline broad/specific queries, while AB/AS denote author-written
   broad/specific queries.}
-  \label{tab:litsearch-metric-validation}
-  \end{table}
+\label{tab:litsearch-metric-validation}
+\end{table}
 
 \subsection{Evaluation metrics}
 
@@ -427,7 +436,7 @@ harness assigns a gain of $1$ to every retrieved relevant document and $0$ to al
 other documents. We then apply a logarithmic discount according to rank:
 \[
 \mathrm{DCG@}k = \sum_{i=1}^{k}
-\frac{\mathbb{I}[d_i \in \mathrm{rel}]}{\log_2(i+1)}
+\frac{\mathbb{I}[d_i \in \mathrm{rel}]}{\log_2(i+1)}.
 \]
 We obtain nDCG@$k$ by normalizing DCG@$k$ with the ideal DCG, in which
 relevant documents appear as early as possible. Unlike R@$k$, nDCG@$k$ rewards
@@ -484,6 +493,8 @@ training-list provenance, objectives or software environments.
 \section{LitSearch gains and precision control}
 \label{supp:precision}
 
+Figure~\ref{fig:litsearch-gains} summarizes the primary-cohort LitSearch gains.
+
 \begin{figure}[ht]
   \centering
   \begingroup
@@ -513,11 +524,15 @@ training-list provenance, objectives or software environments.
   \end{tabular}
   \end{adjustbox}
   \endgroup
-  \caption{LitSearch fine-tuning gains. We compute each value as the difference between the fine-tuned reranker and its base instruction-tuned model. Red indicates an improvement and blue a regression; darker shading represents a larger absolute change.}
+  \caption{LitSearch fine-tuning gains. We compute each value as the difference between the fine-tuned reranker and its base instruction-tuned model. Red indicates an improvement and blue a regression; darker shading represents a larger absolute change}
   \label{fig:litsearch-gains}
   \end{figure}
 
+Table~\ref{tab:gemma27b-precision} reports the precision-control results.
+
 \begin{table}[t]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{7pt}
@@ -533,6 +548,8 @@ Qwen3 & 65.22 & 65.90 & 65.02 & $-$0.88 & [$-$1.89, 0.10] & .2328 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Gemma 3 27B LitSearch nDCG@$20$ precision control. Base, 4-bit
 QLoRA and 16-bit LoRA scores are percentages. Each delta is 16-bit LoRA minus
 4-bit QLoRA over the same 597 queries. We report paired percentile 95\%
@@ -551,7 +568,11 @@ LitSearch only, so we do not use it to explain the CSFCube regression.
 \section{Numerical supervision-budget learning curve}
 \label{supp:budget}
 
+Table~\ref{tab:parent-budget-main} reports the numerical learning curve.
+
 \begin{table}[ht]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4.2pt}
@@ -570,6 +591,8 @@ Parent queries & Aspect rows & Optimizer steps & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Retriever-averaged parent-query learning curve. Training rows report
 mean $\pm$ sample standard deviation over three seeds; aspect rows and optimizer
 steps report mean $[\min,\max]$. The zero-shot row is a single checkpoint and is
@@ -584,9 +607,11 @@ from differences between displayed values.}
 \section{Pool-augmentation uncertainty}
 \label{supp:augmentation}
 
-The configuration ablation and the example-count-matched control are reported in the main article. The following table gives the full paired uncertainty for the configuration comparisons.
+The configuration ablation and the example-count-matched control are reported in the main article. Table~\ref{tab:pool-augmentation-uncertainty} gives the full paired uncertainty for the configuration comparisons.
 
 \begin{table}[t]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -605,6 +630,8 @@ $V=3$ $-$ no pool augmentation & nDCG@20 & 0.19 & [$-$0.63, 1.03] & .6572 & 1.00
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Paired uncertainty for the pool-augmentation comparisons. For each
 query, metrics are first averaged over BM25, GRIT and Qwen3. Deltas are standard
 $V=3$ minus the named reference in percentage points. Holm correction is applied
@@ -622,9 +649,11 @@ and three standard reconstructed-environment Gemma 3 12B runs.
 Table~\ref{tab:seed-stability} reports the mean and sample standard deviation
 over the resulting checkpoints. These deviations quantify training-run
 variability only in the reconstructed environment. They are not uncertainty
-estimates for the original checkpoints in the main article, Table~3.
+estimates for the original checkpoints in the main article, Table~4.
 
 \begin{table}[ht]
+
+
 \centering
 \footnotesize
 \setlength{\tabcolsep}{3.5pt}
@@ -646,6 +675,8 @@ Model & Retriever & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{LitSearch stability of the standard reconstructed-environment recipe over
 three training runs. We report the mean $\pm$ sample standard deviation in
 percentage points.}
@@ -672,10 +703,12 @@ depth separately by fixing representative reconstructed-environment Llama 3.1
 8B, Gemma 3 12B and Gemma 3 27B checkpoints and varying only the number of first-stage
 candidates in the prompt. For every retriever, the shorter candidate lists are
 exact prefixes of the corresponding 100-document list. Table~\ref{tab:inference-depth}
-reports the equal-weight mean over BM25, GRIT and Qwen3; Table~\ref{tab:inference-depth-detailed}
+reports the equal-weight mean over BM25, GRIT and Qwen3; Section~\ref{app:detailed-results}
 gives the retriever-specific results.
 
 \begin{table}[ht]
+
+
 \centering
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -705,6 +738,8 @@ Model & $K_{\mathrm{eval}}$ & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Representative reconstructed-environment LitSearch performance of fine-tuned checkpoints with $K_{\mathrm{train}}=50$ at four inference depths.
 Values are percentages averaged equally over BM25, GRIT and Qwen3 for the same
 597 queries. These runs are separate from the original-cohort main results. The
@@ -733,7 +768,11 @@ prefill compute, and we make no claim about that setting.
 \section{Uncertainty for local open-reranker comparisons}
 \label{supp:local}
 
+Table~\ref{tab:open-reranker-uncertainty} reports paired uncertainty for the local open-reranker comparisons.
+
 \begin{table}[t]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -759,6 +798,8 @@ Qwen3 & Qwen3-Reranker-8B & nDCG@20 & 12.89 & [10.20, 15.63] & $<.001$ & $<.001$
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Paired uncertainty for the local-baseline comparisons. Deltas are Gemma
 3 27B FT minus the named reference in percentage points over the same 597
 LitSearch queries. The intervals are pointwise; $p_{\mathrm{H}}$ is corrected
@@ -771,6 +812,8 @@ within the six local-baseline comparisons for each metric.}
 \label{supp:failures}
 
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3.5pt}
@@ -794,11 +837,13 @@ Can you suggest literature on enhanced semantic parsing methods that focus on ge
 \end{tabular}
 \end{adjustbox}
 }
+
+
+
 \caption{LitSearch examples in which fine-tuning improves Recall@20 but
 worsens the early ranking. All examples use Qwen3-Embedding-8B as the first-stage
 retriever.}
 \label{tab:top-rank-failures}
-
 \end{table}
 
 \subsection{Top-rank precision failure modes}
@@ -817,7 +862,11 @@ often inspect only the earliest results.
 \section{Detailed Subset and Facet Results}
 \label{app:detailed-results}
 
+Table~\ref{tab:inference-depth-detailed} gives the retriever-specific inference-depth results.
+
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -871,6 +920,8 @@ Model & $K_{\mathrm{eval}}$ & Retriever & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Retriever-specific inference-depth results underlying
 Table~\ref{tab:inference-depth}. The fine-tuned reconstructed-environment
 checkpoints are held fixed while $K_{\mathrm{eval}}$ varies. All values are
@@ -878,7 +929,11 @@ percentages over the same 597 LitSearch queries.}
 \label{tab:inference-depth-detailed}
 \end{table}
 
+Table~\ref{tab:parent-budget-detailed} gives the retriever-specific parent-query learning curve.
+
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4.0pt}
@@ -915,6 +970,8 @@ Parent queries & Retriever & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Retriever-specific parent-query learning curve for Llama 3.1 8B.
 Values are mean $\pm$ sample standard deviation over seeds 42, 2026 and 3407
 in percentage points. All checkpoints rerank the same 597 LitSearch queries at
@@ -923,11 +980,11 @@ $K_{\mathrm{eval}}=100$.}
 \end{table}
 
 Tables~\ref{tab:litsearch-subsets-appendix} and
-\ref{tab:csfcube-facet-gains-appendix} summarize the subset and facet results,
-while Table~\ref{tab:litsearch-ablation-detailed} reports the complete LitSearch
-ablation breakdown by first-stage retriever.
+\ref{tab:csfcube-facet-gains-appendix} summarize the subset and facet results.
 
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \resizebox{\columnwidth}{!}{
@@ -944,6 +1001,8 @@ Gemma 3 27B FT + Qwen3   & \textbf{75.2} & \textbf{69.3} & \textbf{81.2} & \text
 \end{tabular}
 \end{adjustbox}
 }
+
+
 \caption{LitSearch primary cohort results by subset for fine-tuned models with
 Qwen3-Embedding-8B as the first-stage retriever. IB/IS denote inline
 broad/specific queries, while AB/AS denote author-written broad/specific queries.
@@ -952,6 +1011,8 @@ Values are percentages.}
 \end{table}
 
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3pt}
@@ -967,11 +1028,17 @@ Gemma 3 27B      & -0.045 & +0.003 & -0.029 & -0.023 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{CSFCube test-split nDCG\%@$20$ gains by facet, computed as fine-tuned minus base. Positive values indicate improvement after fine-tuning.}
 \label{tab:csfcube-facet-gains-appendix}
 \end{table}
 
+Table~\ref{tab:litsearch-r5-uncertainty} reports paired uncertainty for the descriptive R@5 endpoint.
+
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -1003,13 +1070,19 @@ Gemma 3 27B FT $-$ RankZephyr & Qwen3 & 3.07 & [0.42, 5.78] & .0250 & .0750 \\
 Gemma 3 27B FT $-$ Qwen3-Reranker-8B & Qwen3 & 12.81 & [9.21, 16.39] & $<.001$ & $<.001$ \\
 \hline
 \end{tabularx}
+
+
 \caption{Paired uncertainty for the descriptive LitSearch R@5 endpoint. Deltas
 are candidate minus reference in percentage points. Holm correction follows the
 same base--FT and local-baseline families used for the primary metrics.}
 \label{tab:litsearch-r5-uncertainty}
 \end{table}
 
+Table~\ref{tab:litsearch-ablation-detailed} reports the complete LitSearch ablation breakdown by first-stage retriever.
+
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3.2pt}
@@ -1060,6 +1133,8 @@ No aspect decomposition
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Complete reconstructed-environment LitSearch ablations for Llama 3.1 8B,
 separated by first-stage retriever, at $K_{\mathrm{eval}}=100$. All values are
 overall averages over the same 597 queries and are reported as percentages.
@@ -1082,6 +1157,8 @@ the main article, Table~16. All deltas and intervals in this table are
 expressed in percentage points, including the CSFCube metrics.
 
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -1119,6 +1196,8 @@ GTE adapted $-$ zero-shot & CSFCube (pooled) & nDCG\%@20 & 2.97 & [1.58, 4.38] &
 \end{tabular}
 
 \end{adjustbox}
+
+
 \caption{Paired uncertainty for the compact reranker. Deltas follow the
 subtraction in the first column; negative Llama-minus-GTE values favor GTE.
 Intervals are pointwise 95\% bootstrap intervals. Holm correction is applied
@@ -1140,6 +1219,8 @@ original-cohort results and we do not combine the two cohorts in confidence
 intervals or significance tests.
 
 \begin{table}[htbp]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -1171,6 +1252,8 @@ Model & Retriever & R@20 & R@5 & nDCG@20 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Reconstructed-environment replication of all four fine-tuned model
 families on the 597-query LitSearch evaluation at
 $K_{\mathrm{eval}}=100$. We report percentages from one canonical run for each
@@ -1211,7 +1294,7 @@ loss~\cite{Xia}:
 \log \sum_{j \ge i} \exp(z_{\pi(j)}) - z_{\pi(i)} \right),
 \]
 where $\pi$ denotes the ideal relevance-sorted permutation and
-$g_r = 2^r - 1$ denotes the DCG-style gain derived from each 0-2 graded label.
+$g_r = 2^r - 1$ denotes the DCG-style gain derived from each 0--2 graded label.
 Negative candidates ($r = 0$) contribute no gain, but remain in the partition
 function. We normalize each sample loss by its total gain
 $\sum_i g_{\pi(i)}$ and average the mini-batch loss over samples.
@@ -1226,6 +1309,8 @@ descending \texttt{argsort} over this $K$-dimensional vector gives the ranking.
 The approach reduces reranking from $O(K)$ decoded tokens to one forward pass.
 
 \begin{table}[htbp]
+
+
 \centering
 \renewcommand{\arraystretch}{1.1}
 \setlength{\tabcolsep}{4pt}
@@ -1240,6 +1325,8 @@ Gemma 3 12B FT, FIRST (GRIT)      & 70.8 & 35.8 & 35.0 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{LitSearch overall-average comparison of our final generative listwise
 reranker and the FIRST-inspired single-token decoding variant. Both use Gemma 3 12B with
 GRIT as the first-stage retriever. Values are percentages.}
@@ -1254,7 +1341,11 @@ main comparisons and the final pipeline.
 
 \subsection{Prompt repetition at inference time}
 
+Table~\ref{tab:prompt-repetition} reports the preliminary prompt-repetition results.
+
 \begin{table}[htbp]
+
+
 \centering
 \renewcommand{\arraystretch}{1.1}
 \setlength{\tabcolsep}{3.5pt}
@@ -1279,6 +1370,8 @@ FT   & Qwen3 & \textbf{82.40} & \textbf{71.14} & \textbf{65.88} & \textbf{62.49}
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Preliminary LitSearch overall-average results with prompt repetition at
 inference time. Values are percentages over all 597 queries. We report these runs
 only as exploratory evidence and do not include them in the main comparison
@@ -1326,6 +1419,8 @@ The standard deviations describe variation across splits whose training sets
 overlap. They are not standard errors over independent experiments.
 
 \begin{table}[t]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -1340,6 +1435,8 @@ $2\times10^{-5}$ & 0.074852 & 0.008772 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Parent-query-disjoint learning-rate selection for Llama 3.1 8B over three split assignments. Lower parent-averaged validation NLL is better}
 \label{tab:grouped-hpo-selection}
 \end{table}
@@ -1392,6 +1489,8 @@ deviations in Table~8 in the main article describe training-seed variation
 separately.
 
 \begin{table}[ht]
+
+
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3pt}
@@ -1407,6 +1506,8 @@ nDCG@20 & $-$8.40 & [$-$9.91, $-$6.90] & .0004 \\
 \hline
 \end{tabular}
 \end{adjustbox}
+
+
 \caption{Epoch-randomized minus deterministic tie-policy differences, averaged over retrievers and seeds, in percentage points. Intervals are pointwise; $p_{\mathrm{H}}$ applies within-metric Holm correction}
 \label{tab:tie-sensitivity-uncertainty}
 \end{table}
@@ -1442,41 +1543,15 @@ descriptive comparison without paired significance tests.
 
 \begin{figure}[htbp]
   \centering
-  \manuscriptfigure[width=\columnwidth]{fig_gpt4o_comparison.pdf}
+  \manuscriptfigure[width=\columnwidth]{FigS2.pdf}
   \caption{Descriptive comparison of the GPT-4o + GritLM pipeline reported by
   LitSearch~\cite{Ajith}, Qwen3 retrieval without reranking, and Qwen3 with
-  fine-tuned Gemma 3 27B.}
+  fine-tuned Gemma 3 27B}
   \label{fig:gpt4o-comparison}
 \end{figure}
 
 \FloatBarrier
 
-\begin{thebibliography}{99}
-
-\bibitem{Ajith}Ajith, A., Xia, M., Chevalier, A., Goyal, T., Chen, D., \& Gao, T. (2024). LitSearch: A retrieval benchmark for scientific literature search. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (pp. 15068--15083). doi: \url{https://doi.org/10.18653/v1/2024.emnlp-main.840}.
-
-\bibitem{Mysore}Mysore, S., O'Gorman, T., McCallum, A., \& Zamani, H. (2021). CSFCube---A test collection of computer science research articles for faceted query by example. arXiv preprint arXiv:2103.12906. doi: \url{https://doi.org/10.48550/arXiv.2103.12906}.
-
-\bibitem{Sun}Sun, W., Yan, L., Ma, X., Wang, S., Ren, P., Chen, Z., et al. (2023). Is ChatGPT good at search? Investigating large language models as re-ranking agents. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (pp. 14918--14937). doi: \url{https://doi.org/10.18653/v1/2023.emnlp-main.923}.
-
-\bibitem{Xia}Xia, F., Liu, T. Y., Wang, J., Zhang, W., \& Li, H. (2008). Listwise approach to learning to rank: Theory and algorithm. In Proceedings of the 25th International Conference on Machine Learning (pp. 1192--1199). doi: \url{https://doi.org/10.1145/1390156.1390306}.
-
-\bibitem{Reddy}Gangi Reddy, R., Doo, J., Xu, Y., Sultan, M. A., Swain, D., Sil, A., et al. (2024). FIRST: Faster improved listwise reranking with single token decoding. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (pp. 8642--8652). doi: \url{https://doi.org/10.18653/v1/2024.emnlp-main.491}.
-
-\bibitem{Zhang}Zhang, Y., Li, M., Long, D., Zhang, X., Lin, H., Yang, B., et al. (2025). Qwen3 Embedding: Advancing text embedding and reranking through foundation models. arXiv preprint arXiv:2506.05176. doi: \url{https://doi.org/10.48550/arXiv.2506.05176}.
-
-\bibitem{Hu}Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., et al. (2022). LoRA: Low-rank adaptation of large language models. In International Conference on Learning Representations (ICLR 2022). arXiv version doi: \url{https://doi.org/10.48550/arXiv.2106.09685}.
-
-\bibitem{Dettmers}Dettmers, T., Pagnoni, A., Holtzman, A., \& Zettlemoyer, L. (2023). QLoRA: Efficient finetuning of quantized LLMs. Advances in Neural Information Processing Systems, 36, 10088--10115. doi: \url{https://doi.org/10.52202/075280-0441}.
-
-\bibitem{unsloth}Han, D., Han, M., \& Unsloth Team. (2023). Unsloth [Software]. \url{https://github.com/unslothai/unsloth}.
-
-\bibitem{Kwon}Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., et al. (2023). Efficient memory management for large language model serving with PagedAttention. In Proceedings of the 29th Symposium on Operating Systems Principles (pp. 611--626). doi: \url{https://doi.org/10.1145/3600006.3613165}.
-
-\bibitem{Leviathan}Leviathan, Y., Kalman, M., \& Matias, Y. (2025). Prompt repetition improves non-reasoning LLMs. arXiv preprint arXiv:2512.14982. doi: \url{https://doi.org/10.48550/arXiv.2512.14982}.
-
-\bibitem{gte-modernbert}Tongyi Lab, Alibaba Group. (n.d.). GTE-reranker-modernbert-base [Model card]. \url{https://huggingface.co/Alibaba-NLP/gte-reranker-modernbert-base}. Evaluated revision: \texttt{204bdd4}.
-
-\end{thebibliography}
+\bibliography{references}
 
 \end{document}

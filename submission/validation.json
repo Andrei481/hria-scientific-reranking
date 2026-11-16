@@ -1,0 +1,14 @@
+{
+  "article": {
+    "pages": 24,
+    "pdf": "article.pdf",
+    "source_archive": "manuscript_source.zip",
+    "pdf_sha256": "7b9a65601659976cdf10e6743fbbfc2879ae1828036e321b2991509922e5df0d"
+  },
+  "article_supplement": {
+    "pages": 22,
+    "pdf": "ESM_1.pdf",
+    "source_archive": "supplement_source.zip",
+    "pdf_sha256": "138bb15758abb362cbbe41406b80c425cdc71d0e3c9ac69fbddb16e061b1abcd"
+  }
+}
