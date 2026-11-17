@@ -1,6 +1,6 @@
 # Journal of Intelligent Information Systems submission
 
-Guidelines checked on 16 November 2026:
+Guidelines checked on 17 November 2026:
 https://link.springer.com/journal/10844/submission-guidelines
 
 ## Manuscript preparation
@@ -33,7 +33,8 @@ https://link.springer.com/journal/10844/submission-guidelines
 
 The `submission/` directory contains the main article PDF, `ESM_1.pdf`, and
 separate source archives. Each source archive has a flat layout with its own
-LaTeX entry point, bibliography, class/style files, and referenced figures.
+LaTeX entry point, bibliography, class/style files, referenced PDF figures,
+and editable SVG counterparts for the external figures.
 
 Upload the main article source archive and compiled PDF as manuscript files.
 Upload `ESM_1.pdf` as **Online Resource 1**. If supplementary source is requested,
@@ -54,12 +55,13 @@ PDF produced by the submission portal before completing submission.
 - Both documents compiled with pdfLaTeX and BibTeX (TeX Live 2026), including
   repeated LaTeX passes to resolve citations and cross-references.
 - Final lengths: main article **24 pages** including references (below the
-  journal's 25-page limit); supplementary PDF **22 pages**.
+  journal's 25-page limit); supplementary PDF **23 pages**.
 - The final logs contain no undefined references/citations, missing characters,
-  or overfull boxes. Underfull spacing and nonfatal PDF-bookmark warnings remain.
+  or overfull boxes. Underfull spacing, math-font substitutions, and nonfatal PDF-bookmark warnings remain.
 - All 17 main-article table bodies and 22 supplement tabular bodies were compared
-  with the original sources and are unchanged. All 27 unique reference keys and
-  the original DOI values were preserved in the shared bibliography.
+  with the original sources and are unchanged. All 27 unique reference keys
+  are preserved. BEIR now cites the published NeurIPS Datasets and Benchmarks
+  2021 proceedings, with the official proceedings URL replacing its preprint DOI.
 - Rendered pages were visually checked for clipping, overlap, and table placement.
 - Table captions retain their original below-table placement. The supplied class
   wraps tables in `threeparttable`; moving captions above scaled tables triggered
@@ -72,3 +74,25 @@ PDF produced by the submission portal before completing submission.
 
 Recheck pagination if the manuscript or declarations change. The final portal
 build can differ because it may use a different TeX Live release.
+
+## Final figure and reference corrections (17 November 2026)
+
+- Figures 1, 2 and S2 were regenerated as vector PDFs at the manuscript text
+  width, with 8.5--9 pt lettering and embedded TrueType fonts. Their editable
+  SVG counterparts are included in the corresponding source archives.
+- Figure 1 states a target list size of 50; the methods explain the realized
+  sizes of 50 or 51.
+- Figure 2 uses distinct line styles and markers. Figure S2 uses patterned bars
+  so the configurations remain distinguishable without color.
+- Figure S1 uses black numbers; the darkest red cell has approximately 5.73:1
+  text contrast. All heatmap values and all manuscript table bodies are unchanged.
+- Run `python scripts/render_submission_figures.py` from the repository root to
+  reproduce the external figures using the retained experiment data. This uses
+  Python with Matplotlib and NumPy, plus the existing research aggregation code.
+- Both source archives were independently extracted and compiled after packaging.
+  Their page text and rendered pixels match the corresponding submission PDFs.
+
+The submission portal still requires the authors' declarations and approval of
+its generated PDF. The journal's conflicting template instructions remain noted
+above. Confirm any disclosure for AI use beyond copyediting, if applicable;
+no unverified disclosure or promise of access to missing data has been added.

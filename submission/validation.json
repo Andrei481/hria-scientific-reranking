@@ -3,16 +3,26 @@
     "pages": 24,
     "pdf": "article.pdf",
     "source_archive": "manuscript_source.zip",
-    "pdf_sha256": "51583757ff43d46d53372a94fb2f897fa4c6c216158348a4cab7cdcfc78bdd90",
+    "pdf_sha256": "cdd0e05b0efebc0f9d7c5d4e016cbf27a42f325a1706205ec8ab2e56a255371a",
+    "source_archive_sha256": "de18a3de65326efa4d4b61cd7347fcb59f2aaed66de35321047064d6a907b294",
     "references": 26,
-    "citation_order_verified": true
+    "citation_order_verified": true,
+    "minimum_external_figure_font_pt": 8.5,
+    "external_figure_fonts_embedded": true,
+    "table_bodies_unchanged": true,
+    "archive_rebuild_matches_pdf": true
   },
   "article_supplement": {
-    "pages": 22,
+    "pages": 23,
     "pdf": "ESM_1.pdf",
     "source_archive": "supplement_source.zip",
-    "pdf_sha256": "bfc189631ba9c22dc0d502711a3209d5be940de92817b059c091ba890350125c",
+    "pdf_sha256": "237e7945e15f5bd2e3e2bbaed159aa0ca6fdf8352660efce25380e7c4e96ccf3",
+    "source_archive_sha256": "a2907b832ee73b4e1617d430b524c78014452965101bc23ab2d7f160eea6d9be",
     "references": 12,
-    "citation_order_verified": true
+    "citation_order_verified": true,
+    "minimum_external_figure_font_pt": 8.5,
+    "external_figure_fonts_embedded": true,
+    "table_bodies_unchanged": true,
+    "archive_rebuild_matches_pdf": true
   }
 }
