@@ -1726,7 +1726,7 @@ FUNCTION {presort}
 }
 
 ITERATE {presort}
-SORT
+% SORT disabled for numbered references in order of first citation.
 STRINGS { last.label next.extra }
 INTEGERS { last.extra.num number.label }
 FUNCTION {initialize.extra.label.stuff}
@@ -1779,7 +1779,7 @@ FUNCTION {bib.sort.order}
   'sort.key$ :=
 }
 ITERATE {bib.sort.order}
-SORT
+% SORT disabled for numbered references in order of first citation.
 FUNCTION {begin.bib}
 { preamble$ empty$
     'skip$
