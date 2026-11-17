@@ -29,7 +29,9 @@ def load_module(name, filename):
 def save(fig, stem):
     # Fixed canvas preserves final-sized font sizes when included at textwidth.
     fig.savefig(ROOT / f"{stem}.pdf")
-    fig.savefig(ROOT / f"{stem}.svg")
+    svg = ROOT / f"{stem}.svg"
+    fig.savefig(svg)
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
 
 
@@ -60,7 +62,7 @@ def pipeline():
     xs = [.12, 1.83, 3.54]
     box(xs[0], 2.38, "DORIS-MAE", "100 parent queries\nGraded candidate pools")
     box(xs[1], 2.38, "Aspect decomposition", "Aspect and sub-aspect\nranking instances")
-    box(xs[2], 2.38, "Candidate sampling", "Target list size K = 50\nRealized sizes: 50 or 51")
+    box(xs[2], 2.38, "Candidate sampling", "Target list size K = 50")
     box(xs[2], 1.62, "Pool augmentation", "Up to 3 distinct pools\nper aspect")
     box(xs[1], 1.62, "Listwise fine-tuning", "LoRA / QLoRA\nRanking prompts")
     box(xs[0], 1.62, "Fine-tuned reranker", "Adapted model", "#d9e8f2")
@@ -70,15 +72,13 @@ def pipeline():
     for right in xs[1:]:
         arrow((right - .02, 1.915), (right - .20, 1.915))
 
-    group(.025, 1.20, "Inference and evaluation: LitSearch / CSFCube", "#f5eee8")
+    group(.025, 1.20, "Inference and evaluation\nLitSearch / CSFCube", "#f5eee8")
     box(xs[0], .14, "Candidate retrieval", "Unseen query\nBM25 / dense / pool")
     box(xs[1], .14, "Reranking", "Top-K titles + abstracts\nBase / fine-tuned model")
     box(xs[2], .14, "Ranked output", "Relevance ordering\nEvaluation metrics")
     for left in xs[:2]:
         arrow((left + 1.51, .435), (left + 1.69, .435))
-    ax.plot([.865, .865, 5.08, 5.08, 2.575],
-            [1.60, 1.32, 1.32, .85, .85], color="#303840", linewidth=.8, linestyle="--")
-    arrow((2.575, .85), (2.575, .75), linestyle="--")
+    arrow((1.57, 1.60), (3.05, .75), linestyle="--")
     save(fig, "Fig1")
 
 

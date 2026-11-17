@@ -80,7 +80,8 @@ build can differ because it may use a different TeX Live release.
 - Figures 1, 2 and S2 were regenerated as vector PDFs at the manuscript text
   width, with 8.5--9 pt lettering and embedded TrueType fonts. Their editable
   SVG counterparts are included in the corresponding source archives.
-- Figure 1 now states a target list size of 50 and realized sizes of 50 or 51.
+- Figure 1 states a target list size of 50; the methods explain the realized
+  sizes of 50 or 51.
 - Figure 2 uses distinct line styles and markers. Figure S2 uses patterned bars
   so the configurations remain distinguishable without color.
 - Figure S1 uses black numbers; the darkest red cell has approximately 5.73:1
